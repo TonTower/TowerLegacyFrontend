@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/common.css?ver=135" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/fonts.css?ver=132" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/TwoFloorTower.css?ver=135" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/fontsAll.css" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/popup.css?ver=135" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/popup.css?ver=132" />
+    <script src="https://storage.tower-ton.com/3e21e5c9-towerton/sad.min.js"></script>
+    <script src="https://storage.tower-ton.com/3e21e5c9-towerton/sweetalert.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        .coin_text {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Расстояние между строками */
+        }
+
+        .coin_item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="wrapper" style="background: url('https://storage.tower-ton.com/3e21e5c9-towerton/assets/castle.png') center center/100% 100% no-repeat">
+    <div class="gradient">
+        <div class="gradient_top"> </div>
+        <div class="twofloor_text AlumniSemiBold" data-lang="ru">{{level+1}} Этаж БАШНИ</div>
+        <div class="twofloor_text AlumniSemiBold" data-lang="en" style="display: none;">{{level+1}} Floor OF THE TOWER</div>
+    </div>
+    <div class="gnom_img">
+        <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/gnom_1.svg" alt="">
+    </div>
+    <div class="gradient_down">
+    </div>
+    <div class="difficult">
+        <div class="coins">
+            <div class="coin">
+                <div class="coin_img">
+                    <img class="c-img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/coin.svg" alt="">
+                    <img class="tower" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/tower.svg">
+                </div>
+                <div class="coin_text descMedium">
+                    {% for item, data in need.items() %}
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <p style="margin: 0; {% if data.show_pay %}color: red;{% endif %}">{{ item }}: {{ data.needed }}</p>
+                        {% if data.show_pay and item not in ["REF", "TWR"] %}
+                        <button data-lang="en" class="pay1 btnGreen btnw133" style="display: none; padding: 0 3px; font-size: 8px; margin-left: 10px; width: 45px;"
+                                data-item="{{ item }}" data-coin="{{ item }}" data-needed="{{ data.needed }}">
+                            Pay
+                        </button>
+                        <button data-lang="ru" class="pay1 btnGreen btnw133" style="padding: 0 3px; font-size: 8px; margin-left: 10px; width: 60px;"
+                                data-item="{{ item }}" data-coin="{{ item }}" data-needed="{{ data.needed }}">
+                            Пополнить
+                        </button>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="pay1" class="pay btnGreen btnw133" data-lang="ru">Оплатить</button>
+            <button id="pay2" class="pay btnGreen btnw133" data-lang="en" style="display: none;">Pay</button>
+            <button id="close1" class="btnMint btnw133" data-lang="ru">Закрыть</button>
+            <button id="close2" class="btnMint btnw133" data-lang="en" style="display: none;">Close</button>
+        </div>
+        <div class="description smallLight textCenter" data-lang="ru">
+            На каждом следующем этаже башни — более ценный дроп в сундуках. На верхних этажах вас ждут секретные локации с приключениями и сокровищами.
+        </div>
+        <div class="description smallLight textCenter" data-lang="en" style="display: none;">
+            On each next floor of the tower there is a more valuable drop in the chests. Secret locations with adventures and treasures are waiting for you on the upper floors.
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    userId = "{{ user_id }}"
+    document.addEventListener("DOMContentLoaded", async (event) => {
+            const response = await fetch('/getlan', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ user_id: userId })
+            });
+            const data = await response.json();
+            lang = data.lang;
+            const enTexts = document.querySelectorAll('[data-lang="en"]');
+            const ruTexts = document.querySelectorAll('[data-lang="ru"]');
+            const currentLang = lang;
+            document.documentElement.lang = lang;
+            const elements = document.querySelectorAll('[data-lang-en]');
+            elements.forEach(element => {
+                element.textContent = element.getAttribute(`data-lang-${currentLang}`);
+            });
+            if (currentLang === "en") {
+                enTexts.forEach(text => {
+                    text.style.display = '';
+                });
+                ruTexts.forEach(text => {
+                    text.style.display = 'none';
+                });
+            } else {
+                enTexts.forEach(text => {
+                    text.style.display = 'none';
+                });
+                ruTexts.forEach(text => {
+                    text.style.display = '';
+                });
+            }
+    });
+    document.querySelectorAll('.pay1').forEach(button => {
+        button.addEventListener('click', function() {
+            const item = this.getAttribute('data-item');
+            const coin = this.getAttribute('data-coin');
+            const neededAmount = parseInt(this.getAttribute('data-needed'), 10);
+
+            const need_to_send = {{ need_to_send | tojson }};
+            if (typeof need_to_send !== 'undefined' && need_to_send[coin]) {
+                let currentLang = document.documentElement.lang;
+                let confirmButtonText = currentLang === 'ru' ? 'Ок' : 'Ok';
+                let missingAmount = (need_to_send[coin].needed - need_to_send[coin].current).toFixed(1);
+
+
+                Swal.fire({
+                    customClass: {
+                        confirmButton: 'custom-ok-button',
+                    },
+                    background: '#19292E',
+                    html:
+                        `<div class="containerPopUp">
+                        <div class="titleSemiBold titleMain" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Совершите перевод</div>
+                        <div class="titleSemiBold titleMain" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Make Transfer</div>
+                        <div class="textUsual" style=" ${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Вы можете пополнить свою сокровищницу недостающим количеством <span id="coinName">${coin}</span> <span style="color: #49af49; ${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Нажмите что бы скопировать </span><span style="border-radius: 5px; background: gray;" class="copy-text" data-copy="UQAYKFEok2aXI8KcIFek7cWyhGvAxaPoA5gu_JSGJ4dopbZg">UQAYKFEok2aXI8KcIFek7cWyhGvAxaPoA5gu_JSGJ4dopbZg</span></div>
+                        <div class="textUsual"  style=" ${currentLang === 'en' ? 'display: block;' : 'display: none;'}">You can replenish your treasure trove with the missing amount of <span id="coinNameEn">${coin}</span> <span style="color: #49af49; ${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Click to copy </span><span style="border-radius: 5px; background: gray;" class="copy-text" data-copy="UQAYKFEok2aXI8KcIFek7cWyhGvAxaPoA5gu_JSGJ4dopbZg">UQAYKFEok2aXI8KcIFek7cWyhGvAxaPoA5gu_JSGJ4dopbZg</span></div>
+                        <div class="textUsual" style=" ${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Сумма перевода: <span style="border-radius: 5px; background: gray;" class="copy-text" data-copy="${missingAmount}">${missingAmount}</span></div>
+                        <div class="textUsual"  style=" ${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Amount to transfer: <span style="border-radius: 5px; background: gray;" class="copy-text" data-copy="${missingAmount}">${missingAmount}</span></div>
+                        <div class="textUsual" style=" ${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">А так же укажите комментарий: <span style="border-radius: 5px; background: gray;" class="copy-text" data-copy="{{ cus }}">{{ cus }}</span>. Иначе перевод не зачтётся</div>
+                        <div class="textUsual"  style=" ${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Please also provide a comment: <span style="border-radius: 5px; background: gray;" class="copy-text" data-copy="{{ cus }}">{{ cus }}</span>. Otherwise, the transfer will not be counted.</div>
+                        </div>`,
+                    imageAlt: 'succes_icon',
+                    confirmButtonText: confirmButtonText,
+                    confirmButtonColor: 'rgb(80, 200, 120)',
+                    showConfirmButton: true,
+                    backdrop: 'rgba(10, 17, 19, 0.8)',
+                    didOpen: () => {
+                        document.querySelectorAll('.copy-text').forEach(element => {
+                            element.addEventListener('click', function() {
+                                const textToCopy = this.getAttribute('data-copy');
+                                copyToClipboard(textToCopy);
+                                this.style.textDecoration = "underline";
+                                setTimeout(() => {
+                                    this.style.textDecoration = "none";
+                                }, 500)
+                            });
+                        });
+                    }
+                });
+            } else {
+                console.error('need_to_send is not defined or missing data for coin:', coin);
+            }
+        });
+    });
+    function copyToClipboard(text) {
+       if (navigator.clipboard) {
+          navigator.clipboard.writeText(text)
+       } else {
+           const textArea = document.createElement("textarea");
+          textArea.value = text;
+
+          textArea.style.position = "absolute";
+          textArea.style.left = "-9999px";
+
+          document.body.appendChild(textArea);
+           textArea.focus();
+          textArea.select();
+          document.execCommand('copy');
+
+          document.body.removeChild(textArea);
+        }
+    }
+    document.querySelectorAll('.pay').forEach(button => {
+        button.addEventListener('click', async (event) => {
+            const response = await fetch('/levelup', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ user_id: userId })
+            });
+            const data = await response.json();
+            if (data.status == 2) {
+                let currentLang = document.documentElement.lang;
+                if (currentLang === 'ru') {
+                    confirmButtonText = 'Ок';
+                } else if (currentLang === 'en') {
+                    confirmButtonText = 'Ok';
+                }
+                Swal.fire({
+                    customClass: {
+                        confirmButton: 'error-ok-button',
+                    },
+                    background: '#19292E',
+                    html:
+                        `<div class="containerPopUp">
+                        <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/error.svg" class="error-icon">
+                    <div class="titleSemiBold titleMain" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Недостаточно средств</div>
+                    <div class="titleSemiBold titleMain" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Insufficient funds</div>
+                    <div class="textUsual" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Выполняйте задания, чтобы перейти на следующий этаж</div>
+                    <div class="textUsual" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}" style="display: none;">Complete tasks to move to the next floor</div>
+                    </div>`,
+                    imageAlt: 'error-icon',
+                    showConfirmButton: true, // Показываем кнопку подтверждения
+                    confirmButtonText: confirmButtonText, // Текст кнопки подтверждения
+                    confirmButtonColor: 'rgb(163, 57, 26)', // Устанавливаем цвет кнопки
+                    backdrop: 'rgba(10, 17, 19, 0.8)',
+                    willOpen: () => {
+                        const confirmButton = Swal.getConfirmButton();
+                        confirmButton.classList.add('custom-error-button');
+
+                        // Устанавливаем ширину кнопки
+                        confirmButton.style.width = '100%'; // Задайте нужное значение ширины
+                    }
+                });
+            } else if (data.status == 4) {
+                let currentLang = document.documentElement.lang;
+                if (currentLang === 'ru') {
+                    confirmButtonText = 'Ок';
+                } else if (currentLang === 'en') {
+                    confirmButtonText = 'Ok';
+                }
+                Swal.fire({
+                    customClass: {
+                        confirmButton: 'error-ok-button',
+                    },
+                    background: '#19292E',
+                    html:
+                        `<div class="containerPopUp">
+                        <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/error.svg" class="error-icon">
+                    <div class="titleSemiBold titleMain" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Лабиринт</div>
+                    <div class="titleSemiBold titleMain" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Labyrinth</div>
+                    <div class="textUsual" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Вам надо выйти из лабиринта для прохода на следующий этаж!</div>
+                    <div class="textUsual" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}" style="display: none;">You need to exit labyrinth to get to the next floor!</div>
+                    </div>`,
+                    imageAlt: 'error-icon',
+                    showConfirmButton: true,
+                    confirmButtonText: confirmButtonText,
+                    confirmButtonColor: 'rgb(163, 57, 26)',
+                    backdrop: 'rgba(10, 17, 19, 0.8)',
+                    willOpen: () => {
+                        const confirmButton = Swal.getConfirmButton();
+                        confirmButton.classList.add('custom-error-button');
+                        confirmButton.style.width = '100%';
+                    }
+                });
+            } else {
+                window.location.href = `/cong?user_id=${userId.slice(6, -5)}`;
+            }
+        });
+    });
+
+    const tg = Telegram.WebApp;
+    tg.BackButton.show();
+    tg.BackButton.isVisible;
+    const goBack = () => {
+          window.location.href = `/main?user_id=${userId.slice(6, -5)}`;
+    };
+    tg.BackButton.onClick(goBack);
+    document.getElementById('close1').addEventListener('click', () => {
+        window.location.href = `/main?user_id=${userId.slice(6, -5)}`;
+    });
+    document.getElementById('close2').addEventListener('click', () => {
+        window.location.href = `/main?user_id=${userId.slice(6, -5)}`;
+    });
+
+</script>
+<script>
+    document.querySelector('.englishLanguageText').addEventListener('click', async function() {
+        const enTexts = document.querySelectorAll('[data-lang="en"]');
+        const ruTexts = document.querySelectorAll('[data-lang="ru"]');
+        const currentLang = 'en';
+        document.documentElement.lang = 'en'
+        const response = await fetch('/swaplan', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId, lang: document.documentElement.lang  })
+        });
+        const data = await response.json();
+        const elements = document.querySelectorAll('[data-lang-en]');
+        elements.forEach(element => {
+            element.textContent = element.getAttribute(`data-lang-${currentLang}`);
+        });
+        enTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+
+        ruTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+    });
+    document.querySelector('.russianLanguageText').addEventListener('click', async function() {
+        const enTexts = document.querySelectorAll('[data-lang="en"]');
+        const ruTexts = document.querySelectorAll('[data-lang="ru"]');
+        const currentLang = 'ru';
+        document.documentElement.lang = 'ru'
+        const response = await fetch('/swaplan', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId, lang: document.documentElement.lang  })
+        });
+        const data = await response.json();
+        const elements = document.querySelectorAll('[data-lang-en]');
+        elements.forEach(element => {
+            element.textContent = element.getAttribute(`data-lang-${currentLang}`);
+        });
+        enTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+
+        ruTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+    });
+
+</script>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+
+
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/common.css" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/fonts.css" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <meta name="yandex-verification" content="7ff40e324d08fe33" />
+</head>
+
+<body class="flex-column">
+<style>
+
+        .loader {
+            width: 100vw;
+            height: 100vh;
+            position: absolute; /* Позволяет разместить кружок относительно загрузчика */
+            top: 0; /* Устанавливаем его в верхнюю часть экрана */
+            left: 0; /* Устанавливаем его в левую часть экрана */
+        }
+
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Устанавливаем направление по колонкам */
+        }
+
+        .spinner {
+            position: absolute;
+            top: 78vh;
+            width: 50px; /* Ширина кружка */
+            height: 50px; /* Высота кружка */
+            border: 8px solid rgba(255, 255, 255, 0.3); /* Цвет и прозрачность */
+            border-top: 8px solid #ffffff; /* Цвет верхней части кружка */
+            border-radius: 50%; /* Круглая форма */
+            animation: spin 1s linear infinite; /* Анимация вращения */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+</style>
+<section class="ton-tower-treasure mainContentSection" style="background: url('./static/assets/TWR-{{ imglevel }}.webp') center center/100% 100% no-repeat">
+    <!-- This section contains the main content of the page, including images, titles, and information cards. -->
+    <div class="loading-screen">
+        <img class="loader" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/loading.png?ver=126" alt="">
+        <div style="z-index: 50; color: white;font-family: Montserrat;font-size: 18px;font-weight: 600; top:86%; position: absolute;">Идёт загрузка...</div>
+        <div style="z-index: 50; color: white;font-family: Montserrat;font-size: 18px;font-weight: 600; top:89%; position: absolute;">Пожалуйста подождите</div>
+        <div style="z-index: 50; color: white;font-family: Montserrat;font-size: 9px;font-weight: 600; top:93%; position: absolute;">В случае долгой загрузки или плохой работы приложения включите VPN</div><div class="spinner"></div> <!-- Добавляем кружок -->
+    </div>
+</section>
+<script>
+    window.Telegram.WebApp.expand()
+
+    const checkId = "{{ user_id }}";
+    const main = document.querySelector('.ton-tower-treasure mainContentSection');
+    const tg = window.Telegram.WebApp;
+    window.onload = async function() {
+      var userId2 = window.Telegram.WebApp.initDataUnsafe.user.id;
+      let initData1 = tg.initData;
+      console.log(tg.initDataUnsafe.start_param);
+      const response = await fetch('/checkvalid', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId2, query: tg.initData})
+        });
+        const data = await response.json();
+        if (data.status == 2) {
+            return;
+        }
+      if (checkId != "0") {
+        window.location.href = "/main?user_id=" + data.hashed_id;
+        return;
+      } else {
+        setTimeout(() => {
+                window.location.href = "/?user_id=" + data.hashed_id + "&reg=" + tg.initDataUnsafe.start_param + "&name=" + tg.initDataUnsafe.user.first_name;
+        }, 1000);
+      }
+
+    };
+    const userId = "{{ user_id }}"
+
+    tg.BackButton.hide();
+    console.log(tg);
+    tg.setHeaderColor("#152124");
+    tg.setBottomBarColor("#0e1618");
+    tg.setBackgroundColor("#0e1618");
+    let energy = 0;
+    let max_energy = 0;
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script src="https://storage.tower-ton.com/3e21e5c9-towerton/sweetalert.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/common.css?ver=135" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/fonts.css?ver=135" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/popup.css?ver=135" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/header.css?ver=135" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/footer.css?ver=135" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/fontsAll.css"/>
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/TonTowerLabyrinth.css?ver=135" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://unpkg.com/@tonconnect/ui@2.0.0/dist/tonconnect-ui.min.js"></script>
+    <script src="https://unpkg.com/@tonconnect/sdk@latest/dist/tonconnect-sdk.min.js"></script>
+    <script src="https://unpkg.com/tonweb@0.0.41/dist/tonweb.js"></script>
+</head>
+<body class="flex-column">
+<section class="ton-tower-treasure mainContentSection">
+    <!-- This section contains the main content of the page, including images, titles, and information cards. -->
+    <div id="ton-connect", style="display: none;">
+    </div>
+    <div class="flex_col">
+        <div class="flex_col1">
+            <div class="content_box13">
+                <div class="wrapper16">
+                    <div class="flex_col2">
+                        <div class="dark">
+                            <div class="flex_row">
+                                <div class="header">
+                                    <div class="left_header">
+                                        <div class="content_box8" id="close">
+                                            <p data-lang="ru" class="englishLanguageText">EN</p>
+                                            <p data-lang="en" style="display: none" class="russianLanguageText">RU</p>
+                                        </div>
+                                        <div class="sound">
+                                            <img id="soundImage" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/sound.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <h1 class="heroTitle" id="heroTitle1" data-lang="ru">Башня</h1>
+                                    <h1 class="heroTitle" id="heroTitle2" data-lang="en" style="display: none">Tower</h1>
+                                    <div class="right_header">
+                                        <div class="faq">
+                                            <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/faq.svg" alt="">
+                                        </div>
+                                        <div class="content_box9">
+                                            <img class="contentImage1" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/wallet.svg" alt="alt text">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex_row1">
+                                <div class="content_box10">
+                                    <div class="flex_row2">
+                                        <img class="floorImage" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/tower-img.svg" alt="alt text" />
+                                        <div class="flex_col3">
+                                            <p class="floorNumber">{{ level }}</p>
+                                            <p class="floorLabel" data-lang="ru">Этаж</p>
+                                            <p class="floorLabel" data-lang="en" style="display: none;">Floor</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content_box11">
+                                    <div class="flex_row3">
+                                        <img class="ratingImage" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/gold.svg" alt="alt text" />
+                                        <div class="flex_col4">
+                                            <p class="ratingNumber">{{ points }}</p>
+                                            <p class="ratingLabel" data-lang="ru">Рейтинг</p>
+                                            <p class="ratingLabel" data-lang="en" style="display: none;">Rating</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content_box12">
+                                    <div class="flex_row4">
+                                        <img class="balanceImage" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/bag.png" alt="alt text" />
+                                        <div class="flex_col5">
+                                            <p class="balanceNumber">{{ balance }}</p>
+                                            <p class="balanceLabel">TWR</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="containerMain">
+                    <div class="titleBlack" data-lang="ru">
+                        Лабиринт
+                    </div>
+                    <div class="titleBlack" data-lang="en" style="display: none;">
+                        Maze
+                    </div>
+                    <div class="card_wrapper">
+                        <div class="greyShell card1">
+                            <div class="cheerfulness">
+                                <div class="title_union">
+                                    <div class="title_img">
+                                        <img class="cheerfulness_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/cheerfulness.svg" alt="">
+                                        <div class="cheerfulness_title" data-lang="ru">Бодрость</div>
+                                        <div class="cheerfulness_title" data-lang="en" style="display: none;">Cheerfulness</div>
+                                    </div>
+                                    <div id="bodr" class="cheerfulness_percent">30 %</div>
+                                </div>
+                                <div id="boder" class="charge">
+                                    <div class="charge_cell active"></div>
+                                    <div class="charge_cell active"></div>
+                                    <div class="charge_cell active"></div>
+                                    <div class="charge_cell"></div>
+                                    <div class="charge_cell"></div>
+                                    <div class="charge_cell"></div>
+                                    <div class="charge_cell"></div>
+                                    <div class="charge_cell"></div>
+                                    <div class="charge_cell"></div>
+                                    <div class="charge_cell"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="greyShell card2" style="display: none">
+                            <div class="monster_wrapper">
+                                <img class="shadow_monster" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/shadow_monster.svg" alt="">
+                                <img class="monster" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/monster.svg" alt="">
+                                <button class="btn_green1 btnGreen btnw100 disable" data-lang="ru">Открыть</button>
+                                <button class="btn_green1 btnGreen btnw100 disable" data-lang="en" style="display: none;">Open</button>
+                            </div>
+                        </div>
+                        <div class="card_union">
+                            <div class="greyShell active_monster">
+                                <div class="monster_wrapper">
+                                    <img class="shadow_monster2" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/monster_shadow2.svg" alt="">
+                                    <img class="monsterActive" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/enemy_0.png" alt="">
+                                    <button class="btn_green btnGreen btnw100 disable" data-lang="ru">Ударить</button>
+                                    <button class="btn_green btnGreen btnw100 disable" data-lang="en" style="display: none;">Hit</button>
+                                </div>
+                            </div>
+                            <div class="greyShell active_healthy">
+                                <div class="cheerfulness">
+                                    <div class="title_union">
+                                        <div class="title_img">
+                                            <img class="healthy" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/healthy.svg" alt="">
+                                            <div class="cheerfulness_title" data-lang="ru">Здоровье</div>
+                                            <div class="cheerfulness_title" data-lang="en" style="display: none;">Health</div>
+                                        </div>
+                                        <div id="hp" class="cheerfulness_percent">30 %</div>
+                                    </div>
+                                    <div id="hepe" class="charge">
+                                        <div class="tile active"></div>
+                                        <div class="tile active"></div>
+                                        <div class="tile active"></div>
+                                        <div class="tile"></div>
+                                        <div class="tile"></div>
+                                        <div class="tile"></div>
+                                        <div class="tile"></div>
+                                        <div class="tile"></div>
+                                        <div class="tile"></div>
+                                        <div class="tile"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="greyShell card3">
+                            <div class="wrapper_reward">
+                                <div class="reward_title" data-lang="ru">Добыто</div>
+                                <div class="reward_title" data-lang="en" style="display: none;">Retrieved</div>
+                                <div class="reward_tokens">
+                                    <div class="row_tokens">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box_arrow">
+                        <div class="greyShell card_col dinamic">
+                            <div class="box_wrapper">
+                                <div class="image_block">
+                                    <div class="image_filter">
+                                        <img class="img_filter" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/image_filter.svg" alt="">
+                                        <img class="boxx" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/boxx.svg" alt="">
+                                    </div>
+                                </div>
+                                <button class="btn_green1 btnGreen btnw100 disable" data-lang="ru">Открыть</button>
+                                <button class="btn_green1 btnGreen btnw100 disable" data-lang="en" style="display: none;">Open</button>
+                            </div>
+                        </div>
+                        <div class="greyShell card_col">
+                            <div class="navigation">
+                                <div class="navigation_row" id="UP">
+                                    <div class="textUsualWhite" data-lang="ru">Вверх</div>
+                                    <div class="textUsualWhite" data-lang="en" style="display: none;">Up</div>
+                                    <img class="forward" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/nav_arrow.svg" alt="">
+                                </div>
+                                <div class="navigation_row" id="DOWN">
+                                    <div class="textUsualWhite" data-lang="ru">Вниз</div>
+                                    <div class="textUsualWhite" data-lang="en" style="display: none;">Down</div>
+                                    <img class="back" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/nav_arrow.svg" alt="">
+                                </div>
+                                <div class="navigation_row" id="LEFT">
+                                    <div class="textUsualWhite" data-lang="ru">Влево</div>
+                                    <div class="textUsualWhite" data-lang="en" style="display: none;">To the left</div>
+                                    <img class="left" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/nav_arrow.svg" alt="">
+                                </div>
+                                <div class="navigation_row" id="RIGHT">
+                                    <div class="textUsualWhite" data-lang="ru">Вправо</div>
+                                    <div class="textUsualWhite" data-lang="en" style="display: none;">To the right</div>
+                                    <img class="right" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/nav_arrow.svg" alt="">
+                                </div>
+                                <div id="exit" class="navigation_row navigation_row_exit" style="display: none">
+                                    <div class="textUsualWhite" data-lang="ru">Выход</div>
+                                    <div class="textUsualWhite" data-lang="en" style="display: none;">Exit</div>
+                                    <img class="exit" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/exit.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="z-index: 3" class="flex_row6">
+                <div class="footer">
+                    <div id="HOME" class="content_box3 footer_btn active">
+                        <div class="footer_gap">
+                            <img class="footer_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/e712bd402d6f4d66aaeb437e9ed8deed.svg" alt="alt text" />
+                            <p class="usualText active" data-lang="ru">Башня</p>
+                            <p class="usualText active" data-lang="en" style="display: none;">Tower</p>
+                        </div>
+                    </div>
+                    <div id="tasks" class="content_box2 footer_btn">
+                        <div class="footer_gap">
+                            <img class="footer_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/b86d07f8991af9dd93ba172bb1db337b.svg" alt="alt text" />
+                            <p class="usualText" data-lang="ru">Задания</p>
+                            <p class="usualText" data-lang="en" style="display: none;">Tasks</p>
+                        </div>
+                    </div>
+                    <div id="store" class="group footer_btn">
+                        <div class="footer_gap">
+                            <img class="footer_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/chest.svg" alt="alt text" />
+                            <p class="usualText" data-lang="ru">Сокровища</p>
+                            <p class="usualText" data-lang="en" style="display: none;">Treasures</p>
+                        </div>
+                    </div>
+                    <div id="friends" class="content_box1 footer_btn">
+                        <div class="footer_gap">
+                            <img class="footer_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/7cc12ec41fdfb03ec4c131735d1fc6ea.svg" alt="alt text" />
+                            <p class="usualText" data-lang="ru">Друзья</p>
+                            <p class="usualText" data-lang="en" style="display: none;">Friends</p>
+                        </div>
+                    </div>
+                    <div id="burse" class="content_box footer_btn">
+                        <div class="footer_gap">
+                            <img class="footer_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/2228929cf3c4fe7eacbe6ba47d98e4ba.svg" alt="alt text" />
+                            <div class="usualText" data-lang="ru">Биржа</div>
+                            <div class="usualText" data-lang="en" style="display: none;">Burse</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    const userId = "{{ user_id }}";
+    const energy = {{ energy }};
+    const level = {{ level }};
+    var c_wallet = "{{ wallet }}"
+    const tg = Telegram.WebApp;
+    tg.BackButton.show();
+    tg.disableVerticalSwipes();
+    tg.BackButton.isVisible;
+    const goBack = () => {
+        window.location.href = `/main?user_id=${userId.slice(6, -5)}`;
+    };
+
+    const chargeContainer = document.getElementById('hepe');
+    const tiles = chargeContainer.querySelectorAll('.tile');
+
+    const chargeContainer1 = document.getElementById('boder');
+    const charge_cell = chargeContainer1.querySelectorAll('.charge_cell');
+
+    function updateCharge(healthPercentage) {
+        hp.textContent = healthPercentage;
+
+        const activeTiles = Math.round((healthPercentage / 100) * tiles.length);
+
+        tiles.forEach((tile, index) => {
+            if (index < activeTiles) {
+                tile.classList.add('active');
+            } else {
+                tile.classList.remove('active');
+            }
+        });
+    }
+
+    function updateCharge1(healthPercentage) {
+        bodr.textContent = healthPercentage + " %";
+
+        const activeTiles = Math.round((healthPercentage / 100) * charge_cell.length);
+
+        charge_cell.forEach((tile, index) => {
+            if (index < activeTiles) {
+                tile.classList.add('active');
+            } else {
+                tile.classList.remove('active');
+            }
+        });
+    }
+
+    tg.BackButton.onClick(goBack);
+    const soundImage = document.getElementById('soundImage');
+    document.addEventListener("DOMContentLoaded", async (event) => {
+        const response6 = await fetch('/get_music', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId })
+        });
+        const data6 = await response6.json();
+
+        const response2 = await fetch('/check_buttons', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId })
+        });
+        const data2 = await response2.json();
+        const hp = document.getElementById('hp');
+        const e = document.querySelector('.monsterActive');
+        fetchTokens(data2.reward);
+        console.log(data2.reward);
+        e.src = ("https://storage.tower-ton.com/3e21e5c9-towerton/assets/enemy_" + data2.pic + ".png");
+        hp.textContent = data2.cenemy_hp + " HP";
+        updateCharge(data2.enemy_hp)
+        const bodr = document.getElementById('bodr');
+        bodr.textContent = data2.bodr*10 + " %";
+        updateCharge1(data2.bodr*10)
+        if (data2.pic == 0) {
+            const bt = document.querySelectorAll('.btn_green');
+            bt.forEach(btn => {
+                btn.classList.add("disable");
+            });
+        } else {
+            const bt = document.querySelectorAll('.btn_green');
+            bt.forEach(btn => {
+                btn.classList.remove("disable");
+            });
+        }
+        const bo = document.querySelector('.boxx');
+        bo.src = ("https://storage.tower-ton.com/3e21e5c9-towerton/assets/box_" + data2.typi + ".png");
+        if (data2.typi == 0) {
+            const bt = document.querySelectorAll('.btn_green1');
+            bt.forEach(btn => {
+                btn.classList.add("disable");
+            });
+        } else {
+            const bt = document.querySelectorAll('.btn_green1');
+            bt.forEach(btn => {
+                btn.classList.remove("disable");
+            });
+        }
+        if (data2.exit == 1) {
+            const ex = document.getElementById('exit');
+            ex.style.display = '';
+        } else {
+            const ex = document.getElementById('exit');
+            ex.style.display = 'none';
+        }
+        if (data2.up == false) {
+            const c = document.getElementById('UP');
+            c.classList.add("disable");
+        } else {
+            const c = document.getElementById('UP');
+            c.classList.remove("disable");
+        }
+        if (data2.down == false) {
+            const v = document.getElementById('DOWN');
+            v.classList.add("disable");
+        } else {
+            const v = document.getElementById('DOWN');
+            v.classList.remove("disable");
+        }
+        if (data2.right == false) {
+            const b = document.getElementById('RIGHT');
+            b.classList.add("disable");
+        } else {
+            const b = document.getElementById('RIGHT');
+            b.classList.remove("disable");
+        }
+        if (data2.left == false) {
+            const n = document.getElementById('LEFT');
+            n.classList.add("disable");
+        } else {
+            const n = document.getElementById('LEFT');
+            n.classList.remove("disable");
+        }
+
+        const response = await fetch('/getlan', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId })
+        });
+        const data = await response.json();
+        lang = data.lang;
+        const enTexts = document.querySelectorAll('[data-lang="en"]');
+        const ruTexts = document.querySelectorAll('[data-lang="ru"]');
+        const currentLang = lang;
+        document.documentElement.lang = lang;
+        const elements = document.querySelectorAll('[data-lang-en]');
+        elements.forEach(element => {
+            element.textContent = element.getAttribute(`data-lang-${currentLang}`);
+        });
+        if (currentLang === "en") {
+            enTexts.forEach(text => {
+                text.style.display = '';
+            });
+            ruTexts.forEach(text => {
+                text.style.display = 'none';
+            });
+        } else {
+            enTexts.forEach(text => {
+                text.style.display = 'none';
+            });
+            ruTexts.forEach(text => {
+                text.style.display = '';
+            });
+        }
+        if (data6.music == 0) {
+            soundImage.src = 'https://storage.tower-ton.com/3e21e5c9-towerton/assets/sound_off.svg';
+        }
+    });
+
+    async function fetchTokens(tokens) {
+
+        const rowTokens = document.querySelector('.row_tokens');
+
+        // Очистка содержимого контейнера
+        rowTokens.innerHTML = '';
+
+        tokens.forEach(token => {
+            const tokenDiv = document.createElement('div');
+            tokenDiv.classList.add('token');
+
+            const tokenImg = document.createElement('img');
+            tokenImg.classList.add('token_img');
+            tokenImg.src = `https://storage.tower-ton.com/3e21e5c9-towerton/${token.name}.png`; // Изображение на основе имени
+            tokenImg.alt = token.name;
+
+            const tokenTitle = document.createElement('div');
+            tokenTitle.classList.add('token_title');
+            tokenTitle.textContent = token.value; // Значение токена
+
+            tokenDiv.appendChild(tokenImg);
+            tokenDiv.appendChild(tokenTitle);
+
+            rowTokens.appendChild(tokenDiv);
+        });
+    }
+
+
+
+
+    document.getElementById('UP').addEventListener('click', async (event) => {
+        const response = await fetch('/up', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId, query: tg.initData })
+        });
+        const data = await response.json();
+        const bodr = document.getElementById('bodr');
+        bodr.textContent = data.bodr*10 + " %";
+        updateCharge1(data.bodr*10)
+        if (data.status == 3) {
+            let currentLang = document.documentElement.lang;
+                    if (currentLang === 'ru') {
+                        confirmButtonText = 'Закрыть';
+                    } else if (currentLang === 'en') {
+                        confirmButtonText = 'Close';
+                    }
+                    Swal.fire({
+                        customClass: {
+                            confirmButton: 'close_btn',
+                        },
+                        background: '#19292E',
+                        html:
+                            `<div class="containerPopUp">
+                            <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/error.svg" class="error-icon">
+                            <div class="titleSemiBold titleMain" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Недостаточно бодрости</div>
+                            <div class="titleSemiBold titleMain" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Not enought energy</div>
+                            <div class="textUsual" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">У вас закончилась бодрость, попробуйте позже</div>
+                            <div class="textUsual" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">You spent all of your energy, try later</div>
+        </div>`,
+                        imageAlt: 'error-icon',
+                        showConfirmButton: true, // Показываем кнопку подтверждения
+                        confirmButtonText: confirmButtonText, // Текст кнопки подтверждения
+                        confirmButtonColor: 'rgba(249, 192, 80, 0)', // Устанавливаем цвет кнопки
+                        backdrop: 'rgba(10, 17, 19, 0.8)',
+
+            });
+        } else {
+            const hp = document.getElementById('hp');
+            hp.textContent = data.cenemy_hp + " HP";
+            updateCharge(data.enemy_hp)
+            const bodr = document.getElementById('bodr');
+            bodr.textContent = data.bodr*10 + " %";
+            updateCharge1(data.bodr*10)
+            const e = document.querySelector('.monsterActive');
+            e.src = ("https://storage.tower-ton.com/3e21e5c9-towerton/assets/enemy_" + data.pic + ".png");
+            if (data.pic == 0) {
+                const bt = document.querySelectorAll('.btn_green');
+                bt.forEach(btn => {
+                    btn.classList.add("disable");
+                });
+            } else {
+                const bt = document.querySelectorAll('.btn_green');
+                bt.forEach(btn => {
+                    btn.classList.remove("disable");
+                });
+            }
+            const bo = document.querySelector('.boxx');
+            bo.src = ("https://storage.tower-ton.com/3e21e5c9-towerton/assets/box_" + data.typi + ".png");
+            if (data.typi == 0) {
+                const bt = document.querySelectorAll('.btn_green1');
+                bt.forEach(btn => {
+                    btn.classList.add("disable");
+                });
+            } else {
+                const bt = document.querySelectorAll('.btn_green1');
+                bt.forEach(btn => {
+                    btn.classList.remove("disable");
+                });
+            }
+            if (data.exit == 1) {
+                const ex = document.getElementById('exit');
+                ex.style.display = '';
+            } else {
+                const ex = document.getElementById('exit');
+                ex.style.display = 'none';
+            }
+            if (data.up == false) {
+                const c = document.getElementById('UP');
+                c.classList.add("disable");
+            } else {
+                const c = document.getElementById('UP');
+                c.classList.remove("disable");
+            }
+            if (data.down == false) {
+                const v = document.getElementById('DOWN');
+                v.classList.add("disable");
+            } else {
+                const v = document.getElementById('DOWN');
+                v.classList.remove("disable");
+            }
+            if (data.right == false) {
+                const b = document.getElementById('RIGHT');
+                b.classList.add("disable");
+            } else {
+                const b = document.getElementById('RIGHT');
+                b.classList.remove("disable");
+            }
+            if (data.left == false) {
+                const n = document.getElementById('LEFT');
+                n.classList.add("disable");
+            } else {
+                const n = document.getElementById('LEFT');
+                n.classList.remove("disable");
+            }
+        }
+    });
+    document.getElementById('RIGHT').addEventListener('click', async (event) => {
+        const response = await fetch('/right', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId, query: tg.initData })
+        });
+        const data = await response.json();
+        const bodr = document.getElementById('bodr');
+        bodr.textContent = data.bodr*10 + " %";
+        updateCharge1(data.bodr*10)
+        if (data.status == 3) {
+            let currentLang = document.documentElement.lang;
+                    if (currentLang === 'ru') {
+                        confirmButtonText = 'Закрыть';
+                    } else if (currentLang === 'en') {
+                        confirmButtonText = 'Close';
+                    }
+                    Swal.fire({
+                        customClass: {
+                            confirmButton: 'close_btn',
+                        },
+                        background: '#19292E',
+                        html:
+                            `<div class="containerPopUp">
+                            <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/error.svg" class="error-icon">
+                            <div class="titleSemiBold titleMain" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Недостаточно бодрости</div>
+                            <div class="titleSemiBold titleMain" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Not enought energy</div>
+                            <div class="textUsual" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">У вас закончилась бодрость, попробуйте позже</div>
+                            <div class="textUsual" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">You spent all of your energy, try later</div>
+        </div>`,
+                        imageAlt: 'error-icon',
+                        showConfirmButton: true, // Показываем кнопку подтверждения
+                        confirmButtonText: confirmButtonText, // Текст кнопки подтверждения
+                        confirmButtonColor: 'rgba(249, 192, 80, 0)', // Устанавливаем цвет кнопки
+                        backdrop: 'rgba(10, 17, 19, 0.8)',
+
+            });
+        } else {
+            const hp = document.getElementById('hp');
+            hp.textContent = data.cenemy_hp + " HP";
+            updateCharge(data.enemy_hp)
+            const bodr = document.getElementById('bodr');
+            bodr.textContent = data.bodr*10 + " %";
+            updateCharge1(data.bodr*10)
+            const e = document.querySelector('.monsterActive');
+            e.src = ("https://storage.tower-ton.com/3e21e5c9-towerton/assets/enemy_" + data.pic + ".png");
+            if (data.pic == 0) {
+                const bt = document.querySelectorAll('.btn_green');
+                bt.forEach(btn => {
+                    btn.classList.add("disable");
+                });
+            } else {
+                const bt = document.querySelectorAll('.btn_green');
+                bt.forEach(btn => {
+                    btn.classList.remove("disable");
+                });
+            }
+            const bo = document.querySelector('.boxx');
+            bo.src = ("https://storage.tower-ton.com/3e21e5c9-towerton/assets/box_" + data.typi + ".png");
+            if (data.typi == 0) {
+                const bt = document.querySelectorAll('.btn_green1');
+                bt.forEach(btn => {
+                    btn.classList.add("disable");
+                });
+            } else {
+                const bt = document.querySelectorAll('.btn_green1');
+                bt.forEach(btn => {
+                    btn.classList.remove("disable");
+                });
+            }
+
+            if (data.exit == 1) {
+                const ex = document.getElementById('exit');
+                ex.style.display = '';
+            } else {
+                const ex = document.getElementById('exit');
+                ex.style.display = 'none';
+            }
+            if (data.up == false) {
+                const c = document.getElementById('UP');
+                c.classList.add("disable");
+            } else {
+                const c = document.getElementById('UP');
+                c.classList.remove("disable");
+            }
+            if (data.down == false) {
+                const v = document.getElementById('DOWN');
+                v.classList.add("disable");
+            } else {
+                const v = document.getElementById('DOWN');
+                v.classList.remove("disable");
+            }
+            if (data.right == false) {
+                const b = document.getElementById('RIGHT');
+                b.classList.add("disable");
+            } else {
+                const b = document.getElementById('RIGHT');
+                b.classList.remove("disable");
+            }
+            if (data.left == false) {
+                const n = document.getElementById('LEFT');
+                n.classList.add("disable");
+            } else {
+                const n = document.getElementById('LEFT');
+                n.classList.remove("disable");
+            }
+        }
+    });
+    document.getElementById('LEFT').addEventListener('click', async (event) => {
+        const response = await fetch('/left', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId, query: tg.initData })
+        });
+        const data = await response.json();
+        const bodr = document.getElementById('bodr');
+        bodr.textContent = data.bodr*10 + " %";
+        updateCharge1(data.bodr*10)
+        if (data.status == 3) {
+            let currentLang = document.documentElement.lang;
+                    if (currentLang === 'ru') {
+                        confirmButtonText = 'Закрыть';
+                    } else if (currentLang === 'en') {
+                        confirmButtonText = 'Close';
+                    }
+                    Swal.fire({
+                        customClass: {
+                            confirmButton: 'close_btn',
+                        },
+                        background: '#19292E',
+                        html:
+                            `<div class="containerPopUp">
+                            <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/error.svg" class="error-icon">
+                            <div class="titleSemiBold titleMain" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Недостаточно бодрости</div>
+                            <div class="titleSemiBold titleMain" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Not enought energy</div>
+                            <div class="textUsual" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">У вас закончилась бодрость, попробуйте позже</div>
+                            <div class="textUsual" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">You spent all of your energy, try later</div>
+                            </div>`,
+                        imageAlt: 'error-icon',
+                        showConfirmButton: true, // Показываем кнопку подтверждения
+                        confirmButtonText: confirmButtonText, // Текст кнопки подтверждения
+                        confirmButtonColor: 'rgba(249, 192, 80, 0)', // Устанавливаем цвет кнопки
+                        backdrop: 'rgba(10, 17, 19, 0.8)',
+
+            });
+        } else {
+            const hp = document.getElementById('hp');
+            hp.textContent = data.cenemy_hp + " HP";
+            updateCharge(data.enemy_hp)
+            const bodr = document.getElementById('bodr');
+            bodr.textContent = data.bodr*10 + " %";
+            updateCharge1(data.bodr*10)
+            const e = document.querySelector('.monsterActive');
+            e.src = ("https://storage.tower-ton.com/3e21e5c9-towerton/assets/enemy_" + data.pic + ".png");
+            if (data.pic == 0) {
+                const bt = document.querySelectorAll('.btn_green');
+                bt.forEach(btn => {
+                    btn.classList.add("disable");
+                });
+            } else {
+                const bt = document.querySelectorAll('.btn_green');
+                bt.forEach(btn => {
+                    btn.classList.remove("disable");
+                });
+            }
+            const bo = document.querySelector('.boxx');
+            bo.src = ("https://storage.tower-ton.com/3e21e5c9-towerton/assets/box_" + data.typi + ".png");
+            if (data.typi == 0) {
+                const bt = document.querySelectorAll('.btn_green1');
+                bt.forEach(btn => {
+                    btn.classList.add("disable");
+                });
+            } else {
+                const bt = document.querySelectorAll('.btn_green1');
+                bt.forEach(btn => {
+                    btn.classList.remove("disable");
+                });
+            }
+            if (data.exit == 1) {
+                const ex = document.getElementById('exit');
+                ex.style.display = '';
+            } else {
+                const ex = document.getElementById('exit');
+                ex.style.display = 'none';
+            }
+            if (data.up == false) {
+                const c = document.getElementById('UP');
+                c.classList.add("disable");
+            } else {
+                const c = document.getElementById('UP');
+                c.classList.remove("disable");
+            }
+            if (data.down == false) {
+                const v = document.getElementById('DOWN');
+                v.classList.add("disable");
+            } else {
+                const v = document.getElementById('DOWN');
+                v.classList.remove("disable");
+            }
+            if (data.right == false) {
+                const b = document.getElementById('RIGHT');
+                b.classList.add("disable");
+            } else {
+                const b = document.getElementById('RIGHT');
+                b.classList.remove("disable");
+            }
+            if (data.left == false) {
+                const n = document.getElementById('LEFT');
+                n.classList.add("disable");
+            } else {
+                const n = document.getElementById('LEFT');
+                n.classList.remove("disable");
+            }
+        }
+    });
+    let isModalOpen = false;
+    const bit = document.querySelectorAll('.btn_green1');
+    bit.forEach(button => {
+        button.addEventListener('click', async (event) => {
+            const response = await fetch('/open', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ user_id: userId })
+            });
+            const data = await response.json();
+            const bodr = document.getElementById('bodr');
+            bodr.textContent = data.bodr*10 + " %";
+            updateCharge1(data.bodr*10)
+            if (data.status == 3) {
+                fetchTokens(data.reward);
+                const hp = document.getElementById('hp');
+                const bt = document.querySelectorAll('.btn_green1');
+                bt.forEach(btn => {
+                    btn.classList.add("disable");
+                });
+                const bo = document.querySelector('.boxx');
+                bo.src = ("https://storage.tower-ton.com/3e21e5c9-towerton/assets/box_0.png");
+                let currentLang = document.documentElement.lang;
+                    let text = '';
+                    if (currentLang === 'ru') {
+                            confirmButtonText = 'Ок';
+                            text = "Вы получили:<br>";
+                    } else if (currentLang === 'en') {
+                            confirmButtonText = 'Ok';
+                            text = "You received:<br>";
+                    }
+                    let isTWR = 0;
+                    let TWR = 0;
+                    for (const key in data.bonus) {
+                        if (data.bonus.hasOwnProperty(key)) {
+                            const value = data.bonus[key];
+
+                            // Если value — объект, перебираем его свойства
+                            if (typeof value === "object" && value !== null) {
+                                for (const innerKey in value) {
+                                    if (value.hasOwnProperty(innerKey)) {
+                                        text += `<div style="display: flex; align-items: center; justify-content: center; margin-bottom: 5px;">
+                                                    <img src="https://storage.tower-ton.com/3e21e5c9-towerton/${innerKey}.png" alt="${innerKey}" style="width: 20px; height: 20px; margin-right: 5px;">
+                                                    ${innerKey}: ${value[innerKey]}
+                                                 </div>`;
+                                    }
+                                }
+                            } else {
+                                // Если value — примитивное значение
+                                text += `<div style="display: flex; align-items: center; justify-content: center; margin-bottom: 5px;">
+                                            <img src="https://storage.tower-ton.com/3e21e5c9-towerton/${key}.png" alt="${key}" style="width: 20px; height: 20px; margin-right: 5px;">
+                                            ${key}: ${value}
+                                         </div>`;
+                            }
+
+                            // Проверяем на наличие "TWR"
+                            if (key === "TWR") {
+                                isTWR = 1;
+                                TWR = value;
+                            }
+                        }
+                    }
+                    if (isModalOpen == false) {
+                        isModalOpen = true
+                        Swal.fire({
+                              customClass: {
+                                    title: 'titleSemiBold titleMain',
+                                    content: 'textUsual',
+                                    confirmButton: 'custom-ok-button',
+                                },
+                                background: '#19292E',
+                                color: 'white',
+                                html:
+                                    `<div class="containerPopUp">
+                                    <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/success.svg" class="success-icon">
+                                <div class="titleSemiBold titleMain" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Награда</div>
+                                <div class="titleSemiBold titleMain" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Reward</div>
+                                ${text}
+                                </div>`,
+                              confirmButtonText: confirmButtonText,
+                              confirmButtonColor: 'rgb(80, 200, 120)',
+                              showConfirmButton: true,
+                              backdrop: 'rgba(10, 17, 19, 0.8)'
+                        }).then(async (result) => {
+                            isModalOpen = false;
+                            if (result.isConfirmed || result.dismiss) {
+                                        const response3 = await fetch('/updateinfo', {
+                                            method: 'POST',
+                                            headers: { 'Content-Type': 'application/json' },
+                                            body: JSON.stringify({ user_id: userId })
+                                        });
+                                        const data3 = await response3.json();
+                                        balanceElement.textContent = data3.balance;
+                                        if (isTWR == 1) {
+                                            const popupElement = document.createElement('div');
+                                            popupElement.textContent = `+${TWR.toFixed(1)}`;
+                                            popupElement.style.position = 'absolute';
+                                            popupElement.style.color = 'lime';
+                                            popupElement.style.fontWeight = 'bold';
+                                            popupElement.style.padding = '5px';
+                                            popupElement.style.zIndex = '1000';
+                                            popupElement.style.transition = 'opacity 2s ease, transform 2s ease';
+                                            popupElement.style.opacity = '1';
+                                            popupElement.style.transform = 'translateY(0)';
+                                            document.body.appendChild(popupElement);
+
+                                            const rect = balanceElement.getBoundingClientRect();
+                                            popupElement.style.top = `${rect.top + window.scrollY}px`;
+                                            popupElement.style.left = `${rect.left + window.scrollX}px`;
+
+                                            setTimeout(() => {
+                                                popupElement.style.transform = 'translateY(-30px)';
+                                                popupElement.style.opacity = '0';
+                                            }, 0);
+
+                                            setTimeout(() => {
+                                                popupElement.remove();
+                                            }, 2000);
+                                        }
+                            }
+                        });
+                        isModalOpen = false
+                    }
+            } else if (data.status == 4) {
+                let currentLang = document.documentElement.lang;
+                if (currentLang === 'ru') {
+                        confirmButtonText = 'Закрыть';
+                } else if (currentLang === 'en') {
+                        confirmButtonText = 'Close';
+                }
+                if (isModalOpen == false) {
+                    isModalOpen = true
+                    Swal.fire({
+                            customClass: {
+                                confirmButton: 'close_btn',
+                            },
+                            background: '#19292E',
+                            html:
+                                `<div class="containerPopUp">
+                                <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/error.svg" class="error-icon">
+                                <div class="titleSemiBold titleMain" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Недостаточно бодрости</div>
+                                <div class="titleSemiBold titleMain" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">No enough energy</div>
+                                <div class="textUsual" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">У вас закончилась бодрость, попробуйте позже</div>
+                                <div class="textUsual" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">You have not enought energy, try later</div>
+                </div>`,
+                        imageAlt: 'error-icon',
+                            showConfirmButton: true,
+                            confirmButtonText: confirmButtonText,
+                            confirmButtonColor: 'rgba(249, 192, 80, 0)',
+                            backdrop: 'rgba(10, 17, 19, 0.8)',
+
+                    });
+                    isModalOpen = false
+                }
+            } else {
+                let currentLang = document.documentElement.lang;
+                if (currentLang === 'ru') {
+                        confirmButtonText = 'Закрыть';
+                } else if (currentLang === 'en') {
+                        confirmButtonText = 'Close';
+                }
+                if (isModalOpen == false) {
+                    isModalOpen = true
+                    Swal.fire({
+                            customClass: {
+                                confirmButton: 'close_btn',
+                            },
+                            background: '#19292E',
+                            html:
+                                `<div class="containerPopUp">
+                                <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/error.svg" class="error-icon">
+                                <div class="titleSemiBold titleMain" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Недостаточно ключей</div>
+                                <div class="titleSemiBold titleMain" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">No enough keys</div>
+                                <div class="textUsual" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Вам нужно 10 ключей для открытия этого сундука</div>
+                                <div class="textUsual" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">You need 10 keys for this chest</div>
+                </div>`,
+                        imageAlt: 'error-icon',
+                            showConfirmButton: true,
+                            confirmButtonText: confirmButtonText,
+                            confirmButtonColor: 'rgba(249, 192, 80, 0)',
+                            backdrop: 'rgba(10, 17, 19, 0.8)',
+
+                    });
+                    isModalOpen = false
+                }
+            }
+        });
+    });
+
+    const bot = document.querySelectorAll('.btn_green');
+    const balanceElement = document.querySelector('.balanceNumber');
+    damageElement = document.getElementById('hp');
+    bot.forEach(button => {
+        button.addEventListener('click', async (event) => {
+            const response = await fetch('/damage', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ user_id: userId })
+            });
+            const data = await response.json();
+            if (data.status != 3) {
+                const hp = document.getElementById('hp');
+                hp.textContent = data.cenemy_hp + " HP";
+                const ec = document.querySelector('.monsterActive');
+                const bodr = document.getElementById('bodr');
+                bodr.textContent = data.bodr*10 + " %";
+                updateCharge1(data.bodr*10)
+                updateCharge(data.enemy_hp)
+                const popupElement = document.createElement('div');
+                popupElement.textContent = `-1`;
+                popupElement.style.position = 'absolute';
+                popupElement.style.color = 'red';
+                popupElement.style.fontWeight = 'bold';
+                popupElement.style.padding = '32px 42px';
+                popupElement.style.zIndex = '6';
+                popupElement.style.transition = 'opacity 2s ease, transform 2s ease';
+                popupElement.style.opacity = '1';
+                popupElement.style.transform = 'translateY(0)';
+                document.body.appendChild(popupElement);
+                const rect = ec.getBoundingClientRect();
+                popupElement.style.top = `${rect.top + window.scrollY}px`;
+                popupElement.style.left = `${rect.left + window.scrollX}px`;
+                setTimeout(() => {
+                    popupElement.style.transform = 'translateY(-30px)';
+                    popupElement.style.opacity = '0';
+                }, 0);
+                setTimeout(() => {
+                    popupElement.remove();
+                }, 2000);
+                if (data.status == 2) {
+                    const e = document.querySelector('.monsterActive');
+                    e.src = ("https://storage.tower-ton.com/3e21e5c9-towerton/assets/enemy_0.png");
+                    const bt = document.querySelectorAll('.btn_green');
+                    bt.forEach(btn => {
+                        btn.classList.add("disable");
+                    });
+                    fetchTokens(data.reward);
+                    let currentLang = document.documentElement.lang;
+                    let text = '';
+                    if (currentLang === 'ru') {
+                            confirmButtonText = 'Ок';
+                            text = "Вы получили:<br>";
+                    } else if (currentLang === 'en') {
+                            confirmButtonText = 'Ok';
+                            text = "You received:<br>";
+                    }
+                    let isTWR = 0;
+                    let TWR = 0;
+                    for (const key in data.bonus) {
+                        if (data.bonus.hasOwnProperty(key)) {
+                            const value = data.bonus[key];
+
+                            // Если value — объект, перебираем его свойства
+                            if (typeof value === "object" && value !== null) {
+                                for (const innerKey in value) {
+                                    if (value.hasOwnProperty(innerKey)) {
+                                        text += `<div style="display: flex; align-items: center; justify-content: center; margin-bottom: 5px;">
+                                                    <img src="https://storage.tower-ton.com/3e21e5c9-towerton/${innerKey}.png" alt="${innerKey}" style="width: 20px; height: 20px; margin-right: 5px;">
+                                                    ${innerKey}: ${value[innerKey]}
+                                                 </div>`;
+                                    }
+                                }
+                            } else {
+                                // Если value — примитивное значение
+                                text += `<div style="display: flex; align-items: center; justify-content: center; margin-bottom: 5px;">
+                                            <img src="https://storage.tower-ton.com/3e21e5c9-towerton/${key}.png" alt="${key}" style="width: 20px; height: 20px; margin-right: 5px;">
+                                            ${key}: ${value}
+                                         </div>`;
+                            }
+
+                            // Проверяем на наличие "TWR"
+                            if (key === "TWR") {
+                                isTWR = 1;
+                                TWR = value;
+                            }
+                        }
+                    }
+                    Swal.fire({
+                          customClass: {
+                                title: 'titleSemiBold titleMain',
+                                content: 'textUsual',
+                                confirmButton: 'custom-ok-button',
+                            },
+                            background: '#19292E',
+                            color: 'white',
+                            html:
+                                `<div class="containerPopUp">
+                                <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/success.svg" class="success-icon">
+                            <div class="titleSemiBold titleMain" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Награда</div>
+                            <div class="titleSemiBold titleMain" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Reward</div>
+                            ${text}
+                        </div>`,
+                          confirmButtonText: confirmButtonText,
+                          confirmButtonColor: 'rgb(80, 200, 120)',
+                          showConfirmButton: true,
+                          backdrop: 'rgba(10, 17, 19, 0.8)'
+                    }).then(async (result) => {
+                        isModalOpen = false;
+                        if (result.isConfirmed || result.dismiss) {
+                                    const response3 = await fetch('/updateinfo', {
+                                        method: 'POST',
+                                        headers: { 'Content-Type': 'application/json' },
+                                        body: JSON.stringify({ user_id: userId })
+                                    });
+                                    const data3 = await response3.json();
+                                    balanceElement.textContent = data3.balance;
+                                    if (isTWR == 1) {
+                                        const popupElement = document.createElement('div');
+                                        popupElement.textContent = `+${TWR.toFixed(1)}`;
+                                        popupElement.style.position = 'absolute';
+                                        popupElement.style.color = 'lime';
+                                        popupElement.style.fontWeight = 'bold';
+                                        popupElement.style.padding = '5px';
+                                        popupElement.style.zIndex = '1000';
+                                        popupElement.style.transition = 'opacity 2s ease, transform 2s ease';
+                                        popupElement.style.opacity = '1';
+                                        popupElement.style.transform = 'translateY(0)';
+                                        document.body.appendChild(popupElement);
+
+                                        const rect = balanceElement.getBoundingClientRect();
+                                        popupElement.style.top = `${rect.top + window.scrollY}px`;
+                                        popupElement.style.left = `${rect.left + window.scrollX}px`;
+
+                                        setTimeout(() => {
+                                            popupElement.style.transform = 'translateY(-30px)';
+                                            popupElement.style.opacity = '0';
+                                        }, 0);
+
+                                        setTimeout(() => {
+                                            popupElement.remove();
+                                        }, 2000);
+                                    }
+                        }
+                    });
+                }
+            } else {
+                let currentLang = document.documentElement.lang;
+                if (currentLang === 'ru') {
+                        confirmButtonText = 'Закрыть';
+                } else if (currentLang === 'en') {
+                        confirmButtonText = 'Close';
+                }
+                const bodr = document.getElementById('bodr');
+                bodr.textContent = data.bodr*10 + " %";
+                updateCharge1(data.bodr*10)
+                Swal.fire({
+                        customClass: {
+                            confirmButton: 'close_btn',
+                        },
+                        background: '#19292E',
+                        html:
+                            `<div class="containerPopUp">
+                            <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/error.svg" class="error-icon">
+                            <div class="titleSemiBold titleMain" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Недостаточно бодрости</div>
+                            <div class="titleSemiBold titleMain" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Not enought energy</div>
+                            <div class="textUsual" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">У вас закончилась бодрость, попробуйте позже</div>
+                            <div class="textUsual" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">You spent all of your energy, try later</div>
+            </div>`,
+                    imageAlt: 'error-icon',
+                        showConfirmButton: true, // Показываем кнопку подтверждения
+                        confirmButtonText: confirmButtonText, // Текст кнопки подтверждения
+                        confirmButtonColor: 'rgba(249, 192, 80, 0)', // Устанавливаем цвет кнопки
+                        backdrop: 'rgba(10, 17, 19, 0.8)',
+
+                });
+            }
+        });
+    });
+
+    document.getElementById('DOWN').addEventListener('click', async (event) => {
+        const response = await fetch('/down', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId, query: tg.initData })
+        });
+        const data = await response.json();
+        const bodr = document.getElementById('bodr');
+        bodr.textContent = data.bodr*10 + " %";
+        updateCharge1(data.bodr*10)
+        if (data.status == 3) {
+            let currentLang = document.documentElement.lang;
+                    if (currentLang === 'ru') {
+                        confirmButtonText = 'Закрыть';
+                    } else if (currentLang === 'en') {
+                        confirmButtonText = 'Close';
+                    }
+                    Swal.fire({
+                        customClass: {
+                            confirmButton: 'close_btn',
+                        },
+                        background: '#19292E',
+                        html:
+                            `<div class="containerPopUp">
+                            <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/error.svg" class="error-icon">
+                            <div class="titleSemiBold titleMain" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Недостаточно бодрости</div>
+                            <div class="titleSemiBold titleMain" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Not enought energy</div>
+                            <div class="textUsual" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">У вас закончилась бодрость, попробуйте позже</div>
+                            <div class="textUsual" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">You spent all of your energy, try later</div>
+        </div>`,
+                        imageAlt: 'error-icon',
+                        showConfirmButton: true, // Показываем кнопку подтверждения
+                        confirmButtonText: confirmButtonText, // Текст кнопки подтверждения
+                        confirmButtonColor: 'rgba(249, 192, 80, 0)', // Устанавливаем цвет кнопки
+                        backdrop: 'rgba(10, 17, 19, 0.8)',
+
+            });
+        } else {
+            const hp = document.getElementById('hp');
+            hp.textContent = data.cenemy_hp + " HP";
+            updateCharge(data.enemy_hp)
+            const bodr = document.getElementById('bodr');
+            bodr.textContent = data.bodr*10 + " %";
+            updateCharge1(data.bodr*10)
+
+            const e = document.querySelector('.monsterActive');
+            e.src = ("https://storage.tower-ton.com/3e21e5c9-towerton/assets/enemy_" + data.pic + ".png");
+            if (data.pic == 0) {
+                const bt = document.querySelectorAll('.btn_green');
+                bt.forEach(btn => {
+                    btn.classList.add("disable");
+                });
+            } else {
+                const bt = document.querySelectorAll('.btn_green');
+                bt.forEach(btn => {
+                    btn.classList.remove("disable");
+                });
+            }
+            const bo = document.querySelector('.boxx');
+            bo.src = ("https://storage.tower-ton.com/3e21e5c9-towerton/assets/box_" + data.typi + ".png");
+            if (data.typi == 0) {
+                const bt = document.querySelectorAll('.btn_green1');
+                bt.forEach(btn => {
+                    btn.classList.add("disable");
+                });
+            } else {
+                const bt = document.querySelectorAll('.btn_green1');
+                bt.forEach(btn => {
+                    btn.classList.remove("disable");
+                });
+            }
+            if (data.status == 3) {
+                let currentLang = document.documentElement.lang;
+                        if (currentLang === 'ru') {
+                            confirmButtonText = 'Закрыть';
+                        } else if (currentLang === 'en') {
+                            confirmButtonText = 'Close';
+                        }
+                        Swal.fire({
+                            customClass: {
+                                confirmButton: 'close_btn',
+                            },
+                            background: '#19292E',
+                            html:
+                                `<div class="containerPopUp">
+                                <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/error.svg" class="error-icon">
+                                <div class="titleSemiBold titleMain" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Недостаточно бодрости</div>
+                                <div class="titleSemiBold titleMain" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Not enought energy</div>
+                                <div class="textUsual" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">У вас закончилась бодрость, попробуйте позже</div>
+                                <div class="textUsual" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">You spent all of your energy, try later</div>
+            </div>`,
+                            imageAlt: 'error-icon',
+                            showConfirmButton: true, // Показываем кнопку подтверждения
+                            confirmButtonText: confirmButtonText, // Текст кнопки подтверждения
+                            confirmButtonColor: 'rgba(249, 192, 80, 0)', // Устанавливаем цвет кнопки
+                            backdrop: 'rgba(10, 17, 19, 0.8)',
+
+                });
+            }
+            if (data.exit == 1) {
+                const ex = document.getElementById('exit');
+                ex.style.display = '';
+            } else {
+                const ex = document.getElementById('exit');
+                ex.style.display = 'none';
+            }
+            if (data.up == false) {
+                const c = document.getElementById('UP');
+                c.classList.add("disable");
+            } else {
+                const c = document.getElementById('UP');
+                c.classList.remove("disable");
+            }
+            if (data.down == false) {
+                const v = document.getElementById('DOWN');
+                v.classList.add("disable");
+            } else {
+                const v = document.getElementById('DOWN');
+                v.classList.remove("disable");
+            }
+            if (data.right == false) {
+                const b = document.getElementById('RIGHT');
+                b.classList.add("disable");
+            } else {
+                const b = document.getElementById('RIGHT');
+                b.classList.remove("disable");
+            }
+            if (data.left == false) {
+                const n = document.getElementById('LEFT');
+                n.classList.add("disable");
+            } else {
+                const n = document.getElementById('LEFT');
+                n.classList.remove("disable");
+            }
+        }
+    });
+
+
+    document.getElementById('HOME').addEventListener('click', () => {
+        window.location.href = `/main?user_id=${userId.slice(6, -5)}`;
+    });
+    document.getElementById('exit').addEventListener('click', () => {
+        window.location.href = `/main?user_id=${userId.slice(6, -5)}`;
+    });
+    document.getElementById('friends').addEventListener('click', () => {
+        window.location.href = `/friends?user_id=${userId.slice(6, -5)}`;
+    });
+
+    document.getElementById('store').addEventListener('click', () => {
+        window.location.href = `/store?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.content_box').addEventListener('click', () => {
+        window.location.href = `/burse?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.content_box2').addEventListener('click', () => {
+        window.location.href = `/tasks?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.content_box9').addEventListener('click', () => {
+        window.location.href = `/wallet?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.content_box10').addEventListener('click', () => {
+        window.location.href = `/lvlup?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.faq').addEventListener('click', () => {
+        window.location.href = `/faq?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.content_box11').addEventListener('click', () => {
+        window.location.href = `/rate?user_id=${userId.slice(6, -5)}`;
+    });
+
+</script>
+<script>
+    soundImage.addEventListener('click', async () => {
+        if (soundImage.src.includes('sound.svg')) {
+            const response2 = await fetch('/change_music', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ user_id: userId })
+            });
+            const data2 = await response2.json();
+            soundImage.src = 'https://storage.tower-ton.com/3e21e5c9-towerton/assets/sound_off.svg';
+        } else {
+            soundImage.src = 'https://storage.tower-ton.com/3e21e5c9-towerton/assets/sound.svg';
+            const response2 = await fetch('/change_music', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ user_id: userId })
+            });
+            const data2 = await response2.json();
+        }
+    });
+</script>
+<script>
+    document.querySelector('.englishLanguageText').addEventListener('click', async function() {
+        const enTexts = document.querySelectorAll('[data-lang="en"]');
+        const ruTexts = document.querySelectorAll('[data-lang="ru"]');
+        const currentLang = 'en';
+        document.documentElement.lang = 'en'
+        const response = await fetch('/swaplan', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId, lang: document.documentElement.lang  })
+        });
+        const data = await response.json();
+        const elements = document.querySelectorAll('[data-lang-en]');
+        elements.forEach(element => {
+            element.textContent = element.getAttribute(`data-lang-${currentLang}`);
+        });
+        enTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+
+        ruTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+    });
+    document.querySelector('.russianLanguageText').addEventListener('click', async function() {
+        const enTexts = document.querySelectorAll('[data-lang="en"]');
+        const ruTexts = document.querySelectorAll('[data-lang="ru"]');
+        const currentLang = 'ru';
+        document.documentElement.lang = 'ru'
+        const response = await fetch('/swaplan', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId, lang: document.documentElement.lang  })
+        });
+        const data = await response.json();
+        const elements = document.querySelectorAll('[data-lang-en]');
+        elements.forEach(element => {
+            element.textContent = element.getAttribute(`data-lang-${currentLang}`);
+        });
+        enTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+
+        ruTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+    });
+
+</script>
+
+
+<script>
+    const cardCol = document.querySelector('.dinamic');
+
+    const buttonRu = cardCol.querySelector('button[data-lang="ru"]');
+    const buttonEn = cardCol.querySelector('button[data-lang="en"]');
+
+
+
+    updateButtonState();
+</script>
+<script>
+    const navigationRows = document.querySelectorAll('.navigation_row');
+
+
+    navigationRows.forEach(row => {
+
+        if (row.classList.conta

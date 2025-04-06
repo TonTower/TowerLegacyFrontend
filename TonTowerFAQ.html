@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/popup.css" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/fontsAll.css" />
+<!--    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/TonTowerMainPage.css" />-->
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/TonTowerFAQ.css" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body class="flex-column">
+<section class="ton-tower-treasure mainContentSection">
+    <!-- This section contains the main content of the page, including images, titles, and information cards. -->
+    <div class="flex_col">
+        <div class="flex_col1">
+            <div class="content_box13">
+                <div class="wrapper16">
+                    <div class="flex_col2">
+                        <div class="dark">
+                            <div class="flex_row">
+                                <div class="header">
+                                    <div class="left_header">
+                                        <div class="content_box8" id="close">
+                                            <p data-lang="ru" class="englishLanguageText">EN</p>
+                                            <p data-lang="en" style="display: none" class="russianLanguageText">RU</p>
+                                        </div>                                        <div class="sound">
+                                            <img id="soundImage" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/sound.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <h1 class="heroTitle" id="heroTitle1" data-lang="ru">Башня</h1>
+                                    <h1 class="heroTitle" id="heroTitle2" data-lang="en" style="display: none">Tower</h1>
+                                    <div class="right_header">
+                                        <div class="faq">
+                                            <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/faq.svg" alt="">
+                                        </div>
+                                        <div class="content_box9">
+                                            <img class="contentImage1" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/wallet.svg" alt="alt text">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex_row1">
+                                <div class="content_box10">
+                                    <div class="flex_row2">
+                                        <img class="floorImage" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/tower-img.svg" alt="alt text" />
+                                        <div class="flex_col3">
+                                            <p class="floorNumber">{{ level }}</p>
+                                            <p class="floorLabel" data-lang="ru">Этаж</p>
+                                            <p class="floorLabel" data-lang="en" style="display: none;">Floor</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content_box11">
+                                    <div class="flex_row3">
+                                        <img class="ratingImage" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/gold.svg" alt="alt text" />
+                                        <div class="flex_col4">
+                                            <p class="ratingNumber">{{ points }}</p>
+                                            <p class="ratingLabel" data-lang="ru">Рейтинг</p>
+                                            <p class="ratingLabel" data-lang="en" style="display: none;">Rating</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content_box12">
+                                    <div class="flex_row4">
+                                        <img class="balanceImage" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/bag.png" alt="alt text" />
+                                        <div class="flex_col5">
+                                            <p class="balanceNumber">{{ balance }}</p>
+                                            <p class="balanceLabel">TWR</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="containerMain">
+                    <div class="faq_content greyShell">
+                        <div class="faq_block">
+                            <div class="faq_img">
+                                <button class="btn_faq">
+                                    <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/key2.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="faq_union">
+                                <div class="titleSemiBold" data-lang="ru">
+                                    Кузнец и ключи
+                                </div>
+                                <div class="titleSemiBold" data-lang="en" style="display: none">
+                                    The blacksmith and the keys
+                                </div>
+                                <div class="faq_description textUsual">
+                                    <p data-lang="ru">Кузнец куёт для вас бесплатные ключи. </p>
+                                    <p data-lang="en" style="display: none">The blacksmith forges free keys for you. </p>
+                                    <p data-lang="ru">Ключ изготавливается за 8 часов. Его ковку можно ускорить на 5% и 10% просмотром короткого ролика. Быстрый ключ можно получить одним просмотром.</p>
+                                    <p data-lang="en" style="display: none">The key is made in 8 hours. Its forging can be accelerated by 5% and 10% by watching a short video. A quick key can be obtained with a single scan.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq_block">
+                            <div class="faq_img">
+                                <button class="btn_faq">
+                                    <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/sledgehammer.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="faq_union">
+                                <div class="titleSemiBold" data-lang="ru">
+                                    Кузнец и сундуки
+                                </div>
+                                <div class="titleSemiBold" data-lang="en" style="display: none">
+                                    The blacksmith and the chests
+                                </div>
+                                <div class="faq_description textUsual">
+                                    <p data-lang="ru">Один ключ = один сундук.</p>
+                                    <p data-lang="en" style="display: none">One key = one chest.</p>
+                                    <p data-lang="ru">Открывая сундуки ты получаешь разные токены и NFT сети TON в разных количествах. Тебе может выпасть как один токен так и несколько. Их ценность может быть совершенно разной.</p>
+                                    <p data-lang="en" style="display: none">By opening the chests, you get different tokens and NFTs of the TON network in different amounts. You can get either one token or several. Their value can be completely different.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq_block">
+                            <div class="faq_img">
+                                <button>
+                                    <button class="btn_faq">
+                                        <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/floor2.svg" alt="">
+                                    </button>
+                                </button>
+                            </div>
+                            <div class="faq_union">
+                                <div class="titleSemiBold" data-lang="ru">
+                                    Этажи Башни
+                                </div>
+                                <div class="titleSemiBold" data-lang="en" style="display: none">
+                                    Floors of the Tower
+                                </div>
+                                <div class="faq_description textUsual">
+                                    <p data-lang="ru">Чем выше ты поднимаешься по этажам башни, тем более ценными становятся найденные токены. Ценность сундуков увеличивается каждые три этажа.</p>
+                                    <p data-lang="en" style="display: none">The higher you climb the floors of the tower, the more valuable the tokens you find become. The value of the chests increases every three floors.</p>
+                                    <p data-lang="ru">А начиная с 10-го этажа тебя ждут новые локации и тайные комнаты, где ты сможешь найти по истине ценные сокровища. Но не забудь нарисовать карту лабиринта, иначе заблудившись в нём ты не сможешь подняться на следующий этаж Башни.</p>
+                                    <p data-lang="en" style="display: none">And starting from the 10th floor, new locations and secret rooms await you, where you can find truly valuable treasures. But don't forget to draw a map of the maze, otherwise, if you get lost in it, you won't be able to climb to the next floor of the Tower.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq_block">
+                            <div class="faq_img">
+                                <button class="btn_faq">
+                                    <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/chest.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="faq_union">
+                                <div class="titleSemiBold" data-lang="ru">
+                                    Сокровища
+                                </div>
+                                <div class="titleSemiBold" data-lang="en" style="display: none">
+                                    Treasures
+                                </div>
+                                <div class="faq_description textUsual">
+                                    <p data-lang="ru">В своей сокровищнице ты можешь видеть все найденные тобой токены.</p>
+                                    <p data-lang="en" style="display: none">You can see all the tokens you've found in your treasure trove.</p>
+                                    <p data-lang="ru">По каждому токену доступны ссылки на торговые пары за пределами игры.</p>
+                                    <p data-lang="en" style="display: none">Links to trading pairs outside the game are available for each token.</p>
+                                    <p data-lang="ru">Накопив тот или иной токен до минимальной суммы вывода, ты можешь заказывать его вывод на подключенный к Башне кошелёк.</p>
+                                    <p data-lang="en" style="display: none">Having accumulated a particular token to the minimum withdrawal amount, you can order its withdrawal to a wallet connected to the Tower.</p>
+                                    <p data-lang="ru">В течении 24 часов вывод поступит на адрес.</p>
+                                    <p data-lang="en" style="display: none">The withdrawal will be sent to the address within 24 hours.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq_block">
+                            <div class="faq_img">
+                                <button class="btn_faq">
+                                    <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/7cc12ec41fdfb03ec4c131735d1fc6ea.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="faq_union">
+                                <div class="titleSemiBold" data-lang="ru">
+                                    Друзья
+                                </div>
+                                <div class="titleSemiBold" data-lang="en" style="display: none">
+                                    Friends
+                                </div>
+                                <div class="faq_description textUsual">
+                                    <p data-lang="ru">Приглашая друзей ты получаешь дополнительные ключи и токены REF.</p>
+                                    <p data-lang="en" style="display: none">By inviting friends, you get additional keys and REF tokens.</p>
+                                    <p data-lang="ru">Друг взявший ключ у кузнеца и открывший первый сундук, становится активным и приносит тебе +1 REF.</p>
+                                    <p data-lang="en" style="display: none">A friend who takes the key from the blacksmith and opens the first chest becomes active and brings you +1 REF.</p>
+                                    <p data-lang="ru">Каждые 10 активных друзей принесут тебе 1 ключ.</p>
+                                    <p data-lang="en" style="display: none">Every 10 active friends will bring you 1 key.</p>
+                                    <p data-lang="ru">Каждые 50 открытых сундуков твоими друзьями будут приносить тебе еще по 1 ключу.</p>
+                                    <p data-lang="en" style="display: none">Every 50 chests opened by your friends will bring you 1 more key.</p>
+                                    <p data-lang="ru">Чем больше активных друзей, тем больше пассивный доход.</p>
+                                    <p data-lang="en" style="display: none">The more active friends you have, the more passive income you have.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq_block">
+                            <div class="faq_img">
+                                <button class="btn_faq">
+                                    <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/b86d07f8991af9dd93ba172bb1db337b.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="faq_union">
+                                <div class="titleSemiBold" data-lang="ru">
+                                    Задания
+                                </div>
+                                <div class="titleSemiBold" data-lang="en" style="display: none">
+                                    Tasks
+                                </div>
+                                <div class="faq_description textUsual">
+                                    <p data-lang="ru">Выполняя задания по подписке ты сможешь получить не только игровые токены, но и ключи.</p>
+                                    <p data-lang="en" style="display: none">By completing subscription tasks, you will be able to receive not only game tokens, but also keys.</p>
+                                    <p data-lang="ru">Если пользователь будет быстро отписываться от каналов за подписку на которые получил награду, то данные действия в перспективе могут негативно повлиять на дропы в его игровом профиле.</p>
+                                    <p data-lang="en" style="display: none">If the user quickly unsubscribes from channels for which he has received a reward, these actions may negatively affect the drops in his gaming profile in the future.</p>
+                                    <p data-lang="ru">Выполняйте пожалуйста загрузку приложений в заданиях. Потратьте на них по одной минуте. Это очень важно.</p>
+                                    <p data-lang="en" style="display: none">Please download the applications in the tasks. Spend one minute on them each. It is very important.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq_block">
+                            <div class="faq_img">
+                                <button class="btn_faq">
+                                    <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/2228929cf3c4fe7eacbe6ba47d98e4ba.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="faq_union">
+                                <div class="titleSemiBold" data-lang="ru">
+                                    Биржа
+                                </div>
+                                <div class="titleSemiBold" data-lang="en" style="display: none">
+                                    Burse
+                                </div>
+                                <div class="faq_description textUsual">
+                                    <p data-lang="ru">На внутренней бирже ты можешь обменять токены и таким образом быстрее насобирать необходимый токен.</p>
+                                    <p data-lang="en" style="display: none">You can exchange tokens on the internal exchange and thus collect the necessary token faster.</p>
+                                    <p data-lang="ru">А стейкинг токенов даст тебе возможность зарабатывать пассивно, просто храня токены не в сокровищнице, а в стейкинге который находится в разделе Биржа.</p>
+                                    <p data-lang="en" style="display: none">And token staking will give you the opportunity to earn passively, simply by storing tokens not in the treasury, but in staking, which is located in the Burse section.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="scroll-button">
+                        <img class="arrow" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/arrow.svg" alt="">
+                    </button>
+                </div>
+
+            </div>
+            <div class="wrapper">
+                <div style="z-index: 3" class="flex_row6">
+                    <div class="footer">
+                        <div id="HOME" class="content_box3 footer_btn">
+                            <div class="footer_gap">
+                                <img class="footer_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/e712bd402d6f4d66aaeb437e9ed8deed.svg" alt="alt text" />
+                                <p class="usualText" data-lang="ru">Башня</p>
+                                <p class="usualText" data-lang="en" style="display: none;">Tower</p>
+                            </div>
+                        </div>
+                        <div id="tasks" class="content_box2 footer_btn">
+                            <div class="footer_gap">
+                                <img class="footer_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/b86d07f8991af9dd93ba172bb1db337b.svg" alt="alt text" />
+                                <p class="usualText" data-lang="ru">Задания</p>
+                                <p class="usualText" data-lang="en" style="display: none;">Tasks</p>
+                            </div>
+                        </div>
+                        <div id="store" class="group footer_btn">
+                            <div class="footer_gap">
+                                <img class="footer_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/chest.svg" alt="alt text" />
+                                <p class="usualText" data-lang="ru">Сокровища</p>
+                                <p class="usualText" data-lang="en" style="display: none;">Treasures</p>
+                            </div>
+                        </div>
+                        <div id="friends" class="content_box1 footer_btn">
+                            <div class="footer_gap">
+                                <img class="footer_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/7cc12ec41fdfb03ec4c131735d1fc6ea.svg" alt="alt text" />
+                                <p class="usualText" data-lang="ru">Друзья</p>
+                                <p class="usualText" data-lang="en" style="display: none;">Friends</p>
+                            </div>
+                        </div>
+                        <div id="burse" class="content_box footer_btn">
+                            <div class="footer_gap">
+                                <img class="footer_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/2228929cf3c4fe7eacbe6ba47d98e4ba.svg" alt="alt text" />
+                                <div class="usualText" data-lang="ru">Биржа</div>
+                                <div class="usualText" data-lang="en" style="display: none;">Burse</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    const userId = "{{ user_id }}";
+    const tg = Telegram.WebApp;
+    tg.BackButton.show();
+    tg.BackButton.isVisible;
+    const goBack = () => {
+        window.location.href = `/main?user_id=${userId.slice(6, -5)}`;
+    };
+    tg.BackButton.onClick(goBack);
+    document.getElementById('HOME').addEventListener('click', () => {
+        window.location.href = `/main?user_id=${userId.slice(6, -5)}`;
+    });
+    document.getElementById('friends').addEventListener('click', () => {
+        window.location.href = `/friends?user_id=${userId.slice(6, -5)}`;
+    });
+
+    document.getElementById('store').addEventListener('click', () => {
+        window.location.href = `/store?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.content_box').addEventListener('click', () => {
+        window.location.href = `/burse?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.content_box2').addEventListener('click', () => {
+        window.location.href = `/tasks?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.content_box9').addEventListener('click', () => {
+        window.location.href = `/wallet?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.content_box10').addEventListener('click', () => {
+        window.location.href = `/lvlup?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.faq').addEventListener('click', () => {
+        window.location.href = `/faq?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.content_box11').addEventListener('click', () => {
+        window.location.href = `/rate?user_id=${userId.slice(6, -5)}`;
+    });
+
+    document.addEventListener("DOMContentLoaded", async (event) => {
+            const response6 = await fetch('/get_music', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ user_id: userId })
+                });
+            const data6 = await response6.json();
+            const response = await fetch('/getlan', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ user_id: userId })
+            });
+            const data = await response.json();
+            lang = data.lang;
+            const enTexts = document.querySelectorAll('[data-lang="en"]');
+            const ruTexts = document.querySelectorAll('[data-lang="ru"]');
+            const currentLang = lang;
+            document.documentElement.lang = lang;
+            const elements = document.querySelectorAll('[data-lang-en]');
+            elements.forEach(element => {
+                element.textContent = element.getAttribute(`data-lang-${currentLang}`);
+            });
+            if (currentLang === "en") {
+                enTexts.forEach(text => {
+                    text.style.display = 'block';
+                });
+                ruTexts.forEach(text => {
+                    text.style.display = 'none';
+                });
+            } else {
+                enTexts.forEach(text => {
+                    text.style.display = 'none';
+                });
+                ruTexts.forEach(text => {
+                    text.style.display = 'block';
+                });
+            }
+            if (data6.music == 0) {
+                      soundImage.src = 'https://storage.tower-ton.com/3e21e5c9-towerton/assets/sound_off.svg';
+            }
+    });
+</script>
+
+<script>
+
+    const headerRow = document.querySelector('.title');
+    const tableContainer = document.querySelector('.table-container');
+
+    window.addEventListener('scroll', function() {
+        const offset = window.scrollY;
+
+        if (offset > tableContainer.offsetTop) {
+            headerRow.classList.add('fixed'); // Добавляем класс фиксированного заголовка
+        } else {
+            headerRow.classList.remove('fixed'); // Убираем класс, если скролл в верхней части
+        }
+    });
+</script>
+
+<script>
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '/get_music?user_id=' + userId, true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        var musicData = JSON.parse(xhr.responseText);
+        console.log(musicData);
+        if (musicData.music == 0) {
+          soundImage.src = 'https://storage.tower-ton.com/3e21e5c9-towerton/assets/sound_off.png';
+        }
+      }
+    };
+    xhr.send();
+
+    soundImage.addEventListener('click', () => {
+      if (soundImage.src.includes('sound.png')) {
+        soundImage.src = 'https://storage.tower-ton.com/3e21e5c9-towerton/assets/sound_off.png';
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/change_music?user_id=' + userId, true);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+
+          }
+        };
+        xhr.send();
+      } else {
+        soundImage.src = 'https://storage.tower-ton.com/3e21e5c9-towerton/assets/sound.png';
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/change_music?user_id=' + userId, true);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+
+          }
+        };
+        xhr.send();
+      }
+    });
+</script>
+
+<script>
+    const buttons = document.querySelectorAll('.buttons_row .category-block');
+    const ratingTexts = document.querySelectorAll('.rating_text');
+    const currentLocations = document.querySelectorAll('.current_location');
+    const ratingLists = document.querySelectorAll('.rating_list');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+
+            buttons.forEach(b => b.classList.remove('active'));
+
+
+            button.classList.add('active');
+
+
+            const index = Array.from(buttons).indexOf(button);
+
+
+            ratingTexts.forEach(r => r.classList.remove('active'));
+            currentLocations.forEach(c => c.classList.remove('active'));
+            ratingLists.forEach(l => l.classList.remove('active'));
+
+
+            ratingTexts[index].classList.add('active');
+            currentLocations[index].classList.add('active');
+            ratingLists[index].classList.add('active');
+        });
+    });
+</script>
+<script>
+    const scrollButtons = document.querySelectorAll(".scroll-button");
+
+    scrollButtons.forEach(scrollButton => {
+        let isAtTop = true;
+        const arrowImage = scrollButton.querySelector(".arrow");
+
+        scrollButton.addEventListener("click", () => {
+            if (isAtTop) {
+                window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: "smooth"
+                });
+            } else {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
+        });
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY === 0) {
+                isAtTop = true;
+                arrowImage.style.transform = 'rotate(0deg)';
+                scrollButton.style.padding = '12px 11px 17px 11px';
+            } else if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                isAtTop = false;
+                arrowImage.style.transform = 'rotate(180deg)';
+                scrollButton.style.padding = '17px 11px 12px 11px';
+            } else {
+                isAtTop = false;
+                arrowImage.style.transform = 'rotate(180deg)';
+                scrollButton.style.padding = '17px 11px 12px 11px';
+            }
+        });
+    });
+</script>
+<script>
+    document.querySelector('.englishLanguageText').addEventListener('click', async function() {
+        const enTexts = document.querySelectorAll('[data-lang="en"]');
+        const ruTexts = document.querySelectorAll('[data-lang="ru"]');
+        const currentLang = 'en';
+        document.documentElement.lang = 'en'
+        const response = await fetch('/swaplan', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId, lang: document.documentElement.lang  })
+        });
+        const data = await response.json();
+        const elements = document.querySelectorAll('[data-lang-en]');
+        elements.forEach(element => {
+            element.textContent = element.getAttribute(`data-lang-${currentLang}`);
+        });
+        enTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+
+        ruTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+    });
+    document.querySelector('.russianLanguageText').addEventListener('click', async function() {
+        const enTexts = document.querySelectorAll('[data-lang="en"]');
+        const ruTexts = document.querySelectorAll('[data-lang="ru"]');
+        const currentLang = 'ru';
+        document.documentElement.lang = 'ru'
+        const response = await fetch('/swaplan', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId, lang: document.documentElement.lang  })
+        });
+        const data = await response.json();
+        const elements = document.querySelectorAll('[data-lang-en]');
+        elements.forEach(element => {
+            element.textContent = element.getAttribute(`data-lang-${currentLang}`);
+        });
+        enTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+
+        ruTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+    });
+
+</script>
+</body>
+</html>

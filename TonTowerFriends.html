@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/common.css?ver=135" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/fonts.css?ver=135" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/popup.css?ver=135" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/header.css?ver=135" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/footer.css?ver=135" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/fontsAll.css" />
+    <script src="https://storage.tower-ton.com/3e21e5c9-towerton/sad.min.js"></script>
+    <script src="https://storage.tower-ton.com/3e21e5c9-towerton/sweetalert.js"></script>
+
+    <!--    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/TonTowerTreasure.css" />-->
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/TonTowerFriends.css?ver=135" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body class="flex-column">
+<section class="ton-tower-treasure mainContentSection">
+    <!-- This section contains the main content of the page, including images, titles, and information cards. -->
+    <div class="flex_col">
+        <div class="flex_col1">
+            <div class="content_box13">
+                <div class="wrapper16">
+                    <div class="flex_col2">
+                        <div class="dark">
+                            <div class="flex_row">
+                                <div class="header">
+                                    <div class="left_header">
+                                        <div class="content_box8" id="close">
+                                            <p data-lang="ru" class="englishLanguageText">EN</p>
+                                            <p data-lang="en" style="display: none" class="russianLanguageText">RU</p>
+                                        </div>
+                                        <div class="sound">
+                                            <img id="soundImage" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/sound.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <h1 class="heroTitle" id="heroTitle1" data-lang="ru" style="display: flex;">Башня</h1>
+                                    <h1 class="heroTitle" id="heroTitle2" data-lang="en" style="display: none">Tower</h1>
+                                    <div class="right_header">
+                                        <div class="faq">
+                                            <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/faq.svg" alt="">
+                                        </div>
+                                        <div class="content_box9">
+                                            <img class="contentImage1" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/wallet.svg" alt="alt text">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex_row1">
+                                <div class="content_box10">
+                                    <div class="flex_row2">
+                                        <img class="floorImage" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/tower-img.svg" alt="alt text" />
+                                        <div class="flex_col3">
+                                            <p class="floorNumber">{{ level }}</p>
+                                            <p class="floorLabel" data-lang="ru">Этаж</p>
+                                            <p class="floorLabel" data-lang="en" style="display: none;">Floor</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content_box11">
+                                    <div class="flex_row3">
+                                        <img class="ratingImage" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/gold2.svg" alt="alt text" />
+                                        <div class="flex_col4">
+                                            <p class="ratingNumber">{{ points }}</p>
+                                            <p class="ratingLabel" data-lang="ru">Рейтинг</p>
+                                            <p class="ratingLabel" data-lang="en" style="display: none;">Rating</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content_box12">
+                                    <div class="flex_row4">
+                                        <img class="balanceImage" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/bag.webp" alt="alt text" />
+                                        <div class="flex_col5">
+                                            <p class="balanceNumber">{{ balance }}</p>
+                                            <p class="balanceLabel">TWR</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="containerMain">
+                    <div class="cols">
+                        <div class="col">
+                            <div class="invite bigRow">
+                                    <div class="invite_img">
+                                        <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/keys.svg" alt="">
+                                    </div>
+                                    <div class="invite_text">
+                                        <div class="titleRegularJaro" data-lang="ru">
+                                            Приглашай друзей
+                                        </div>
+                                        <div class="titleRegularJaro" data-lang="en" style="display: none">
+                                            Invite your friends
+                                        </div>
+                                        <div class="textUsual" data-lang="ru">
+                                            Получай ключи
+                                        </div>
+                                        <div class="textUsual" data-lang="en" style="display: none">
+                                            Get the keys
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="scale_union">
+                                <div class="scale">
+                                    <div class="scale_progress"></div>
+                                </div>
+                                <div class="textJaro">
+                                    {{ invreward }}/10
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="get_keys bigRow">
+                                <div class="get_img">
+                                    <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/gold.svg" alt="">
+                                </div>
+                                <div class="keys_text">
+                                    <div class="titleRegularJaro" data-lang="ru">
+                                        Получай ключи
+                                    </div>
+                                    <div class="titleRegularJaro" data-lang="en" style="display: none;">
+                                        Get the keys
+                                    </div>
+                                    <div class="textUsual" data-lang="ru">
+                                        За открытые сундуки друзей
+                                    </div>
+                                    <div class="textUsual" data-lang="en" style="display: none;">
+                                        For the open chests of friends
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="scale_union2">
+                                <div class="scale2">
+                                    <div class="scale_progress2"></div>
+                                </div>
+                                <div class="textJaro">
+                                    {{ chestreward }}/50
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="banner_keys greyShell">
+                        <div class="keys_quantity">
+                            <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/key.svg" alt="">
+                            <div class="banner_quantity">
+                                {{ keystoclaim }}
+                            </div>
+                        </div>
+                        <button id="t1" class="take_off" type="submit" data-lang="ru">Снять</button>
+                        <button id="t2" class="take_off" type="submit" data-lang="en" style="display: none;">Take off</button>
+                    </div>
+                    <div class="invite_buttons">
+                        <button id="i1" class="btnGreen btnw100" data-lang="ru">Пригласить друга</button>
+                        <button id="i2" class="btnGreen btnw100" data-lang="en" style="display: none;">Invite a friend</button>
+                        <button class="copy">
+                            <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/copy.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="information titleMedium greyShell">
+                        <div class="information_friends">
+                            <div>
+                                {{ friends }}
+                            </div>
+                            <div data-lang="ru">Активных друзей</div>
+                            <div data-lang="en" style="display: none;">Active friends</div>
+                        </div>
+                        <div data-lang="ru">Рейтинг</div>
+                        <div data-lang="en" style="display: none;">Rating</div>
+                    </div>
+                    <div class="table_users">
+                        <div style="display: none" class="table_user">
+                            <div class="user_union">
+                                <div class="user_name">Кыш отсюда</div>
+                                <div class="user_quantity">давай-давай</div>
+                            </div>
+                            <div class="chest">
+                                <img class="chest_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/chest2.svg" alt="">
+                                <div class="chest_quantity">
+                                    9999
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="scroll-button">
+                        <img class="arrow" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/arrow.svg" alt="">
+                    </button>
+                </div>
+
+            </div>
+            <div class="wrapper">
+                <div style="z-index: 3" class="flex_row6">
+                    <div class="footer">
+                        <div id="HOME" class="content_box3 footer_btn">
+                            <div class="footer_gap">
+                                <img class="footer_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/e712bd402d6f4d66aaeb437e9ed8deed.svg" alt="alt text" />
+                                <p class="usualText" data-lang="ru">Башня</p>
+                                <p class="usualText" data-lang="en" style="display: none;">Tower</p>
+                            </div>
+                        </div>
+                        <div id="tasks" class="content_box2 footer_btn">
+                            <div class="footer_gap">
+                                <img class="footer_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/b86d07f8991af9dd93ba172bb1db337b.svg" alt="alt text" />
+                                <p class="usualText" data-lang="ru">Задания</p>
+                                <p class="usualText" data-lang="en" style="display: none;">Tasks</p>
+                            </div>
+                        </div>
+                        <div id="store" class="group footer_btn">
+                            <div class="footer_gap">
+                                <img class="footer_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/chest.svg" alt="alt text" />
+                                <p class="usualText" data-lang="ru">Сокровища</p>
+                                <p class="usualText" data-lang="en" style="display: none;">Treasures</p>
+                            </div>
+                        </div>
+                        <div id="friends" class="content_box1 footer_btn active">
+                            <div class="footer_gap">
+                                <img class="footer_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/7cc12ec41fdfb03ec4c131735d1fc6ea.svg" alt="alt text" />
+                                <p class="usualText active" data-lang="ru">Друзья</p>
+                                <p class="usualText active" data-lang="en" style="display: none;">Friends</p>
+                            </div>
+                        </div>
+                        <div id="burse" class="content_box footer_btn">
+                            <div class="footer_gap">
+                                <img class="footer_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/2228929cf3c4fe7eacbe6ba47d98e4ba.svg" alt="alt text" />
+                                <div class="usualText" data-lang="ru">Биржа</div>
+                                <div class="usualText" data-lang="en" style="display: none;">Burse</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    const userId = "{{ user_id }}";
+    const energy = {{ energy }};
+    const level = {{ level }};
+    var c_wallet = "{{ wallet }}";
+
+    const chests = ({{ chestreward }} * 100 / 50);
+    const invs = ({{ invreward }} * 100 / 10);
+    const scale_progress = document.querySelector('.scale_progress');
+    const scale_result2 = document.querySelector('.scale_progress2');
+    const keysam = document.querySelector('.banner_quantity');
+    if (scale_progress && scale_result2) {
+        scale_result2.style.width = `${chests}%`;
+        scale_progress.style.width = `${invs}%`;
+    } else {
+        console.error('Elements not found');
+    }
+    var lines = 1;
+
+    const inviteButton = document.querySelector('.copy');
+    const link = `https://t.me/TowerTon_bot?start={{ t_us }}`;
+    const soundImage = document.getElementById('soundImage');
+    document.addEventListener("DOMContentLoaded", async (event) => {
+        const response6 = await fetch('/get_music', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId })
+        });
+        const data6 = await response6.json();
+        if (data6.music == 0) {
+            soundImage.src = 'https://storage.tower-ton.com/3e21e5c9-towerton/assets/sound_off.svg';
+        }
+    });
+    inviteButton.addEventListener('click', () => {
+        navigator.clipboard.writeText(link);
+    });
+    function sendMessageToBot() {
+        const message = "https://t.me/share/url?url=https://t.me/TowerTon_bot?start={{ t_us }}&text=\n\nПривет 👋\n\nТеперь можно дропать токены без ожидания листингов 💎\n\nПрисоединяйся, покорим Башню вместе! 🏰";
+        window.Telegram.WebApp.openTelegramLink(message);
+    }
+    function sendMessageToBot2() {
+        const message = "https://t.me/share/url?url=https://t.me/TowerTon_bot?start={{ t_us }}&text=\nJoin to me, lets get this tower together";
+        window.Telegram.WebApp.openTelegramLink(message);
+    }
+    document.getElementById('i1').addEventListener('click', () => {
+        sendMessageToBot();
+    });
+    document.getElementById('i2').addEventListener('click', () => {
+        sendMessageToBot2();
+    });
+    const tg = Telegram.WebApp;
+    tg.BackButton.show();
+    tg.BackButton.isVisible;
+    const goBack = () => {
+        window.location.href = `/main?user_id=${userId.slice(6, -5)}`;
+    };
+    tg.BackButton.onClick(goBack);
+    document.getElementById('t1').addEventListener('click', async (event) => {
+        const response = await fetch('/withdrawkeys', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId })
+        });
+        const data = await response.json();
+        if (data.status == 1) {
+            keysam.textContent = "0";
+            Swal.fire({
+                customClass: {
+                    confirmButton: 'custom-ok-button',
+                },
+                background: '#19292E',
+                html:
+                    `<div class="containerPopUp">
+                        <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/success.svg" class="success-icon">
+                        <div class="titleSemiBold titleMain">Вы сняли ключи!</div>
+                    </div>`,
+                imageAlt: 'succes_icon',
+                showConfirmButton: true,
+                confirmButtonColor: 'rgb(80, 200, 120)',
+                confirmButtonText: 'Ок',
+                backdrop: 'rgba(10, 17, 19, 0.8)'
+            });
+        } else {
+            Swal.fire({
+                customClass: {
+                    confirmButton: 'error-ok-button',
+                },
+                background: '#19292E',
+                html:
+                    `<div class="containerPopUp">
+                        <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/error.svg" class="error-icon">
+                        <div class="titleSemiBold titleMain">У вас нет ключей</div>
+                    </div>`,
+                imageAlt: 'error_icon',
+                showConfirmButton: true,
+                confirmButtonColor: 'rgb(163, 57, 26)', // Устанавливаем цвет кнопки
+                confirmButtonClass: 'error-ok-button', // Применяем кастомный класс
+                confirmButtonText: 'Ок',
+                backdrop: 'rgba(10, 17, 19, 0.8)'
+            });
+        }
+    });
+    document.getElementById('t2').addEventListener('click', async (event) => {
+        const response = await fetch('/withdrawkeys', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId })
+        });
+        const data = await response.json();
+        if (data.status == 1) {
+            keysam.textContent = "0";
+            Swal.fire({
+                customClass: {
+                    confirmButton: 'custom-ok-button',
+                },
+                background: '#19292E',
+                html:
+                    `<div class="containerPopUp">
+                        <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/success.svg" class="success-icon">
+                        <div class="titleSemiBold titleMain">You got keys!</div>
+                    </div>`,
+                imageAlt: 'succes_icon',
+                showConfirmButton: true,
+                confirmButtonColor: 'rgb(80, 200, 120)',
+                confirmButtonText: 'Ok',
+                backdrop: 'rgba(10, 17, 19, 0.8)'
+            });
+        } else {
+            Swal.fire({
+                customClass: {
+                    confirmButton: 'error-ok-button',
+                },
+                background: '#19292E',
+                html:
+                    `<div class="containerPopUp">
+                        <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/error.svg" class="error-icon">
+                        <div class="titleSemiBold titleMain">You dont have keys</div>
+                    </div>`,
+                imageAlt: 'error_icon',
+                showConfirmButton: true,
+                confirmButtonColor: 'rgb(163, 57, 26)',
+                confirmButtonText: 'Ok',
+                backdrop: 'rgba(10, 17, 19, 0.8)'
+            });
+        }
+    });
+    document.addEventListener("DOMContentLoaded", async function() {
+        const response = await fetch('/getlan', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId })
+        });
+        const data = await response.json();
+        lang = data.lang;
+        const enTexts = document.querySelectorAll('[data-lang="en"]');
+        const ruTexts = document.querySelectorAll('[data-lang="ru"]');
+        const currentLang = lang;
+        document.documentElement.lang = lang;
+        const elements = document.querySelectorAll('[data-lang-en]');
+        elements.forEach(element => {
+            element.textContent = element.getAttribute(`data-lang-${currentLang}`);
+        });
+        if (currentLang === "en") {
+            enTexts.forEach(text => {
+                text.style.display = 'block';
+            });
+            ruTexts.forEach(text => {
+                text.style.display = 'none';
+            });
+        } else {
+            enTexts.forEach(text => {
+                text.style.display = 'none';
+            });
+            ruTexts.forEach(text => {
+                text.style.display = 'block';
+            });
+        }
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', `/get_reffs?user_id=${userId.slice(6, -5)}`, true);
+
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState === 4 && xhr.status === 200) {
+                var coinsData = JSON.parse(xhr.responseText);
+                console.log(coinsData);
+                addNewRows(coinsData, lines);
+            }
+        };
+        xhr.send();
+    });
+    function addNewRows(data, lines) {
+        const existingRow = document.querySelector('.table_user');
+        data.forEach(item => {
+            if (item.keys != "TWR") {
+                const newRow = existingRow.cloneNode(true);
+                newRow.style.display = "flex";
+                newRow.querySelector('.user_name').textContent = item.name;
+                newRow.querySelector('.user_quantity').textContent = item.keys + " этаж";
+                newRow.querySelector('.chest_quantity').textContent = item.points;
+                existingRow.after(newRow);
+                lines++;
+                const numericValueElements = newRow.querySelectorAll('.numericValue1, .numericValue2');
+
+                numericValueElements.forEach(element => {
+                    const value = element.textContent.trim();
+
+                    if (value.length > 2) {
+                        element.style.fontSize = '10px';
+                    }
+                });
+            }
+        });
+    }
+
+    document.getElementById('HOME').addEventListener('click', () => {
+        window.location.href = `/main?user_id=${userId.slice(6, -5)}`;
+    });
+    document.getElementById('store').addEventListener('click', () => {
+        window.location.href = `/store?user_id=${userId.slice(6, -5)}`;
+    });
+    document.getElementById('tasks').addEventListener('click', () => {
+        window.location.href = `/tasks?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.flex_row4').addEventListener('click', () => {
+        window.location.href = `/twr?user_id=${userId.slice(6, -5)}`;
+    });
+    document.getElementById('burse').addEventListener('click', () => {
+        window.location.href = `/burse?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.content_box9').addEventListener('click', () => {
+        window.location.href = `/wallet?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.content_box10').addEventListener('click', () => {
+        window.location.href = `/lvlup?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.faq').addEventListener('click', () => {
+        window.location.href = `/faq?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.content_box11').addEventListener('click', () => {
+        window.location.href = `/rate?user_id=${userId.slice(6, -5)}`;
+    });
+</script>
+
+<script>
+    soundImage.addEventListener('click', async () => {
+        if (soundImage.src.includes('sound.svg')) {
+            const response2 = await fetch('/change_music', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ user_id: userId })
+            });
+            const data2 = await response2.json();
+            soundImage.src = 'https://storage.tower-ton.com/3e21e5c9-towerton/assets/sound_off.svg';
+        } else {
+            soundImage.src = 'https://storage.tower-ton.com/3e21e5c9-towerton/assets/sound.svg';
+            const response2 = await fetch('/change_music', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ user_id: userId })
+            });
+            const data2 = await response2.json();
+        }
+    });
+</script>
+<script>
+    const scrollButtons = document.querySelectorAll(".scroll-button");
+
+    scrollButtons.forEach(scrollButton => {
+        let isAtTop = true;
+        const arrowImage = scrollButton.querySelector(".arrow");
+
+        scrollButton.addEventListener("click", () => {
+            if (isAtTop) {
+                window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: "smooth"
+                });
+            } else {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
+        });
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY === 0) {
+                isAtTop = true;
+                arrowImage.style.transform = 'rotate(0deg)';
+                scrollButton.style.padding = '12px 11px 17px 11px';
+            } else if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                isAtTop = false;
+                arrowImage.style.transform = 'rotate(180deg)';
+                scrollButton.style.padding = '17px 11px 12px 11px';
+            } else {
+                isAtTop = false;
+                arrowImage.style.transform = 'rotate(180deg)';
+                scrollButton.style.padding = '17px 11px 12px 11px';
+            }
+        });
+    });
+</script>
+<script>
+    document.querySelector('.englishLanguageText').addEventListener('click', async function() {
+        const enTexts = document.querySelectorAll('[data-lang="en"]');
+        const ruTexts = document.querySelectorAll('[data-lang="ru"]');
+        const currentLang = 'en';
+        document.documentElement.lang = 'en'
+        const response = await fetch('/swaplan', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId, lang: document.documentElement.lang  })
+        });
+        const data = await response.json();
+        const elements = document.querySelectorAll('[data-lang-en]');
+        elements.forEach(element => {
+            element.textContent = element.getAttribute(`data-lang-${currentLang}`);
+        });
+        enTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+
+        ruTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+    });
+    document.querySelector('.russianLanguageText').addEventListener('click', async function() {
+        const enTexts = document.querySelectorAll('[data-lang="en"]');
+        const ruTexts = document.querySelectorAll('[data-lang="ru"]');
+        const currentLang = 'ru';
+        document.documentElement.lang = 'ru'
+        const response = await fetch('/swaplan', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId, lang: document.documentElement.lang  })
+        });
+        const data = await response.json();
+        const elements = document.querySelectorAll('[data-lang-en]');
+        elements.forEach(element => {
+            element.textContent = element.getAttribute(`data-lang-${currentLang}`);
+        });
+        enTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+
+        ruTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+    });
+
+</script>
+</body>
+</html>

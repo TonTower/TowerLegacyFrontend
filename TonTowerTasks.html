@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script src="https://storage.tower-ton.com/3e21e5c9-towerton/sweetalert.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/TonTowerMainPage.css" />
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/font-awesome.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/common.css?ver=135"/>
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/fonts.css?ver=135"/>
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/popup.css?ver=135"/>
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/header.css?ver=135"/>
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/footer.css?ver=135"/>
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/fontsAll.css"/>
+    <link rel="stylesheet" type="text/css" href="https://storage.tower-ton.com/3e21e5c9-towerton/css/TonTowerTasks.css?ver=136"/>
+    <script src="https://w.tads.me/widget.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script async src="https://sdk.tappads.io/pub/sdk_v1.js"></script>
+    <script src="https://unpkg.com/@tonconnect/ui@2.0.0/dist/tonconnect-ui.min.js"></script>
+    <script src="https://unpkg.com/@tonconnect/sdk@latest/dist/tonconnect-sdk.min.js"></script>
+    <script src="https://unpkg.com/tonweb@0.0.41/dist/tonweb.js"></script>
+    <style>
+
+        .task {
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.5s ease-out;
+        }
+
+        .task.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
+</head>
+
+<body class="flex-column">
+
+<section class="ton-tower-treasure mainContentSection">
+    <!-- This section contains the main content of the page, including images, titles, and information cards. -->
+    <div id="ton-connect", style="display: none;">
+
+    </div>
+    <div class="flex_col">
+
+        <div class="flex_col1">
+            <div class="content_box13">
+                <div class="wrapper16">
+                    <div class="flex_col2">
+                        <div class="dark">
+                            <div class="flex_row">
+                                <div class="header">
+                                    <div class="left_header">
+                                        <div class="content_box8" id="close">
+                                            <p data-lang="ru" class="englishLanguageText">EN</p>
+                                            <p data-lang="en" style="display: none" class="russianLanguageText">RU</p>
+                                        </div>
+                                        <div class="sound">
+                                            <img id="soundImage" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/sound.svg" alt="">
+                                        </div>
+                                    </div>
+
+                                    <h1 class="heroTitle" id="heroTitle1" data-lang="ru">Башня</h1>
+                                    <h1 class="heroTitle" id="heroTitle2" data-lang="en" style="display: none">Tower</h1>
+
+                                    <div class="right_header">
+                                        <div class="faq">
+                                            <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/faq.svg" alt="">
+                                        </div>
+                                        <div class="content_box9">
+                                            <img class="contentImage1" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/wallet.svg" alt="alt text">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+
+                            </div>
+
+                            <div class="flex_row1">
+                                <div class="content_box10">
+                                    <div class="flex_row2">
+                                        <img class="floorImage" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/tower-img.svg" alt="alt text" />
+                                        <div class="flex_col3">
+                                            <p class="floorNumber">{{ level }}</p>
+                                            <p class="floorLabel" data-lang="ru">Этаж</p>
+                                            <p class="floorLabel" data-lang="en" style="display: none;">Floor</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content_box11">
+                                    <div class="flex_row3">
+                                        <img class="ratingImage" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/gold.svg" alt="alt text" />
+                                        <div class="flex_col4">
+                                            <p class="ratingNumber">{{ points }}</p>
+                                            <p class="ratingLabel" data-lang="ru">Рейтинг</p>
+                                            <p class="ratingLabel" data-lang="en" style="display: none;">Rating</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content_box12">
+                                    <div class="flex_row4">
+                                        <img class="balanceImage" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/bag.webp" alt="alt text" />
+                                        <div class="flex_col5">
+                                            <p class="balanceNumber">{{ balance }}</p>
+                                            <p class="balanceLabel">TWR</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+
+                </div>
+                <div style="padding-top: 4px" class="titleSemiBold titleMain" data-lang="ru">
+                    Выполняй задания <br>
+                    и зарабатывай TWR
+                </div>
+
+                <div class="titleSemiBold titleMain" data-lang="en" style="padding-top: 4px; display: none;">
+                    Complete tasks<br>
+                    and earn TWR
+                </div>
+                <div style="display: none;border-radius: 4px;box-shadow: 2px 4px 10px 0px rgba(16, 25, 27, 0.25);background: rgb(33, 52, 57);padding-top: 20px; padding-bottom: 10px; padding-right: 10px; margin-right: 15px; padding-left: 10px; margin-left: 15px" id="tads-container-300">
+                </div>
+                <div style="display: none;border-radius: 4px;box-shadow: 2px 4px 10px 0px rgba(16, 25, 27, 0.25);background: rgb(33, 52, 57);padding-left: 10px; margin-left: 15px;padding-bottom:10px;padding-right: 10px; margin-right: 15px; margin-top:-15px;" id="add" class="union_icon">
+                                        <div class="coin_img">
+                                            <img class="coin" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/TWR.svg" alt="">
+                                        </div>
+
+                                        <div  class="largeTitleMedium">25</div>
+                                        <div class="coin_img">
+                                            <img class="coin" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/key.svg" alt="">
+                                        </div>
+
+                                        <div  class="largeTitleMedium">1</div>
+                                        <div class="largeTitleMedium" style="
+                                            font-size: 10px;
+                                            font-weight: 100;
+                                            letter-spacing: 0px;
+                                            line-height: 12px;
+                                            padding-left: 10px;
+                                            color: yellow;
+                                        ">Просмотрите 3 рекламы для получения награды</div>
+                </div>
+                <div id="tasks" class="tasks">
+                    <div style="display: none" class="task">
+                        <div class="task_col1">
+                            <div class="text_description">
+                                <div class="titleMedium" data-lang="ru">Подпишись на канал</div>
+                                <div class="titleMedium" data-lang="en" style="display: none;">Subscribe to the channel</div>
+                                <div class="textUsual pale_blue">@channel</div>
+                            </div>
+
+                            <div class="union_icon">
+                                <div class="coin_img">
+                                    <img class="coin" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/TWR.svg" alt="">
+                                </div>
+
+                                <div id="coin_reward" class="largeTitleMedium">0</div>
+                                <div class="coin_img">
+                                    <img class="coin" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/key.svg" alt="">
+                                </div>
+
+                                <div id="key_reward" class="largeTitleMedium">0</div>
+                            </div>
+                        </div>
+                        <div class="task_col2">
+                            <button class="btnTurquoise"  data-lang="ru">Выполнить</button>
+                            <button class="btnTurquoise" data-lang="en" style="display: none;">Perform</button>
+                        </div>
+
+                    </div>
+                    <div class="wrapper_grey task_ended">
+
+                        <img class="attention" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/attention2.svg" alt="">
+                        <div class="text_description">
+                            <div class="titleMedium" data-lang="ru">
+                                Доступных заданий нет
+                            </div>
+                            <div class="titleMedium" data-lang="en" style="display: none;">
+                                There are no available tasks
+                            </div>
+                            <div class="textUsual pale_blue" data-lang="ru">
+                                Вернитесь позже — новые задания уже в пути!
+                            </div>
+                            <div class="textUsual pale_blue" data-lang="en" style="display: none;">
+                                Come back later — new tasks are on the way!
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="wrapper">
+                <div class="permanent_tasks">
+                    <div class="line"></div>
+                    <div class="taskNews">
+                        <div id="three" class="taskNew">
+                            <div class="taskNew_gap">
+                                <div class="taskNew_title_union">
+                                    <div class="titleMedium" data-lang="ru">Пригласить друзей</div>
+                                    <div class="titleMedium" data-lang="en" style="display: none;">Invite friends</div>
+                                    <div class="key_union">
+                                        <img class="key" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/key6.svg" alt="">
+                                        <p class="titleSemiBold white">{{ keys }}</p>
+                                    </div>
+                                </div>
+                                <div class="scaleNew">
+                                    <div style="z-index: 1;" class="smallJaroRegular">{{ qf }}/{{ mf }}</div>
+                                    {% set width_percentage = (qf / mf * 100) if mf else 0 %}
+                                    <div class="scale_progressNew" style="width: {{ [width_percentage, 100] | min }}%;"></div>
+                                </div>
+                                <button id="invite1" class="blueBtn" data-lang="ru">Пригласить</button>
+                                <button id="invite2" class="blueBtn" data-lang="en" style="display: none;">Invite</button>
+                            </div>
+                        </div>
+                        <div id="four" class="taskNew">
+                            <div class="taskNew_gap">
+                                <div class="title_description">
+                                    <div class="titleMedium" data-lang="ru">Пожертвовать TON</div>
+                                    <div class="titleMedium" data-lang="en" style="display: none;">Donate a TON</div>
+                                    <div class="description_union">
+                                        <div class="textUsual pale_blue" data-lang="ru">Ключи и TWR+REF в подарок</div>
+                                        <div class="textUsual pale_blue" data-lang="en" style="display: none;">Keys and TWR+REF as a gift</div>
+                                        <div class="dropdown-container">
+                                    <span class="amount textUsual white">
+                                        0.25
+                                        <div class="arrow">
+                                            <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/arrow2.svg" alt="">
+                                        </div>
+                                    </span>
+                                            <div class="dropdown textUsual white">
+                                                <ul>
+                                                    <li>5.00</li>
+                                                    <li>2.00</li>
+                                                    <li>1.50</li>
+                                                    <li>1.00</li>
+                                                    <li>0.50</li>
+                                                    <li>0.25</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="bonus">
+                                    <div class="bonus_gap">
+                                        <img class="TWR" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/REF2.svg" alt="">
+                                        <p id="coin_reward3" class="titleSemiBold white">25</p>
+                                    </div>
+                                    <div class="bonus_gap">
+                                        <img class="REF" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/bfcc31b7e3c9e9084ed7ee38d5ad963d.svg" alt="">
+                                        <p id="coin_reward2" class="titleSemiBold white">2,5</p>
+                                    </div>
+                                    <div class="bonus_gap">
+                                        <img class="keyNew" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/key6.svg" alt="">
+                                        <p id="key_reward2" class="titleSemiBold white">25</p>
+                                    </div>
+                                </div>
+                                <button id="one" class="blueBtn" data-lang="ru">Отправить</button>
+                                <button id="two" class="blueBtn" data-lang="en" style="display: none;">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="z-index: 3" class="flex_row6">
+                    <div class="footer">
+                        <div id="HOME" class="content_box3 footer_btn">
+                            <div class="footer_gap">
+                                <img class="footer_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/e712bd402d6f4d66aaeb437e9ed8deed.svg" alt="alt text" />
+                                <p class="usualText" data-lang="ru">Башня</p>
+                                <p class="usualText" data-lang="en" style="display: none;">Tower</p>
+                            </div>
+                        </div>
+                        <div id="tasks" class="content_box2 footer_btn active">
+                            <div class="footer_gap">
+                                <img class="footer_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/b86d07f8991af9dd93ba172bb1db337b.svg" alt="alt text" />
+                                <p class="usualText active" data-lang="ru">Задания</p>
+                                <p class="usualText active" data-lang="en" style="display: none;">Tasks</p>
+                            </div>
+                        </div>
+                        <div id="store" class="group footer_btn">
+                            <div class="footer_gap">
+                                <img class="footer_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/chest.svg" alt="alt text" />
+                                <p class="usualText" data-lang="ru">Сокровища</p>
+                                <p class="usualText" data-lang="en" style="display: none;">Treasures</p>
+                            </div>
+                        </div>
+                        <div id="friends" class="content_box1 footer_btn">
+                            <div class="footer_gap">
+                                <img class="footer_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/7cc12ec41fdfb03ec4c131735d1fc6ea.svg" alt="alt text" />
+                                <p class="usualText" data-lang="ru">Друзья</p>
+                                <p class="usualText" data-lang="en" style="display: none;">Friends</p>
+                            </div>
+                        </div>
+                        <div id="burse" class="content_box footer_btn">
+                            <div class="footer_gap">
+                                <img class="footer_img" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/2228929cf3c4fe7eacbe6ba47d98e4ba.svg" alt="alt text" />
+                                <div class="usualText" data-lang="ru">Биржа</div>
+                                <div class="usualText" data-lang="en" style="display: none;">Burse</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+<script>
+
+    const userId = "{{ user_id }}";
+    const cus = {{ cus }};
+    const energy = {{ energy }};
+    const level = {{ level }};
+    var c_wallet = "{{ wallet }}"
+    const mf = {{ mf }}
+    var lines = 1;
+    const tg = Telegram.WebApp;
+    tg.BackButton.show();
+    tg.disableVerticalSwipes();
+    tg.BackButton.isVisible;
+
+
+    const goBack = () => {
+          window.location.href = `/main?user_id=${userId.slice(6, -5)}`;
+    };
+    tg.BackButton.onClick(goBack);
+
+    function completeNew(taskId, status) {
+            if (status == true) {
+                fetch('/completetasknew', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        user_id: userId,
+                        status: status,
+                        id: taskId+1000000
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.status == 5) {
+                        const messages = {
+                            en: {
+                                title: 'Task already completed!',
+                                text: 'You already made that task before!',
+                                btn: 'Ok',
+                            },
+                            ru: {
+                                title: 'Задание уже выполнено',
+                                text: 'Вы уже выполнили это задание!',
+                                btn: 'Ок',
+                            }
+                        };
+
+                        const currentLang = document.documentElement.lang;
+                        Swal.fire({
+                                  customClass: {
+                                    title: 'customclass1',
+                                    content: 'customclass2',
+                                      confirmButton: 'error-ok-button',
+                                  },
+                                  background: '#19292E',
+                                  html:
+                                    `<img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/error.svg" class="error-icon">` +
+                                    `<div class="customclass1">${messages[currentLang].title}</div>` +
+                                    `<div class="customclass2">${messages[currentLang].text}</div>`,
+                                  imageAlt: 'error-icon',
+                                  confirmButtonText: messages[currentLang].btn,
+                                  confirmButtonColor: 'rgb(163, 57, 26)',
+                                  showConfirmButton: true,
+                                  backdrop: 'rgba(10, 17, 19, 0.8)',
+                        });
+
+                    } else if (data.status == 1) {
+                        const messages = {
+                            en: {
+                                title: 'Task completed!',
+                                text: 'You successfully made task and you got: ' + data.reward + 'и 1 ключ',
+                                btn: 'Ok',
+                            },
+                            ru: {
+                                title: 'Задание выполнено',
+                                text: 'Вы успешно выполнили задание и получили: ' + data.reward + 'and 1 key',
+                                btn: 'Ок',
+                            }
+                        };
+
+                        const currentLang = document.documentElement.lang;
+                        Swal.fire({
+                            customClass: {
+                                title: 'titleSemiBold titleMain',
+                                content: 'textUsual',
+                                confirmButton: 'custom-ok-button',
+                            },
+                            background: '#19292E',
+                            html:
+                                `<div class="containerPopUp">
+                                <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/success.svg" class="success-icon" style="">
+                                <div class="titleSemiBold titleMain" style="">${messages[currentLang].title}</div>
+                                </div>`,
+                            imageAlt: 'succes_icon',
+                            confirmButtonText: messages[currentLang].btn,
+                            confirmButtonColor: 'rgb(40, 131, 43)',
+                            showConfirmButton: true,
+                            backdrop: 'rgba(10, 17, 19, 0.8)'
+                        });
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 2000);
+
+                    }
+                })
+                .catch(error => {
+                    console.error('Error completing task:', error);
+            });
+            } else {
+                TappAdsPubSdk.taskStart(taskId)
+                  .then(() => {
+                    console.log('Task started:', taskId);
+                  })
+                  .catch(err => {
+                    console.error('Task start error:', err);
+                  });
+            }
+    };
+
+    const soundImage = document.getElementById('soundImage');
+    document.addEventListener('DOMContentLoaded', async function() {
+            const response6 = await fetch('/get_music', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ user_id: userId })
+                });
+            const data6 = await response6.json();
+            await TappAdsPubSdk.init('faf7e048-aee5-4124-9b8d-b81322529743', {
+              debug: false
+            })
+              .then(() => {
+                console.log('TappAdsPubSdk initialized');
+              })
+              .catch(err => {
+                if (cus == 490364844) {
+                    alert('TappAdsPubSdk initialization error:', err);
+                } else {
+                    console.error('TappAdsPubSdk initialization error:', err);
+                }
+              });
+            if (data6.music == 0) {
+                      soundImage.src = 'https://storage.tower-ton.com/3e21e5c9-towerton/assets/sound_off.svg';
+            }
+            const response = await fetch('/getlan', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ user_id: userId })
+            });
+            const data = await response.json();
+            lang = data.lang;
+            const three = document.getElementById('three');
+            const four = document.getElementById('four');
+            console.log(mf);
+            if (mf != 99) {
+                three.style.display = 'flex';
+                four.style.marginTop = '15px';
+            } else {
+                three.remove();
+                const inviteSection = document.getElementById('tasks');
+                inviteSection.style.marginBottom = '290px';
+            }
+            const enTexts = document.querySelectorAll('[data-lang="en"]');
+            const ruTexts = document.querySelectorAll('[data-lang="ru"]');
+            const currentLang = lang;
+            document.documentElement.lang = lang;
+            const elements = document.querySelectorAll('[data-lang-en]');
+            elements.forEach(element => {
+                element.textContent = element.getAttribute(`data-lang-${currentLang}`);
+            });
+            if (currentLang === "en") {
+                text = "No quests."
+                text1 = "for complition"
+                text2 = "Executions left:"
+                enTexts.forEach(text => {
+                    text.style.display = 'block';
+                });
+                ruTexts.forEach(text => {
+                    text.style.display = 'none';
+                });
+            } else {
+                text = "Доступных заданий нет."
+                text1 = "за выполнение"
+                text2 = "Осталось выполнений:"
+                enTexts.forEach(text => {
+                    text.style.display = 'none';
+                });
+                ruTexts.forEach(text => {
+                    text.style.display = 'block';
+                });
+            }
+            fetch('/getque', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    user_id: userId
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                Names = data.Names; // Присваивание полученных имен в массив Names
+                let Prices = data.Prices;
+                let ids = data.ids;
+                let Links = data.Links;
+                let Keys = data.Keys;
+                let Statuses = data.Statuses;
+                let Textes = data.Textes
+                let Channels = data.Channels;
+
+                const inviteSection = document.getElementById('tasks');
+                inviteSection.innerHTML = '';
+                if (Names.length === 0) {
+                    const taskDiv = document.createElement('div');
+                    taskDiv.style.display = 'flex';
+                    const taskContent = `
+                                <div style="width:100%;" class="wrapper_grey task_ended">
+                                    <img class="attention" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/attention2.svg" alt="">
+                                    <div class="text_description">
+                                        <div class="titleMedium" data-lang="ru">
+                                            Доступных заданий нет
+                                        </div>
+                                        <div class="titleMedium" data-lang="en" style="display: none;">
+                                            There are no available tasks
+                                        </div>
+                                        <div class="textUsual pale_blue" data-lang="ru">
+                                            Вернитесь позже — новые задания уже в пути!
+                                        </div>
+                                        <div class="textUsual pale_blue" data-lang="en" style="display: none;">
+                                            Come back later — new tasks are on the way!
+                                        </div>
+                                    </div>
+                                </div>
+                    `;
+                    taskDiv.innerHTML = taskContent;
+                    inviteSection.appendChild(taskDiv);
+                } else {
+                    Names.forEach((name, index) => {
+                        if (Statuses[index] == 0) {
+                            button_text = "Выполнить"
+                            classB = "btnTurquoise"
+                        } else if (Statuses[index] == 1) {
+                            button_text = "Проверить"
+                            classB = "btnGreen"
+                        } else if (Statuses[index] == 2) {
+                            button_text = "Забрать"
+                            classB = "btnDarkBlue"
+                        }
+                        const taskDiv = document.createElement('div');
+                        taskDiv.className = 'task';
+                        taskDiv.style.display = 'flex';
+                        const capitalizedName = name.charAt(0).toUpperCase() + name.substring(1);
+                        const nameWithBreaks = capitalizedName.replace(/([иа])\s$/g, "$1");
+                        const taskContent = `
+                                <div class="task_col1">
+                                    <div class="titleMedium">${Textes[index]}</div>
+                                    <div class="textUsual pale_blue">${nameWithBreaks}</div>
+                                    <div class="union_icon">
+                                        <div class="coin_img">
+                                            <img class="coin" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/TWR.svg" alt="">
+                                        </div>
+
+                                        <div id="coin_reward" class="largeTitleMedium">${Prices[index]}</div>
+                                        <div class="coin_img">
+                                            <img class="coin" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/key.svg" alt="">
+                                        </div>
+
+                                        <div id="key_reward" class="largeTitleMedium">${Keys[index]}</div>
+                                    </div>
+                                </div>
+                                <div class="task_col2">
+                                    <button onclick="completeTask('${ids[index]}', '${Links[index]}', '${Channels[index]}', '${Statuses[index]}', this)" class=${classB}>${button_text}</button>
+                                </div>
+                        `;
+                        taskDiv.innerHTML = taskContent;
+                        inviteSection.appendChild(taskDiv);
+                        setTimeout(() => {
+                                                taskDiv.classList.add('show');
+                        }, 50);
+                    });
+
+                }
+            });
+            setTimeout(() => {
+                fetch('/getquenew', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        user_id: userId
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    const completedTaskIds = data.list;
+
+                    TappAdsPubSdk.getFeed()
+                        .then(feed => {
+                            console.log('Feed:', feed);
+                            feed.forEach(task => {
+                                if (completedTaskIds.includes(task.id + 1000000)) {
+                                    return;
+                                }
+                                const stat = [task.id];
+                                const staty = task.id;
+                                const inviteSection = document.getElementById('tasks');
+
+                                TappAdsPubSdk.getTaskStatus(stat)
+                                    .then(async res => {
+                                        console.log(1);
+                                        let button_text = "";
+                                        let classB = "";
+
+
+                                        if (currentLang === "en") {
+                                            if (res[staty] == "new") {
+                                                button_text = "Start";
+                                            } else if (res[staty] == "started") {
+                                                button_text = "Performing";
+                                            } else if (res[staty] == "completed") {
+                                                button_text = "Take";
+                                            }
+                                        } else {
+                                            if (res[staty] == "new") {
+                                                button_text = "Выполнить";
+                                            } else if (res[staty] == "started") {
+                                                button_text = "Выполняется";
+                                            } else if (res[staty] == "completed") {
+                                                button_text = "Забрать";
+                                            }
+                                        }
+
+
+                                        classB = (res[staty] == "new") ? "btnTurquoise" : (res[staty] == "started") ? "btnGreen" : "btnDarkBlue";
+
+
+                                        let translatedName = task.name;
+                                        let translatedDescription = task.description;
+                                        let translatedButtonText = button_text;
+
+
+
+
+
+                                        const taskDiv = document.createElement('div');
+                                        taskDiv.className = 'task';
+                                        taskDiv.style.display = 'flex';
+                                        const taskContent = `
+                                            <div class="task_col1">
+                                                <div class="titleMedium">${translatedName}</div>
+                                                <div class="textUsual pale_blue">${translatedDescription}</div>
+                                                <div class="union_icon">
+                                                    <div class="coin_img">
+                                                        <img class="coin" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/TWR.svg" alt="">
+                                                    </div>
+                                                    <div id="coin_reward" class="largeTitleMedium">25</div>
+                                                    <div class="coin_img">
+                                                        <img class="coin" src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/key.svg" alt="">
+                                                    </div>
+                                                    <div id="key_reward" class="largeTitleMedium">1</div>
+                                                </div>
+                                            </div>
+                                            <div class="task_col2">
+                                                <button onclick="completeNew(${task.id}, ${task.is_done})" class=${classB}>${translatedButtonText}</button>
+                                            </div>
+                                        `;
+                                        taskDiv.innerHTML = taskContent;
+                                        inviteSection.appendChild(taskDiv);
+                                        setTimeout(() => {
+                                                taskDiv.classList.add('show');
+                                        }, 50);
+                                    })
+                                    .catch(err => {
+                                        console.error('Error get statuses:', err);
+                                    });
+                            });
+                        })
+                        .catch(err => {
+                            console.error('Feed error:', err);
+                        });
+                });
+            }, 1000);
+            const initTadsWidget = (id, debug, onShowReward, onClickReward, onAdsNotFound) => {
+                const adController = window.tads.init({ widgetId: id, debug: false, onShowReward, onClickReward, onAdsNotFound });
+                adController.loadAd()
+                    .then(() => {
+                        adController.showAd()
+                        document.getElementById('tads-container-300').style.display = "none";
+                        document.getElementById('add').style.display = "none";
+                    })
+                    .catch((result) => {
+                        console.log(result);
+                    });
+                };
+
+            const onShowRewardCallback = (result) => {
+                    console.log(result);
+            };
+            const onClickRewardCallback = async (result) => {
+                    let confirmButtonText;
+                                if (currentLang === 'ru') {
+                                    confirmButtonText = 'Ок';
+                                } else if (currentLang === 'en') {
+                                    confirmButtonText = 'Ok';
+                                }
+                    const response = await fetch('/bannerboost', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ user_id: userId })
+                    });
+                    const data = await response.json();
+                    if (data.status == 2) {
+                        setTimeout(() => {
+                            Swal.fire({
+                                                 customClass: {
+                                                     confirmButton: 'custom-ok-button',
+                                                 },
+                                                 background: '#19292E',
+                                                 html:
+                                                     `<div class="containerPopUp">
+                                                     <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/success.svg" class="success-icon">
+                                                 <div class="titleSemiBold titleMain" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Награда!</div>
+                                                 <div class="titleSemiBold titleMain" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Reward!</div>
+                                                 <div class="textUsual" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Вы получили 25 TWR и 1🔑</div>
+                                                 <div class="textUsual" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}" >You got 25 TWR and 1🔑</div>
+                                                </div>`,
+                                                imageAlt: 'succes_icon',
+                                                 confirmButtonText: confirmButtonText,
+                                                 confirmButtonColor: 'rgb(80, 200, 120)',
+                                                 showConfirmButton: true,
+                                                 backdrop: 'rgba(10, 17, 19, 0.8)'
+                            });
+                        }, 2000);
+                    } else if (data.status == 3) {
+                        setTimeout(() => {
+                            Swal.fire({
+                                                 customClass: {
+                                                     confirmButton: 'custom-ok-button',
+                                                 },
+                                                 background: '#19292E',
+                                                 html:
+                                                     `<div class="containerPopUp">
+                                                     <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/success.svg" class="success-icon">
+                                                 <div class="titleSemiBold titleMain" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Реклама</div>
+                                                 <div class="titleSemiBold titleMain" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Advetisment</div>
+                                                 <div class="textUsual" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Продолжайте смотреть для получения награды</div>
+                                                 <div class="textUsual" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}" >Continue watch ads, to get reward</div>
+                                                </div>`,
+                                                 imageAlt: 'succes_icon',
+                                                 confirmButtonText: confirmButtonText,
+                                                 confirmButtonColor: 'rgb(80, 200, 120)',
+                                                 showConfirmButton: true,
+                                                 backdrop: 'rgba(10, 17, 19, 0.8)'
+                            });
+                        }, 2000);
+                    } else {
+                        Swal.fire({
+                                         customClass: {
+                                             confirmButton: 'error-ok-button',
+                                         },
+                                         background: '#19292E',
+                                         html:
+                                             `<div class="containerPopUp">
+                                             <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/error.svg" class="error-icon">
+                                         <div class="titleSemiBold titleMain" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Реклама</div>
+                                         <div class="titleSemiBold titleMain" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Ads</div>
+                                         <div class="textUsual" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Вы уже получили максимум наград на сегодня за этот тип рекламы</div>
+                                         <div class="textUsual" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">You already got all rewards for today by that type of ads</div>
+                                        </div>`,
+                                        imageAlt: 'error_icon',
+                                         showConfirmButton: true,
+                                         confirmButtonColor: 'rgb(163, 57, 26)',
+                                         confirmButtonText: confirmButtonText,
+                                         backdrop: 'rgba(10, 17, 19, 0.8)'
+                        });
+                    }
+            };
+            const onAdsNotFound = () => {
+                    console.log("No ads for you now");
+                    document.getElementById('tads-container-300').remove()
+                    document.getElementById('add').remove()
+            };
+            initTadsWidget(300, true, onShowRewardCallback, onClickRewardCallback, onAdsNotFound);
+        });
+        window.Telegram.WebApp.lockOrientation();
+        function completeTask(id, link, channel, status, butt) {
+            window.Telegram.WebApp.isActive = false;
+            const index = Names.findIndex(taskName => taskName === name);
+            fetch('/completetask', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    user_id: userId,
+                    channel: channel,
+                    status: status,
+                    id: id
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                if (data.status == 0) {
+                    const messages = {
+                        en: {
+                            title: 'Do actions for quest!',
+                            text: 'or quest will be not counted!'
+                        },
+                        ru: {
+                            title: 'Совершите действия по заданию!',
+                            text: 'или задание в вашем профиле будет сохранено как не выполненное.'
+                        }
+                    };
+
+                    const currentLang = document.documentElement.lang;
+                    if (data.type == 2) {
+                        Swal.fire({
+                                  customClass: {
+                                    title: 'titleSemiBold titleMain',
+                                    content: 'textUsual',
+                                      confirmButton: 'error-ok-button',
+                                  },
+                                  background: '#19292E',
+                                  html:
+                                      `<div class="containerPopUp">
+                                    <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/error.svg" class="error-icon">
+                                    <div class="titleSemiBold titleMain">${messages[currentLang].title}</div>
+                                    <div class="textUsual">${messages[currentLang].text}</div>
+                                </div>`,
+                                  imageAlt: 'error-icon',
+                                  confirmButtonText: messages[currentLang].btn,
+                                  confirmButtonColor: 'rgb(163, 57, 26)',
+                                  showConfirmButton: false,
+                                  backdrop: 'rgba(10, 17, 19, 0.8)',
+                        });
+                        setTimeout(() => {
+                            if (link.startsWith("https://t.me")) {
+                                if (window.Telegram.WebApp.platform == "android") {
+                                    window.Telegram.WebApp.isActive = false;
+                                    window.Telegram.WebApp.openLink(link);
+                                } else {
+                                    window.Telegram.WebApp.openTelegramLink(link);
+                                }
+                            } else {
+                                window.Telegram.WebApp.openLink(link);
+                            }
+                        }, 2000);
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 30000);
+                    } else {
+                            if (link.startsWith("https://t.me")) {
+                                if (window.Telegram.WebApp.platform == "android") {
+                                    window.Telegram.WebApp.isActive = false;
+                                    window.Telegram.WebApp.openLink(link);
+                                } else {
+                                    window.Telegram.WebApp.openTelegramLink(link);
+                                }
+                            } else {
+                                window.Telegram.WebApp.openLink(link);
+                            }
+                            window.location.reload();
+                    }
+                } else if (data.status == 1) {
+                    const messages = {
+                        en: {
+                            title: 'Task already completed!',
+                            text: 'You already made that task before!',
+                            btn: 'Ok',
+                        },
+                        ru: {
+                            title: 'Задание уже выполнено',
+                            text: 'Вы уже выполнили это задание!',
+                            btn: 'Ок',
+                        }
+                    };
+
+                    const currentLang = document.documentElement.lang;
+                    if (link.startsWith("https://t.me")) {
+                        window.Telegram.WebApp.openTelegramLink(link);
+                    } else {
+                        window.Telegram.WebApp.openLink(link);
+                    }
+                    window.location.reload();
+                    Swal.fire({
+                              customClass: {
+                                title: 'titleSemiBold titleMain',
+                                content: 'textUsual',
+                                  confirmButton: 'error-ok-button',
+                              },
+                              background: '#19292E',
+                              html:
+                                  `<div class="containerPopUp">
+                                <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/error.svg" class="error-icon">
+                                <div class="titleSemiBold titleMain">${messages[currentLang].title}</div>
+                                <div class="textUsual">${messages[currentLang].text}</div>
+                                </div>`,
+                              imageAlt: 'error-icon',
+                              confirmButtonText: messages[currentLang].btn,
+                              confirmButtonColor: 'rgb(163, 57, 26)',
+                              showConfirmButton: true,
+                              backdrop: 'rgba(10, 17, 19, 0.8)',
+                    });
+
+                } else if (data.status == 3) {
+                    const messages = {
+                        en: {
+                            title: 'Task completed!',
+                            text: 'You successfully made task and you got: ' + data.reward,
+                            btn: 'Ok',
+                        },
+                        ru: {
+                            title: 'Задание выполнено',
+                            text: 'Вы успешно выполнили задание и получили: ' + data.reward,
+                            btn: 'Ок',
+                        }
+                    };
+
+                    const currentLang = document.documentElement.lang;
+                    Swal.fire({
+                        customClass: {
+                            title: 'titleSemiBold titleMain',
+                            content: 'textUsual',
+                            confirmButton: 'custom-ok-button',
+                        },
+                        background: '#19292E',
+                        html:
+                            `<div class="containerPopUp">
+                            <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/success.svg" class="success-icon" style="">
+                            <div class="titleSemiBold titleMain" style="">${messages[currentLang].title}</div>
+                            </div>`,
+                        imageAlt: 'succes_icon',
+                        confirmButtonText: messages[currentLang].btn,
+                        confirmButtonColor: 'rgb(40, 131, 43)',
+                        showConfirmButton: true,
+                        backdrop: 'rgba(10, 17, 19, 0.8)'
+                    });
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 2000);
+
+                } else if (data.status == 4) {
+                    const messages = {
+                        en: {
+                            title: 'You don`t subscribed!',
+                            text: 'You need to subscribe to channel to get reward',
+                            btn: 'Ok',
+                        },
+                        ru: {
+                            title: 'Вы не подписаны!',
+                            text: 'Вам нужно подписаться что бы получить награду!',
+                            btn: 'Ок',
+                        }
+                    };
+
+                    const currentLang = document.documentElement.lang;
+                    Swal.fire({
+                              customClass: {
+                                title: 'titleSemiBold titleMain',
+                                content: 'textUsual',
+                                  confirmButton: 'error-ok-button',
+                              },
+                              background: '#19292E',
+                              html:
+                                  `<div class="containerPopUp">
+                                <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/error.svg" class="error-icon">
+                                <div class="titleSemiBold titleMain">${messages[currentLang].title}</div>
+                                <div class="textUsual">${messages[currentLang].text}</div>
+                                </div>`,
+                              imageAlt: 'error-icon',
+                              confirmButtonText: messages[currentLang].btn,
+                              confirmButtonColor: 'rgb(163, 57, 26)',
+                              showConfirmButton: true,
+                              backdrop: 'rgba(10, 17, 19, 0.8)',
+                    });
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 2000);
+
+                } else if (data.status == 5) {
+                    const messages = {
+                        en: {
+                            title: 'Channel isn`t logged by bot',
+                            text: 'Try to check it later',
+                            btn: 'Ok',
+                        },
+                        ru: {
+                            title: 'Бот ещё не настроен на проверку подписки',
+                            text: 'Попробуйте проверить позже!',
+                            btn: 'Ок',
+                        }
+                    };
+
+                    const currentLang = document.documentElement.lang;
+                    Swal.fire({
+                              customClass: {
+                                  title: 'titleSemiBold titleMain',
+                                  content: 'textUsual',
+                                  confirmButton: 'error-ok-button',
+                              },
+                              background: '#19292E',
+                              html:
+                                  `<div class="containerPopUp">
+                                <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/error.svg" class="error-icon">
+                                <div class="titleSemiBold titleMain">${messages[currentLang].title}</div>
+                                <div class="error-ok-button">${messages[currentLang].text}</div>
+                                </div>`,
+                              imageAlt: 'error-icon',
+                              confirmButtonText: messages[currentLang].btn,
+                              confirmButtonColor: 'rgb(163, 57, 26)',
+                              showConfirmButton: true,
+                              backdrop: 'rgba(10, 17, 19, 0.8)',
+                    });
+
+                }
+            })
+            .catch(error => {
+                console.error('Error completing task:', error);
+        });
+    }
+
+    const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+            manifestUrl: 'https://ton-tower.com/tonconnect-manifest.json',
+            buttonRootId: 'ton-connect'
+    });
+
+
+
+    document.getElementById('one').addEventListener('click', async () => {
+        let a = new TonWeb.boc.Cell();
+        a.bits.writeUint(0, 32);
+        a.bits.writeString(cus);
+        let payload = TonWeb.utils.bytesToBase64(await a.toBoc());
+        const selectedValue2 = amounts[0].childNodes[0].nodeValue;
+        let c = selectedValue2*1000000000;
+        const transaction = {
+            validUntil: Math.floor(Date.now() / 1000) + 360,
+            messages: [
+                {
+                    address: "UQDhppX6_hfbkGJ_IGXFAIh2DAKyceVEVNSWPdlhMUhgSdQw",
+                    amount: c,
+                    payload: payload,
+
+                }
+            ]
+        }
+
+        try {
+            const result = await tonConnectUI.sendTransaction(transaction)
+        } catch (error) {
+            let currentLang = document.documentElement.lang;
+            if (currentLang === 'ru') {
+                        confirmButtonText = 'Ок';
+            } else if (currentLang === 'en') {
+                        confirmButtonText = 'Ok';
+            }
+            Swal.fire({
+                      customClass: {
+                          title: 'titleSemiBold titleMain',
+                          content: 'textUsual',
+                          confirmButton: 'error-ok-button',
+                      },
+                      background: '#19292E',
+                      html:
+                          `<div class="containerPopUp">
+                            <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/error.svg" class="error-icon">
+                        <div class="titleSemiBold titleMain" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Пожертвование</div>
+                        <div class="titleSemiBold titleMain" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Tip</div>
+                        <div class="textUsual" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Ваш кошелёк не привязан!</div>
+                        <div class="textUsual" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Your wallet isnt connected!</div>
+                        </div>`,
+                    imageAlt: 'error-icon',
+                        confirmButtonText: confirmButtonText,
+                      confirmButtonColor: 'rgb(163, 57, 26)',
+                      showConfirmButton: true,
+                      backdrop: 'rgba(10, 17, 19, 0.8)',
+            });
+        }
+    });
+    document.getElementById('two').addEventListener('click', async () => {
+        let a = new TonWeb.boc.Cell();
+        a.bits.writeUint(0, 32);
+        a.bits.writeString(cus);
+        let payload = TonWeb.utils.bytesToBase64(await a.toBoc());
+        const selectedValue2 = amounts[0].childNodes[0].nodeValue;
+        let c = selectedValue2*1000000000;
+        const transaction = {
+            validUntil: Math.floor(Date.now() / 1000) + 360,
+            messages: [
+                {
+                    address: "UQDhppX6_hfbkGJ_IGXFAIh2DAKyceVEVNSWPdlhMUhgSdQw",
+                    amount: c,
+                    payload: payload,
+
+                }
+            ]
+        }
+        try {
+            const result = await tonConnectUI.sendTransaction(transaction)
+        } catch (error) {
+            let currentLang = document.documentElement.lang;
+            if (currentLang === 'ru') {
+                        confirmButtonText = 'Ок';
+            } else if (currentLang === 'en') {
+                        confirmButtonText = 'Ok';
+            }
+            Swal.fire({
+                      customClass: {
+                          title: 'titleSemiBold titleMain',
+                          content: 'textUsual',
+                          confirmButton: 'error-ok-button',
+                      },
+                      background: '#19292E',
+                      html:
+                          `<div class="containerPopUp">
+                            <img src="https://storage.tower-ton.com/3e21e5c9-towerton/assets/error.svg" class="error-icon">
+                        <div class="titleSemiBold titleMain" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Пожертвование</div>
+                        <div class="titleSemiBold titleMain" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Tip</div>
+                        <div class="textUsual" style="${currentLang === 'ru' ? 'display: block;' : 'display: none;'}">Ваш кошелёк не привязан!</div>
+                        <div class="textUsual" style="${currentLang === 'en' ? 'display: block;' : 'display: none;'}">Your wallet isnt connected!</div>
+                        </div>`,
+                imageAlt: 'error-icon',
+                        confirmButtonText: confirmButtonText,
+                      confirmButtonColor: 'rgb(163, 57, 26)',
+                      showConfirmButton: true,
+                      backdrop: 'rgba(10, 17, 19, 0.8)',
+            });
+        }
+    });
+
+
+    document.getElementById('HOME').addEventListener('click', () => {
+        window.location.href = `/main?user_id=${userId.slice(6, -5)}`;
+    });
+    document.getElementById('friends').addEventListener('click', () => {
+        window.location.href = `/friends?user_id=${userId.slice(6, -5)}`;
+    });
+
+    document.getElementById('store').addEventListener('click', () => {
+        window.location.href = `/store?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.content_box').addEventListener('click', () => {
+        window.location.href = `/burse?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.flex_row4').addEventListener('click', () => {
+        window.location.href = `/twr?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.content_box2').addEventListener('click', () => {
+        window.location.href = `/tasks?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.content_box9').addEventListener('click', () => {
+        window.location.href = `/wallet?user_id=${userId.slice(6, -5)}}`;
+    });
+    document.querySelector('.content_box10').addEventListener('click', () => {
+        window.location.href = `/lvlup?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.faq').addEventListener('click', () => {
+        window.location.href = `/faq?user_id=${userId.slice(6, -5)}`;
+    });
+    document.querySelector('.content_box11').addEventListener('click', () => {
+        window.location.href = `/rate?user_id=${userId.slice(6, -5)}`;
+    });
+
+    document.getElementById('invite1').addEventListener('click', () => {
+        sendMessageToBot();
+    });
+    document.getElementById('invite2').addEventListener('click', () => {
+        sendMessageToBot2();
+    });
+
+    function sendMessageToBot() {
+        const message = "https://t.me/share/url?url=https://t.me/TowerTon_bot?start={{ cus }}&text=\n\nПривет 👋\n\nТеперь можно дропать токены без ожидания листингов 💎\n\nПрисоединяйся, покорим Башню вместе! 🏰";
+        window.Telegram.WebApp.openTelegramLink(message);
+    }
+    function sendMessageToBot2() {
+        const message = "https://t.me/share/url?url=https://t.me/TowerTon_bot?start={{ cus }}&text=\nJoin to me, lets get this tower together";
+        window.Telegram.WebApp.openTelegramLink(message);
+    }
+
+</script>
+
+
+<script>
+    document.querySelector('.englishLanguageText').addEventListener('click', async function() {
+        const enTexts = document.querySelectorAll('[data-lang="en"]');
+        const ruTexts = document.querySelectorAll('[data-lang="ru"]');
+        const currentLang = 'en';
+        document.documentElement.lang = 'en'
+        const response = await fetch('/swaplan', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId, lang: document.documentElement.lang  })
+        });
+        const data = await response.json();
+        const elements = document.querySelectorAll('[data-lang-en]');
+        elements.forEach(element => {
+            element.textContent = element.getAttribute(`data-lang-${currentLang}`);
+        });
+        enTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+
+        ruTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+    });
+    document.querySelector('.russianLanguageText').addEventListener('click', async function() {
+        const enTexts = document.querySelectorAll('[data-lang="en"]');
+        const ruTexts = document.querySelectorAll('[data-lang="ru"]');
+        const currentLang = 'ru';
+        document.documentElement.lang = 'ru'
+        const response = await fetch('/swaplan', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId, lang: document.documentElement.lang  })
+        });
+        const data = await response.json();
+        const elements = document.querySelectorAll('[data-lang-en]');
+        elements.forEach(element => {
+            element.textContent = element.getAttribute(`data-lang-${currentLang}`);
+        });
+        enTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? '' : 'none';
+        });
+
+        ruTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? '' : 'none';
+        });
+    });
+
+</script>
+<script>
+
+    const headerRow = document.querySelector('.title');
+    const tableContainer = document.querySelector('.table-container');
+    console.log(window.innerHeight);
+    window.innerHeight = window.innerHeight*2;
+    console.log(window.innerHeight);
+    window.addEventListener('scroll', function() {
+
+        const offset = window.scrollY;
+
+        if (offset > tableContainer.offsetTop) {
+            headerRow.classList.add('fixed'); // Добавляем класс фиксированного заголовка
+        } else {
+            headerRow.classList.remove('fixed'); // Убираем класс, если скролл в верхней части
+        }
+    });
+</script>
+<script>
+    // Функция для открытия модального окна
+    function openWindow() {
+        document.getElementById('big').style.display = 'block';
+        document.getElementById('modalOverlay').style.display = 'block';
+    }
+
+    // Функция для закрытия модального окна
+    function closeWindow() {
+        document.getElementById('big').style.display = 'none';
+        document.getElementById('modalOverlay').style.display = 'none';
+    }
+
+    // Привязка события клика к кнопке
+    document.getElementById('close').addEventListener('click', openWindow);
+
+
+</script>
+<script>
+    soundImage.addEventListener('click', async () => {
+      if (soundImage.src.includes('sound.svg')) {
+        const response2 = await fetch('/change_music', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ user_id: userId })
+         });
+        const data2 = await response2.json();
+        soundImage.src = 'https://storage.tower-ton.com/3e21e5c9-towerton/assets/sound_off.svg';
+      } else {
+        soundImage.src = 'https://storage.tower-ton.com/3e21e5c9-towerton/assets/sound.svg';
+        const response2 = await fetch('/change_music', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ user_id: userId })
+         });
+        const data2 = await response2.json();
+      }
+    });
+</script>
+
+
+<script>
+    const amounts = document.querySelectorAll('.amount');
+
+    amounts.forEach(amount => {
+      amount.addEventListener('click', () => {
+        const dropdown = amount.querySelector('.dropdown');
+        dropdown.style.display = 'block';
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.classList.contains('amount') && !e.target.classList.contains('dropdown')) {
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+          dropdown.style.display = 'none';
+        });
+      }
+    });
+
+    const dropdownItems = document.querySelectorAll('.dropdown li');
+    const multipliers = {
+      '0.25': 1,
+      '0.50': 2,
+      '1.00': 4,
+      '1.50': 6,
+      '2.00': 8,
+      '5.00': 20
+    };
+
+    const baseValues = {
+      key_reward2: 25,
+      coin_reward2: 2.5,
+      coin_reward3: 25
+    };
+    dropdownItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.stopPropagation();
+        amounts.forEach(amount => {
+          const selectedValue = item.textContent;
+          const multiplier = multipliers[selectedValue];
+          console.log(selectedValue,multiplier);
+          document.getElementById('key_reward2').textContent = (baseValues.key_reward2 * multiplier);
+          document.getElementById('coin_reward2').textContent = (baseValues.coin_reward2 * multiplier);
+          document.getElementById('coin_reward3').textContent = (baseValues.coin_reward3 * multiplier);
+          amount.childNodes[0].nodeValue = item.textContent;
+        });
+        const dropdown = item.parentNode.parentNode;
+        dropdown.style.display = 'none';
+      });
+    });
+</script>
+<script>
+    document.querySelector('.arrow').addEventListener('click', function(event) {
+        const dropdown = document.querySelector('.dropdown');
+        const arrow = document.querySelector('.arrow');
+
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+
+        arrow.classList.toggle('open');
+
+        event.stopPropagation();
+    });
+
+    // Закрытие выпадающего списка при клике вне его
+    window.addEventListener('click', function(event) {
+        const dropdown = document.querySelector('.dropdown');
+        const arrow = document.querySelector('.arrow');
+
+        if (dropdown.style.display === 'block' && !event.target.closest('.dropdown-container')) {
+            dropdown.style.display = 'none';
+            arrow.classList.remove('open');
+        }
+    });
+</script>
+</body>
+
+</html>
