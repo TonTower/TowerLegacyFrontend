@@ -1,0 +1,218 @@
+.AlumniSemiBold {
+    color: rgb(255, 255, 255);
+    font-family: Alumni Sans;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.textBigJaro {
+    color: rgb(249, 252, 255);
+    font-family: Jaro;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.descMedium {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.largeTitleMedium {
+    color: rgb(249, 252, 255);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0%;
+}
+
+.titleHeavy {
+    color: rgb(249, 252, 255);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 20px;
+    letter-spacing: 1%;
+}
+
+.titleBlack {
+    color: rgb(249, 252, 255);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 20px;
+    letter-spacing: 1%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.titleBold {
+    color: rgb(249, 252, 255);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 125%;
+    letter-spacing: 1%;
+    text-transform: uppercase;
+}
+
+.titleSemiBold {
+    color: rgb(249, 252, 255);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 1%;
+}
+
+.titleMedium {
+    color: rgb(249, 252, 255);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0%;
+}
+
+.textBold {
+    color: rgb(249, 252, 255);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0%;
+}
+
+.textMedium {
+    color: rgb(249, 252, 255);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+
+.textUsual {
+    color: rgb(249, 252, 255);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+
+.titleRegularJaro {
+    color: rgb(249, 252, 255);
+    font-family: Jaro;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+}
+
+.textJaro {
+    color: rgb(249, 252, 255);
+    font-family: Jaro;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0%;
+}
+
+.textUsualWhite {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+
+.smallRegular {
+    color: rgb(249, 252, 255);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.smallLight {
+    color: rgb(249, 252, 255);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 15px;
+    letter-spacing: 0%;
+}
+
+.smallJaroRegular {
+    color: rgb(249, 252, 255);
+    font-family: Jaro;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0%;
+}
+
+.light_grey {
+    color: rgb(135, 163, 171);
+}
+
+.white {
+    color: white;
+}
+
+.dark_grey {
+    color: rgb(114, 129, 145);
+}
+
+.pearl_grey {
+    color: rgb(193, 193, 193);
+}
+
+.pale_grey {
+    color: rgb(160, 160, 160);
+}
+
+.titleMain {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.textLeft {
+    text-align: left;
+}
+
+.textRight {
+    text-align: right;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.blue {
+    color: rgb(224, 246, 251);
+}
+
+.pale_blue {
+    color: rgb(191, 215, 222);
+}
+
+.semi-transparent {
+    color: rgba(249, 252, 255, 0.7);
+}

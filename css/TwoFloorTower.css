@@ -1,0 +1,98 @@
+.wrapper{
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+}
+body {
+    background: rgb(25, 41, 46);
+}
+
+.gradient {
+    position: relative;
+}
+
+.gradient_top {
+    background: linear-gradient(0.00deg, rgb(11, 18, 20),rgba(15, 25, 27, 0.73) 41%,rgba(17, 27, 30, 0.54) 77%,rgba(22, 35, 38, 0) 100%);
+    transform: rotate(-180.00deg);
+    position: absolute;
+    height: 278px;
+    width: 100%;
+    z-index: -1;
+}
+
+.twofloor_text {
+    padding-top: 20px;
+    padding-bottom: 2px;
+}
+
+.gnom_img img {
+    width: 131px;
+    height: 207px;
+}
+
+.gnom_img {
+    display: flex;
+    justify-content: center;
+    padding-top: 33px;
+}
+
+.gradient_down {
+    background: linear-gradient(0.00deg, rgb(11, 18, 20),rgba(15, 25, 27, 0.73) 41%,rgba(17, 27, 30, 0.54) 77%,rgba(22, 35, 38, 0) 100%);
+    margin-top: -22px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 34%;
+    z-index: -1;
+}
+
+.difficult {
+    display: flex;
+    flex-direction: column;
+}
+
+.coin {
+    display: flex;
+}
+
+.coin_img {
+    position: relative;
+    display: flex;
+}
+
+.coin {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.tower {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); / Центрирование с помощью translate /
+    margin: auto;
+    width: 10px;
+    height: 10px;
+}
+
+.buttons {
+    display: flex;
+    gap: 11px;
+    justify-content: center;
+    padding-top: 23px;
+}
+
+.description {
+    padding-top: 24px;
+    margin: 0 47px;
+}
+
+.btnw133 {
+    width: 133px;
+}
+
+

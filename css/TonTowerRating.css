@@ -1,0 +1,206 @@
+.ton-tower-treasure .flex_col1 {
+    align-items: center;
+    gap: 30px 0;
+    min-height: 100vh;
+}
+
+.buttons_wrapper {
+    border-radius: 6px;
+    background: rgb(33, 52, 57);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 6px;
+}
+
+.buttons_row {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    height: 69px;
+}
+
+.chest_img img {
+    width: 25px;
+    height: 30px;
+}
+
+.floor_img img {
+    width: 27px;
+    height: 30px;
+}
+
+.friend_img img {
+    width: 43px;
+    height: 30px;
+}
+
+.category-block.active {
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(57, 102, 115);
+    background: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 0;
+    gap: 4px;
+    border-radius: 0px;
+}
+
+.category-block {
+    border-radius: 4px;
+    background: rgb(57, 102, 115);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 0;
+    gap: 4px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.rating_text {
+    border-radius: 4px;
+    background: linear-gradient(90.00deg, rgb(82, 29, 26),rgb(166, 44, 37) 100%);
+    display: flex;
+    gap: 12px;
+    padding: 10px 31px 19px 31px;
+    align-items: center;
+    display: none;
+    min-height: 92px;
+}
+
+.rating_text.active {
+    display: flex;
+}
+
+.cup {
+    z-index: 2;
+    width: 75px;
+    height: 59px;
+}
+
+.rating_img {
+    position: relative;
+    display: flex;
+}
+
+.rating_union {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.current_location {
+    border-radius: 4px;
+    box-shadow: 2px 4px 10px 0px rgba(16, 25, 27, 0.25);
+    background: rgb(57, 102, 115);
+    margin: 18px 0px 16px 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+    display: none;
+}
+
+.current_location.active {
+    display: flex;
+}
+
+.location_number {
+    gap: 10px;
+}
+
+.rating_number {
+
+    display: flex;
+
+}
+
+.rating_number img {
+    margin-right: -3px;
+    height: 25px;
+    width: 25px;
+}
+
+.rating {
+    border-radius: 4px;
+    box-shadow: 2px 4px 10px 0px rgba(16, 25, 27, 0.25);
+    background: rgb(33, 52, 57);
+    padding: 23.5px 16px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 75px;
+}
+
+.rating_list {
+    flex-direction: column;
+    gap: 12px;
+    display: none;
+}
+
+.rating_list.active {
+    display: flex;
+}
+
+.union2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.chest_union {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}
+
+.chest_union_img {
+    display: flex;
+    align-items: center;
+}
+
+.chest_img {
+    display: flex;
+}
+
+.floor_img {
+    display: flex;
+}
+
+.friend_img {
+    display: flex;
+}
+
+.small_chest {
+    height: 23px;
+    width: 23px;
+}
+
+.small_floor {
+    width: 21px;
+    height: 23px;
+}
+
+.rating_ref {
+    color: rgb(193, 193, 193);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 15px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.nickname_ref {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}

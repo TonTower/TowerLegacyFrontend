@@ -1,0 +1,277 @@
+.ton-tower-treasure .flex_col1 {
+    align-items: center;
+    gap: 30px 0;
+    min-height: 100vh;
+}
+
+.task {
+    border-radius: 4px;
+    box-shadow: 2px 4px 10px 0px rgba(16, 25, 27, 0.25);
+    background: rgb(33, 52, 57);
+    padding: 14px 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.coin_img {
+    position: relative;
+    width: 19px;
+    height: 18px;
+}
+
+.coin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 19px;
+    height: 18px;
+}
+
+.tower {
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    margin: auto;
+    width: 7px;
+    height: 7px;
+}
+
+.tasks {
+    overflow-y: auto;
+    flex-grow: 1;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 420px;
+}
+
+.union_icon {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding-top: 10px;
+}
+
+.ton-tower-treasure .wrapper {
+    height: 80px;
+}
+
+/* new code */
+
+.taskNew {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25);
+    padding: 14px;
+    margin: 0 16px;
+    border: 1px solid transparent;
+    background: linear-gradient(#11252B 0 0) padding-box, /*this is your grey background*/ linear-gradient(108deg, #10252B 0%, rgba(101, 147, 160, 0.6) 60%) border-box;
+}
+
+.key_union {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+}
+
+.taskNew_title_union {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.key {
+    width: 6.81px;
+    height: 15.89px;
+    transform: rotate(15.00deg);
+}
+
+.scaleNew {
+    border-radius: 50px;
+    background: rgb(42, 67, 73);
+    width: 100%;
+    height: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.scale_progressNew {
+    border-radius: 50px;
+    background: rgb(182, 224, 237);
+    height: 12px;
+    width: 86px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.taskNew_gap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%
+}
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.amount {
+    border-radius: 4px;
+    background: rgb(9, 25, 30);
+    display: flex;
+    align-items: center;
+    padding: 8px; /* Добавим немного отступов для красоты */
+    cursor: pointer; /* Указатель при наведении */
+    position: relative;
+    gap: 4px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.arrow {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: rgb(36, 57, 64);
+}
+
+.arrow img {
+    height: 6.1px;
+    width: 11.5px;
+}
+
+.arrow img {
+    transition: transform 0.3s;
+}
+
+.arrow.open img {
+    transform: rotate(180deg);
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    border-radius: 4px;
+    background: rgb(9, 25, 30);
+    z-index: 1;
+    bottom: 100%;
+    right: 0;
+    padding: 10px 0;
+    margin-bottom: 7px;
+    text-align: center;
+    width: 54px;
+}
+
+.dropdown ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown li {
+    padding: 2px 12px; /* Отступы для элементов списка */
+    cursor: pointer; /* Указатель при наведении */
+}
+
+.dropdown li:hover {
+    background-color: rgb(182, 224, 237); /* Подсветка при наведении */
+    color: rgb(14, 28, 32);
+}
+
+.description_union {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.TWR, .REF {
+    width: 20px;
+    height: 20px;
+}
+
+.keyNew {
+    width: 7px;
+    height: 15.89px;
+    transform: rotate(15.00deg);
+}
+
+.bonus_gap {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.bonus {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 1.5px 0;
+}
+
+.title_description {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.permanent_tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: absolute;
+    width: 100%;
+    bottom: 80px;
+}
+
+.taskNews {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.line {
+    height: 1px;
+    margin: 0 16px;
+    background: linear-gradient(to right, #132024 0%, #213439 55%, #132024 100%);
+}
+/* */
+.wrapper_grey {
+    border-radius: 4px;
+    background: rgb(33, 52, 57);
+    padding: 14px;
+}
+
+.text_description {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.task_ended{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.attention {
+    width: 18px;
+    height: 18px;
+}

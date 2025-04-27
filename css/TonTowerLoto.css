@@ -1,0 +1,303 @@
+.ton-tower-treasure .flex_col1 {
+    align-items: center;
+    gap: 30px 0;
+    min-height: 100vh;
+}
+
+.faq_content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn_faq {
+    border-radius: 4px;
+    box-shadow: 2px 4px 10px 0px rgba(16, 25, 27, 0.25);
+    background: rgb(62, 75, 79);
+    padding: 6px 8px;
+    height: 36px;
+    width: 36px;
+    display: flex;
+}
+
+.faq_block {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.faq_description {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.faq_union {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.semiBold {
+    font-weight: 600;
+}
+
+.imgTicket {
+    width: 19px;
+    height: 20px;
+}
+
+.imgCoins, .imgConfetti, .imgGift {
+    width: 20px;
+    height: 20px;
+}
+
+.imgCupSmall {
+    width: 21px;
+    height: 20px;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 2;
+    position: relative;
+}
+
+.grey1 {
+    padding: 20px;
+}
+
+.grey2 {
+    padding: 16px 20px 20px 20px;
+    margin-bottom: 16px;
+}
+
+.headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+
+    box-sizing: border-box;
+    border-top: 1px solid rgb(43, 69, 76);
+    border-radius: 1px;
+
+    /* Shadow */
+    box-shadow: 2px 4px 10px 0px rgba(16, 25, 27, 0.25);
+}
+
+.btn_gaps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lotoRow .row_info {
+    padding: 14.5px 0;
+}
+
+.winRow .row_info {
+    padding: 11px 12px;
+}
+
+.row_info {
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(43, 69, 76);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row_info:last-child {
+    border-bottom: none;
+}
+
+.buttons_wrapper {
+    border-radius: 6px;
+    background: rgb(33, 52, 57);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 6px;
+    margin-bottom: 18px;
+}
+
+.buttons_row {
+    display: flex;
+    flex-direction: row;
+    gap: 7.67px;
+    height: 69px;
+}
+
+.category-block {
+    border-radius: 4px;
+    background: rgb(57, 102, 115);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 0;
+    gap: 4px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.category-block.active {
+    display: flex;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(57, 102, 115);
+    background: transparent;
+    border-radius: 0px;
+}
+
+.safe2 {
+    width: 37px;
+    height: 30px;
+}
+
+.coin2 {
+    position: absolute;
+    width: 10px;
+    height: 11px;
+    left: 22px;
+    top: 17px;
+
+}
+
+.cup {
+    width: 20.05px;
+    height: 30px;
+}
+
+.birchBark {
+    width: 31px;
+    height: 31px;
+}
+
+.safe_union {
+    position: relative;
+}
+
+.contentBig {
+    display: none;
+}
+
+.contentBig.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.row_gap {
+    box-sizing: border-box;
+    border: 1px solid rgb(43, 69, 76);
+    border-radius: 50px;
+    background: rgb(19, 32, 36);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5.5px 12px;
+}
+
+.table_gap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: -2px;
+}
+
+.rectangle_gradient {
+    background: linear-gradient(180.00deg, rgb(74, 115, 128),rgb(33, 52, 57) 100%);
+    height: 83px;
+    position: absolute;
+    right: 16px;
+    left: 16px;
+}
+
+/*3rd */
+
+.table {
+    color: rgb(251, 251, 251);
+    font-family: Montserrat;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+tr td:first-child
+{
+    padding: 12px 6.5px;
+    box-sizing: border-box;
+    background: rgb(36, 38, 43);
+    border-left: none;
+}
+
+.data
+{
+    padding: 18px 0px;
+    box-sizing: border-box;
+    background: rgb(17, 37, 43);
+}
+
+tr td
+{
+    padding: 0px 0px;
+    box-sizing: border-box;
+    background: rgb(33, 52, 57);
+    line-height: 7px;
+}
+
+tr th {
+    background: rgb(33, 52, 57);
+    box-sizing: border-box;
+    font-weight: 400;
+}
+table .winning {
+    color: rgb(46, 204, 113);
+}
+
+
+table tr td:last-child {
+    color: rgb(46, 204, 113);
+}
+
+table th {
+    border-left: 1px solid rgb(19, 32, 36);
+    border-bottom: 1px solid rgb(19, 32, 36);
+}
+
+table th:first-child {
+    border-left: none;
+}
+
+table td {
+    border-left: 1px solid rgb(19, 32, 36);
+    border-bottom: 1px solid rgb(19, 32, 36);
+}
+
+table {
+    border-spacing: 0;
+}
+
+th:first-child {
+    border-top-left-radius: 4px;
+
+}
+
+th:last-child {
+    border-top-right-radius: 4px;
+
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 4px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 4px;
+}

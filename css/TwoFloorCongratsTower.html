@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="./static/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./static/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./static/css/TwoFloorCongratsTower.css" />
+    <script src="https://sad.adsgram.ai/js/sad.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body>
+
+<div class="wrapper" style="background: url('./static/assets/castle.png') center center/100% 100% no-repeat">
+<!--    <div class="conf">-->
+<!--        <div class="confetti" style="background: url('./static/assets/confetti.svg') no-repeat; background-size: cover;">-->
+
+<!--        </div>-->
+<!--    </div>-->
+
+
+    <div class="gradient">
+
+        <div class="gradient_top"> </div>
+        <div class="congratulate" data-lang="ru">
+            ПОЗДРАВЛЯЕМ
+        </div>
+        <div class="congratulate" data-lang="en" style="display: none;">
+            Congratulate
+        </div>
+        <div class="twofloor_text" data-lang="ru">{{ level }} Этаж БАШНИ</div>
+        <div class="twofloor_text" data-lang="en" style="display: none;">{{ level }} Floor OF THE TOWER</div>
+    </div>
+
+    <div class="gnom_union">
+        <img class="gnom_happy" src="./static/assets/gnom_happy.gif" alt="">
+        <img class="gnom_shadow" src="./static/assets/gnom_happy.svg" alt="">
+    </div>
+    <div class="gradient_down">
+
+
+
+        <button class="new_tasks" data-lang="ru">Новые задания</button>
+        <button class="new_tasks" data-lang="en" style="display: none;">New tasks</button>
+
+        <div class="description" data-lang="ru">
+            Отличная работа! Вы успешно завершили задания и перешли на следующий уровень. Вперед к новым достижениям!        </div>
+        <div class="description" data-lang="en" style="display: none;">
+            Great job! You have successfully completed the tasks and moved on to the next level. Forward to new achievements!        </div>
+    </div>
+
+</div>
+</body>
+<script>
+    const userId = "{{ user_id }}";
+    document.addEventListener("DOMContentLoaded", async (event) => {
+            const response = await fetch('/getlan', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ user_id: userId })
+            });
+            const data = await response.json();
+            lang = data.lang;
+            const enTexts = document.querySelectorAll('[data-lang="en"]');
+            const ruTexts = document.querySelectorAll('[data-lang="ru"]');
+            const currentLang = lang;
+            document.documentElement.lang = lang;
+            const elements = document.querySelectorAll('[data-lang-en]');
+            elements.forEach(element => {
+                element.textContent = element.getAttribute(`data-lang-${currentLang}`);
+            });
+            if (currentLang === "en") {
+                enTexts.forEach(text => {
+                    text.style.display = '';
+                });
+                ruTexts.forEach(text => {
+                    text.style.display = 'none';
+                });
+            } else {
+                enTexts.forEach(text => {
+                    text.style.display = 'none';
+                });
+                ruTexts.forEach(text => {
+                    text.style.display = '';
+                });
+            }
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        // Показываем confetti.gif на 4 секунды при загрузке страницы
+        var confetti = document.createElement('img');
+        confetti.src = './static/assets/kanfeti.gif';
+        confetti.style.position = 'fixed';
+        confetti.style.top = '0';
+        confetti.style.left = '0';
+        confetti.style.width = '100%';
+        confetti.style.height = '100%';
+        confetti.style.opacity = '0.8';
+        document.body.appendChild(confetti);
+        setTimeout(function() {
+          confetti.remove();
+        }, 4000);
+
+        var gnomHappy = document.querySelector('.gnom_happy');
+        gnomHappy.src = './static/assets/jumping.gif';
+        setTimeout(function() {
+          gnomHappy.src = './static/assets/gnom_happy.gif';
+        }, 2000);
+      });
+    const tg = Telegram.WebApp;
+    tg.BackButton.show();
+    tg.BackButton.isVisible;
+    const goBack = () => {
+          window.location.href = `/?user_id=${userId.slice(6, -5)}`;
+    };
+    tg.BackButton.onClick(goBack);
+    document.querySelector('.new_tasks').addEventListener('click', () => {
+        window.location.href = `/?user_id=${userId.slice(6, -5)}`;
+    });
+</script>
+<script>
+    document.querySelector('.englishLanguageText').addEventListener('click', async function() {
+        const enTexts = document.querySelectorAll('[data-lang="en"]');
+        const ruTexts = document.querySelectorAll('[data-lang="ru"]');
+        const currentLang = 'en';
+        document.documentElement.lang = 'en'
+        const response = await fetch('/swaplan', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId, lang: document.documentElement.lang  })
+        });
+        const data = await response.json();
+        const elements = document.querySelectorAll('[data-lang-en]');
+        elements.forEach(element => {
+            element.textContent = element.getAttribute(`data-lang-${currentLang}`);
+        });
+        enTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+
+        ruTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+    });
+    document.querySelector('.russianLanguageText').addEventListener('click', async function() {
+        const enTexts = document.querySelectorAll('[data-lang="en"]');
+        const ruTexts = document.querySelectorAll('[data-lang="ru"]');
+        const currentLang = 'ru';
+        document.documentElement.lang = 'ru'
+        const response = await fetch('/swaplan', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_id: userId, lang: document.documentElement.lang  })
+        });
+        const data = await response.json();
+        const elements = document.querySelectorAll('[data-lang-en]');
+        elements.forEach(element => {
+            element.textContent = element.getAttribute(`data-lang-${currentLang}`);
+        });
+        enTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+
+        ruTexts.forEach(text => {
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        });
+    });
+
+</script>
+</html>

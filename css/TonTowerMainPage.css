@@ -1,0 +1,519 @@
+.ton-tower-treasure .flex_col1 {
+  align-items: center;
+  gap: 30px 0;
+  min-height: 100vh;
+}
+
+.ton-tower-treasure .flex_row6 {
+  background: transparent;
+}
+
+.scale {
+  border-radius: 50px;
+  background: rgb(42, 67, 73);
+  width: 100%;
+  height: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.scale_text {
+  color: rgb(255, 255, 255);
+  font-family: Jaro;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0%;
+
+}
+
+.speed {
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  top: -6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: -15.81px;
+  cursor: pointer;
+  box-shadow: 2px 4px 10px 0px rgba(16, 25, 27, 0.25);
+  background: rgb(227, 100, 20);
+  border-radius: 20px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.speed_img {
+  width: 16px;
+  height: 16px;
+
+}
+
+.scale_progress {
+  border-radius: 50px;
+  background: rgb(38, 189, 55);
+  height: 15px;
+  width: 31px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.scale_union {
+  margin: 0 12px 0px 27.81px;
+  padding: 12px 0 6px 0;
+}
+
+#coin {
+  width: 20vh;
+  margin-top: 67vh;
+  margin-left: -9px;
+  position: absolute;
+  object-fit: contain;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#coin2 {
+  width: 40%;
+  margin-top: 107px;
+  margin-top: 107px;
+  margin-left: -9px;
+  position: absolute;
+}
+
+#gnom {
+ position: absolute;
+ width: 20vh;
+ height: 30vh;
+ margin-top: 58vh;
+ right: 5%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#coin3 {
+  width: 20vh;
+  margin-top: 67vh;
+  margin-left: -9px;
+  position: absolute;
+  object-fit: contain;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#coin4 {
+  width: 40%;
+  margin-top: 107px;
+  margin-top: 107px;
+  margin-left: -9px;
+  position: absolute;
+}
+
+#gnom2 {
+ position: absolute;
+ width: 20vh;
+ height: 30vh;
+ margin-top: 58vh;
+ right: 5%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.flexRowImages {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 57px;
+  position: absolute;
+  bottom: 64px;
+  width: 90%;
+  height: 45%;
+}
+
+.button_speed {
+  border-radius: 4px;
+  background: rgb(231, 126, 35);
+  color: rgb(249, 252, 255);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0%;
+  text-align: center;
+  padding: 6px 10.5px;
+}
+
+.speeding {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.speeding_text {
+  color: rgba(135, 163, 171, 1);
+  font-family: Montserrat;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.speeding_count {
+  color: rgba(135, 163, 171, 1);
+  font-family: Jaro;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: left;
+  display: flex;
+  gap: 4px;
+}
+
+.container {
+  margin-top: 4px;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 6px;
+}
+
+.circle_union {
+  position: absolute;
+  z-index: 3;
+  right: 65px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.sledgehammer {
+  position: absolute;
+  top: 11px;
+  left: 9.79px;
+  width: 25.43px;
+  height: 21px;
+
+}
+
+.rectangle {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  padding: 2.5px 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.rectangle_union {
+  display: inline-block;
+  position: relative;
+  align-self: end;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: absolute;
+  top: 31vh;
+  right: 16px;
+}
+
+.key3 {
+  position: absolute;
+
+}
+
+.text-overlay {
+  position: absolute;
+  z-index: 5;
+  color: rgb(26, 42, 46);
+  font-family: Montserrat;
+  font-size: 8px;
+  font-weight: 900;
+  line-height: 120%;
+  letter-spacing: 2%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.text-overlay2 {
+  color: rgb(26, 42, 46);
+  font-family: Montserrat;
+  font-size: 8px;
+  font-weight: 800;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.text-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-middle-other {
+  top: 19px;
+  left: 28px;
+  position: absolute;
+  z-index: 5;
+  line-height: 6px;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.circle1 {
+  height: 45px;
+  width: 45px;
+  position: relative;
+}
+
+.plus {
+  width: 5px;
+  height: 6px;
+}
+
+.ten {
+  width: 12.07px;
+  height: 14px;
+}
+
+.persent {
+  width: 6.46px;
+  height: 14px;
+}
+
+.rectangle1 {
+  width: 80px;
+  height: 40px;
+}
+
+.rectangle2 {
+  width: 80px;
+  height: 40px;
+}
+
+.spider_union {
+  position: absolute;
+  margin-top: 38vh;
+  z-index: 15;
+}
+
+.spider {
+  position: absolute;
+  top: 37px;
+  left: 24px;
+  z-index: 21;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.spider img {
+  transform: rotate(-15.84deg);
+  width: 47px;
+  height: 55px;
+}
+
+.spiderweb {
+  margin-left: -10px;
+  z-index: 2;
+}
+
+.spiderweb img {
+  width: 142px;
+  height: 147px;
+}
+
+.shadowSpider {
+  filter: blur(1px);
+  position: absolute;
+  top: 13px;
+  left: -1px;
+  z-index: 3;
+}
+
+.shadowSpider img {
+  width: 133px;
+  height: 138px;
+}
+
+.spiderColor {
+  filter: blur(50px);
+  background: rgba(255, 254, 254, 0.5);
+  width: 63px;
+  height: 64px;
+  border-radius: 50%;
+  position: absolute;
+  top: 38px;
+  left: 23px;
+  z-index: 4;
+}
+
+.ton-tower-treasure .flex_row1 {
+  margin-bottom: 16px;
+  margin-top: 18px;
+}
+
+.dark {
+  gap: 0px!important;
+  background: linear-gradient(180.00deg, rgb(19, 32, 35),rgba(26, 44, 49, 0) 100%);
+}
+
+.ton-tower-treasure .flex_col2 {
+  background: transparent;
+  padding-bottom: 4px;
+  gap: 0px;
+}
+
+.button_union {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dragon_img {
+  position: absolute;
+  top: -12px;
+  left: -27px;
+  width: 44px;
+  height: 60px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dragon {
+  position: absolute;
+  top: 31vh;
+  left: 42px;
+  z-index: 20;
+}
+
+.dragon_btn {
+  position: relative;
+  left: -1px;
+}
+
+.dragon_btn_transparent {
+  position: absolute;
+  width: 122.53px;
+  height: 16.36px;
+  left: -0.81px;
+  top: 6.57px;
+}
+
+.dragon_text {
+  left: 16px;
+  top: 11px;
+  position: absolute;
+}
+
+.text_Jaro {
+  color: rgb(26, 42, 46);
+  font-family: Jaro;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.gap_img {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.TON {
+  width: 10px;
+  height: 10px;
+}
+
+.buttons2 {
+  left: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: absolute;
+  top: 55vh;
+}
+
+.rectangle3 {
+  width: 79px;
+  height: 37px;
+  position: relative;
+}
+
+.TWR_img {
+  width: 22px;
+  height: 24px;
+  position: absolute;
+  left: 26.37%;
+  top: 21.97%;
+}
+
+.rectangleBig {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  padding: 4px 0 5px 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.safe2 {
+  width: 20px;
+  height: 19px;
+  position: absolute;
+  top: 13px;
+  left: 13px;
+}
+
+.coin2 {
+  width: 6px;
+  height: 7px;
+  position: absolute;
+  top: 24px;
+  left: 27px;
+}
+
+.text_btn_transparent {
+  position: absolute;
+  width: 66px;
+  height: 15px;
+  left: 7.59%;
+  top: 9px;
+  z-index: 2;
+}
+
+.ml4 {
+  margin-left: -4px;
+}
+
+.black_container {
+  border-radius: 10px;
+
+  background: rgb(19, 32, 36);
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 18px;
+}

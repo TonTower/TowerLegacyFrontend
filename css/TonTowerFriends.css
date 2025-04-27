@@ -1,0 +1,238 @@
+.bigRow {
+    border-radius: 10px;
+    height: 89px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.invite {
+    box-shadow: 2px 4px 10px 0px rgba(16, 25, 27, 0.25);
+    background: rgb(155, 98, 127);
+}
+
+.get_keys {
+    background: rgb(56, 75, 194);
+}
+
+.invite_img {
+    padding-left: 25px;
+}
+
+.invite_text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.invite_img img {
+    width: 39px;
+    height: 45px;
+}
+
+.scale_union, .scale_union2 {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.scale {
+    border-radius: 50px;
+    background: rgb(42, 67, 73);
+    height: 9px;
+    width: 100%;
+}
+
+.scale_progress, .scale_progress2 {
+    border-radius: 50px;
+    background: rgb(38, 189, 55);
+    height: 9px;
+    width: 31px;
+}
+
+.get_img img {
+    width: 45px;
+    height: 53px;
+}
+
+.get_img  {
+    padding-left: 25px;
+}
+
+.keys_text {
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+}
+
+
+
+.scale2 {
+    border-radius: 50px;
+    background: rgb(42, 67, 73);
+    height: 9px;
+    width: 100%;
+}
+
+
+
+.banner_keys {
+    height: 89px;
+    margin: 16px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    padding: 20px 25px;
+    justify-content: space-between;
+}
+
+.keys_quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.keys_quantity img {
+    width: 13.81px;
+    height: 27px;
+}
+
+.banner_quantity {
+    color: rgb(249, 252, 255);
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0%;
+}
+
+.take_off {
+    border-radius: 4px;
+    background: rgb(61, 153, 112);
+    padding: 6px 23px;
+    color: rgb(207, 207, 207);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0%;
+    text-align: center;
+    cursor: pointer;
+    line-height: 17px;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.3s ease;
+}
+
+.take_off:hover {
+    background: rgb(40, 131, 43);
+    color: rgb(249, 252, 255);
+}
+
+.invite_buttons {
+    margin: 18px 0px 0px 0px;
+    display: flex;
+    gap: 10px;
+}
+
+.copy img {
+    width: 22px;
+    height: 16px;
+}
+
+.copy {
+    padding: 8px 20px;
+    border-radius: 6px;
+    background: rgb(28, 65, 47);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.information {
+    margin: 22px 0px 0px 0px;
+    display: flex;
+    padding: 11px 25px;
+    justify-content: space-between;
+}
+
+.information_friends {
+    display: flex;
+    gap: 10px;
+}
+
+.table_users {
+    margin: 16px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.table_user {
+    border-radius: 4px;
+    box-shadow: 2px 4px 10px 0px rgba(16, 25, 27, 0.25);
+    background: rgb(33, 52, 57);
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user_union {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.user_name {
+    color: rgb(201, 201, 201);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+}
+
+.user_quantity {
+    color: rgb(201, 201, 201);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+}
+
+.chest_img {
+    width: 23px;
+    height: 23px;
+}
+
+.chest {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.chest_quantity {
+    color: rgb(201, 201, 201);
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 27px;
+}
+
+.ton-tower-treasure .flex_col1 {
+    align-items: center;
+    gap: 30px 0;
+    min-height: 100vh;
+}
+
+.cols {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}

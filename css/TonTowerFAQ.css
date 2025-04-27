@@ -1,0 +1,42 @@
+.ton-tower-treasure .flex_col1 {
+    align-items: center;
+    gap: 30px 0;
+    min-height: 100vh;
+}
+
+.faq_content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.btn_faq {
+    border-radius: 4px;
+    box-shadow: 2px 4px 10px 0px rgba(16, 25, 27, 0.25);
+    background: rgb(62, 75, 79);
+    padding: 6px 8px;
+    display: flex;
+}
+
+.btn_faq img {
+    height: 24px;
+    width: 24px;
+}
+
+.faq_block {
+    display: flex;
+    gap: 10px;
+}
+
+.faq_description {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.faq_union {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

@@ -1,0 +1,911 @@
+.ton-tower-treasure .flex_col {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.ton-tower-treasure .flex_col1 {
+    align-items: center;
+    gap: 30px 0;
+    min-height: 100vh;
+}
+
+.ton-tower-treasure .additionalImage {
+    width: 100%;
+    border-radius: 10px;
+    filter: drop-shadow(2px 4px 10px rgba(16, 25, 27, 0.25));
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 21px;
+}
+
+.key_union {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;;
+    align-items: center;
+    gap: 12px;
+    border-radius: 6px;
+
+    /* Shadow */
+    box-shadow: 2px 4px 10px 0px rgba(16, 25, 27, 0.25);
+    background: rgb(33, 40, 47);
+    padding: 10px 14px;
+    width: 100%;
+}
+
+.keyImage {
+    width: 19.12px;
+    height: 22px;
+}
+
+.keyCount {
+    color: rgb(249, 252, 255);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.key_left {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn_green2 {
+    border-radius: 6px;
+
+    /* Shadow */
+    box-shadow: 2px 4px 10px 0px rgba(16, 25, 27, 0.25);
+    background: rgb(40, 131, 43);
+    /* Body base/Regular */
+    color: rgb(249, 252, 255);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0%;
+    text-align: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.green_higher {
+    height: 54px;
+    width: 82%;
+    box-shadow: 2px 4px 10px 0px rgba(16, 25, 27, 0.25);
+}
+
+.key_button_union {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.token_img {
+    height: 24px;
+    width: 24px;
+}
+
+.ton-tower-treasure .color8 {
+    background-color: #21282f;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 2px 4px 10px 0 rgba(16, 25, 27, 0.25);
+}
+
+.ton-tower-treasure .color9 {
+    inset: 391px 17px 161px 217px;
+    width: 141px;
+    background-color: #21282f;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 2px 4px 10px 0 rgba(16, 25, 27, 0.25);
+}
+
+.ton-tower-treasure .flex_col12 {
+    position: absolute;
+    top: 40px;
+    left: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 164px;
+    height: 244px;
+}
+
+.ton-tower-treasure .flex_row7 {
+    display: flex;
+    align-items: center;
+    gap: 0 29px;
+    margin: 0 0 0 2px;
+}
+
+.ton-tower-treasure .flex_col13 {
+    display: flex;
+    flex-direction: column;
+    gap: 6px 0;
+    width: 22px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .tonImage {
+    width: 22px;
+}
+
+.ton-tower-treasure .tonLabel {
+    margin: 0 2px;
+    font: 400 8px/0.75 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .numericValue1 {
+    min-width: 0;
+    font: 400 14px/0.71 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .numericValue2 {
+    min-width: 0;
+    font: 400 14px/0.71 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .image39 {
+    width: 13px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .flex_row8 {
+    display: flex;
+    align-items: center;
+    gap: 0 28px;
+    margin: 16px 1px 0;
+}
+
+.ton-tower-treasure .flex_col14 {
+    display: flex;
+    flex-direction: column;
+    gap: 6px 0;
+    width: 24px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .twrImage {
+    width: 24px;
+    border-radius: 12px;
+}
+
+.ton-tower-treasure .twrLabel {
+    margin: 0 2px;
+    font: 400 8px/0.75 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .text {
+    min-width: 0;
+    font: 400 14px/0.71 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .flex_row9 {
+    display: flex;
+    align-items: center;
+    gap: 0 27px;
+    margin: 16px 1px 0;
+}
+
+.ton-tower-treasure .refImage {
+    width: 24px;
+}
+
+.ton-tower-treasure .refLabel {
+    margin: 0 3px 0 4px;
+    font: 400 8px/0.75 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .value2 {
+    min-width: 0;
+    font: 400 14px/0.71 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .value1 {
+    min-width: 0;
+    font: 400 14px/0.71 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .flex_row10 {
+    display: flex;
+    gap: 0 27px;
+    margin: 10px 1px 0;
+}
+
+.ton-tower-treasure .flex_col15 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px 0;
+    width: 24px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .fidImage {
+    width: 24px;
+}
+
+.ton-tower-treasure .fidLabel {
+    font: 400 8px/0.75 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .refValue2 {
+    margin: 19px 0 7px;
+    min-width: 0;
+    font: 400 14px/0.71 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .refValue1 {
+    margin: 19px 0 7px;
+    min-width: 0;
+    font: 400 14px/0.71 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .image391 {
+    margin: 13px 0 1px;
+    width: 13px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .flex_row11 {
+    display: flex;
+    align-items: center;
+    gap: 0 27px;
+    margin: 22px 0 0;
+}
+
+.ton-tower-treasure .flex_col16 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px 0;
+    width: 26px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .atlImage {
+    width: 26px;
+    border-radius: 13px;
+}
+
+.ton-tower-treasure .atlLabel {
+    display: flex;
+    justify-content: center;
+    font: 400 8px/0.75 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+    text-align: center;
+}
+
+.ton-tower-treasure .atlValue2 {
+    min-width: 0;
+    font: 400 14px/0.71 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .atlValue1 {
+    min-width: 0;
+    font: 400 14px/0.71 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .separatorLine1 {
+    position: absolute;
+    inset: 81px 0 210px;
+    width: 189px;
+    height: 1px;
+    background-color: #213439;
+}
+
+.ton-tower-treasure .separatorLine2 {
+    position: absolute;
+    inset: 31px 0 260px;
+    width: 189px;
+    height: 1px;
+    background-color: red;
+}
+
+.ton-tower-treasure .separatorLine3 {
+    position: absolute;
+    inset: 133px 0 158px;
+    width: 189px;
+    height: 1px;
+    background-color: #213439;
+
+}
+
+.ton-tower-treasure .separatorLine4 {
+    position: absolute;
+    inset: 185px 0 106px;
+    width: 189px;
+    height: 1px;
+    background-color: #213439;
+}
+
+.ton-tower-treasure .separatorLine5 {
+    position: absolute;
+    inset: 237px 0 54px;
+    width: 189px;
+    height: 1px;
+    background-color: #213439;
+
+}
+
+.ton-tower-treasure .color7 {
+    position: absolute;
+    inset: 0 146px 0 42px;
+    width: 1px;
+    height: 292px;
+    background-color: red;
+}
+
+.ton-tower-treasure .color71 {
+    position: absolute;
+    top: 0;
+    left: 90px;
+    width: 1px;
+    height: 292px;
+    background-color: red;
+}
+
+.ton-tower-treasure .color72 {
+    position: absolute;
+    top: 0;
+    right: 46px;
+    width: 1px;
+    height: 292px;
+    background-color: red;
+}
+
+.ton-tower-treasure .flex_row12 {
+    position: relative;
+    display: flex;
+    gap: 0 12px;
+    margin: 12px 5px 273px 6px;
+    width: 178px;
+    height: 7px;
+}
+
+.ton-tower-treasure .tokenLabel {
+    font: 400 10px/0.7 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .quantityLabel {
+    font: 400 10px/0.7 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .minExitLabel {
+    font: 400 10px/0.7 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .withdrawalLabel {
+    font: 400 10px/0.7 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .blockContainer {
+    position: absolute;
+    inset: 359px 17px 161px 217px;
+    display: flex;
+    flex-direction: column;
+    width: 141px;
+    height: 292px;
+    filter: drop-shadow(2px 4px 10px rgba(16, 25, 27, 0.25));
+}
+
+.ton-tower-treasure .colorBlock1 {
+    margin: 32px 0 0;
+    min-height: 260px;
+    background-color: #21282f;
+    border-radius: 0 0 4px 4px;
+}
+
+.ton-tower-treasure .contentBox6 {
+    position: absolute;
+    inset: 359px 17px auto 217px;
+    width: 141px;
+    height: 292px;
+}
+
+.ton-tower-treasure .contentBox5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 141px;
+    height: 292px;
+}
+
+.ton-tower-treasure .separatorLine6 {
+    position: absolute;
+    inset: 81px 0 210px;
+    width: 141px;
+    height: 1px;
+    background-color: #213439;
+}
+
+.ton-tower-treasure .separatorLine7 {
+    position: absolute;
+    inset: 31px 0 260px;
+    width: 141px;
+    height: 1px;
+    background-color: #213439;
+}
+
+.ton-tower-treasure .separatorLine8 {
+    position: absolute;
+    inset: 133px 0 158px;
+    width: 141px;
+    height: 1px;
+    background-color: #213439;
+}
+
+.ton-tower-treasure .separatorLine9 {
+    position: absolute;
+    inset: 185px 0 106px;
+    width: 141px;
+    height: 1px;
+    background-color: #213439;
+}
+
+.ton-tower-treasure .separatorLine10 {
+    position: absolute;
+    inset: 237px 0 54px;
+    width: 141px;
+    height: 1px;
+    background-color: #213439;
+}
+
+.ton-tower-treasure .colorBlock2 {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 1px;
+    height: 292px;
+    background-color: #213439;
+}
+
+.ton-tower-treasure .colorBlock3 {
+    position: absolute;
+    top: 0;
+    left: 95px;
+    width: 1px;
+    height: 292px;
+    background-color: #213439;
+}
+
+.ton-tower-treasure .colorSection {
+    position: relative;
+    display: flex;
+    gap: 0 1px;
+    margin: 0 0 261px;
+    width: 141px;
+    height: 31px;
+}
+
+.ton-tower-treasure .colorBlock4 {
+    width: 50px;
+    min-width: 0;
+    min-height: 31px;
+    background-color: #21282f;
+    border-radius: 4px 0 0;
+}
+
+.ton-tower-treasure .colorBlock5 {
+    width: 44px;
+    min-width: 0;
+    min-height: 31px;
+    background-color: #21282f;
+}
+
+.ton-tower-treasure .colorBlock6 {
+    width: 45px;
+    min-width: 0;
+    min-height: 31px;
+    background-color: #21282f;
+    border-radius: 0 4px 0 0;
+}
+
+.ton-tower-treasure .flex_col17 {
+    position: absolute;
+    top: 12px;
+    left: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px 0;
+    width: 130px;
+    height: 265px;
+}
+
+.ton-tower-treasure .infoRow1 {
+    display: flex;
+    gap: 0 11px;
+    width: 100%;
+}
+
+.ton-tower-treasure .info1 {
+    min-width: 0;
+    font: 400 10px/0.7 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .infoRow2 {
+    min-width: 0;
+    font: 400 10px/0.7 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .infoRow3 {
+    min-width: 0;
+    font: 400 10px/0.7 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .flex_col18 {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.ton-tower-treasure .infoRowImage1 {
+    display: flex;
+    gap: 0 20px;
+}
+
+.ton-tower-treasure .image29 {
+    margin: 0 0 1px;
+    width: 24px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .infoRowImage2 {
+    width: 28px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .infoRowImage3 {
+    margin: 1px 0;
+    width: 24px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .flex_row13 {
+    display: flex;
+    gap: 0 26px;
+    margin: 29px 2px 0;
+}
+
+.ton-tower-treasure .infoRowImage4 {
+    width: 20px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .infoRowImage5 {
+    width: 20px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .infoRowImage6 {
+    width: 20px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .flex_row14 {
+    display: flex;
+    gap: 0 26px;
+    margin: 31px 1px 0 3px;
+}
+
+.ton-tower-treasure .infoRowImage7 {
+    width: 20px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .infoRowImage8 {
+    width: 20px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .infoRowImage9 {
+    width: 20px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .flex_row15 {
+    display: flex;
+    gap: 0 20px;
+    margin: 29px 0 0;
+}
+
+.ton-tower-treasure .infoRowImage10 {
+    margin: 0 0 1px;
+    width: 24px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .infoRowImage11 {
+    width: 28px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .infoRowImage12 {
+    margin: 1px 0;
+    width: 24px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .flex_row16 {
+    display: flex;
+    gap: 0 24px;
+    margin: 27px 0 0;
+}
+
+.ton-tower-treasure .infoRowImage13 {
+    width: 24px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .infoRowImage14 {
+    margin: 3px 0 2px;
+    width: 20px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .infoRowImage15 {
+    margin: 1px 0 0;
+    width: 24px;
+    min-width: 0;
+}
+
+.name {
+    color: rgb(135, 163, 171);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+.table th,
+.table td {
+    padding: 0px;
+    text-align: center;
+    border-bottom: 1px solid rgb(33, 52, 57);
+    border-right: 1px solid rgb(33, 52, 57);
+}
+
+.table th, .table td {
+    padding: 0px;
+    text-align: center;
+
+    border-right: 1px solid rgb(33, 52, 57);
+}
+
+.table th:last-child {
+    border-right: none;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.table td:last-child {
+    border-right: none;
+}
+
+.title th {
+    padding: 12px 0;
+}
+
+.name td {
+    line-height: 0px;
+}
+
+.name1 td {
+    padding-top: 8px;
+    padding-bottom: 7.5px;
+
+}
+
+.name2 td, .name3 td {
+    padding-top: 8.5px;
+    padding-bottom: 7.5px;
+
+}
+
+.name4 td {
+    padding-top: 2px;
+    padding-bottom: 14px;
+
+}
+
+
+.name5 td {
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+}
+
+.tonImage {
+    height: 22px;
+    width: 22px;
+}
+
+.twrImage {
+    height: 24px;
+    width: 24px;
+    border-radius: 13px;
+}
+
+.refImage, .fidImage {
+    height: 24px;
+    width: 24px;
+}
+
+.atlImage {
+    width: 26px;
+    height: 26px;
+}
+
+.image_name img {
+    margin-bottom: 6px;
+}
+
+.line td {
+    line-height: 0;
+}
+
+.line1 td {
+    padding-top: 12px;
+    padding-bottom: 12.5px;
+}
+
+.line2 td {
+    padding-top: 17.5px;
+    padding-bottom: 14.5px;
+}
+
+.line3 td {
+    padding-top: 16.5px;
+    padding-bottom: 15.5px;
+}
+
+.line4 td {
+    padding-top: 13.5px;
+    padding-bottom: 13.5px;
+}
+
+.line5 td {
+    padding-top: 14.5px;
+    padding-bottom: 15px;
+}
+
+.dedust {
+    height: 25px;
+    width: 24px;
+}
+
+.dismiss {
+    height: 20px;
+    width: 20px;
+}
+
+.stonfi {
+    height: 26px;
+    width: 28px;
+}
+
+.xrocket {
+    height: 24px;
+    width: 24px;
+}
+
+.fixed {
+    position: fixed;
+    top: 174px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 330px;
+    height: auto;
+    z-index: 10;
+    background-color: #21282f;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 2px 4px 10px 0 rgba(16, 25, 27, 0.25);
+    padding-left: 16px;
+    padding-right: 16px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.door {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    width: 22px;
+    height: 24px;
+}
+
+.table_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 14px;
+}
+
+.table_rows {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.table_left {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.content {
+    display: none;
+}
+#initialContent.active {
+    display: block;
+}
+.content.active {
+    display: block;
+}
+#initialContent {
+    display: none;
+}
+
+.img1 {
+    width: 20px;
+    height: 20px;
+}
+
+.img2 {
+    width: 22px;
+    height: 20px;
+}
+
+.img3 {
+    width: 20px;
+    height: 20px;
+}
+
+.btn36 {
+    height: 36px;
+    padding: 8.5px 0;
+}

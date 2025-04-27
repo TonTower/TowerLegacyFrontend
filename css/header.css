@@ -1,0 +1,313 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+}
+
+.wrapper16 {
+    height: 137px;
+}
+
+.ton-tower-treasure .content_box8 {
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    width: 46px;
+    min-width: 0;
+    background-color: #2a4349;
+    border-radius: 4px;
+    box-shadow: 2px 4px 10px 0 rgba(16, 25, 27, 0.25);
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px 0;
+    -webkit-tap-highlight-color: transparent;
+}
+.ton-tower-treasure .content_box8 p {
+    background: radial-gradient(100% 100% at 50% 4.55%, rgb(69, 167, 249) 0%, rgb(84, 192, 245) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+#heroTitle1 {
+    min-width: 0;
+    font: 700 40px / 1.26 Alumni Sans, Helvetica, Arial, serif;
+    color: #f9fcff;
+    text-transform: uppercase;
+}
+
+#heroTitle2 {
+    min-width: 0;
+    font: 400 40px / 1.26 Jaro, Helvetica, Arial, serif;
+    color: #f9fcff;
+    text-transform: uppercase;
+}
+
+.sound {
+    border-radius: 4px;
+    box-shadow: 2px 4px 10px 0px rgba(16, 25, 27, 0.25);
+    background: rgb(42, 67, 73);
+    width: 46px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.sound img {
+    width: 25px;
+    height: 21px;
+}
+
+.left_header {
+    display: flex;
+    gap: 8px;
+}
+
+.faq {
+    border-radius: 4px;
+    box-shadow: 2px 4px 10px 0px rgba(16, 25, 27, 0.25);
+    background: rgb(42, 67, 73);
+    width: 46px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.right_header {
+    display: flex;
+    gap: 8px;
+}
+
+.faq img {
+    width: 18px;
+    height: 24px;
+}
+
+.dark {
+    display: flex;
+    flex-direction: column;
+    gap: 18px 0;
+    width: 100%;
+    background: transparent;
+}
+
+.ton-tower-treasure .heroImage {
+    margin: 6px 9px;
+    width: 28px;
+}
+
+.ton-tower-treasure .content_box9 {
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    width: 46px;
+    min-width: 0;
+    background-color: #2a4349;
+    border-radius: 4px;
+    box-shadow: 2px 4px 10px 0 rgba(16, 25, 27, 0.25);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.content_box13 {
+    display: flex;
+    flex-direction: column;
+}
+
+.ton-tower-treasure .flex_col2 {
+    display: flex;
+    flex-direction: column;
+    gap: 11px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: rgb(19, 32, 36);
+}
+
+.ton-tower-treasure .flex_row {
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    width: 100%;
+    padding: 18px 16px 0 16px;
+}
+
+.ton-tower-treasure .contentImage1 {
+    margin: 0 3px;
+    width: 40px;
+    aspect-ratio: 0.95;
+}
+
+.ton-tower-treasure .flex_row1 {
+    display: flex;
+    gap: 0 11px;
+    justify-content: space-between;
+    margin-left:  16px;
+    margin-right: 16px;
+    margin-bottom: 18px;
+}
+
+.ton-tower-treasure .content_box10 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    background-color: #2a4349;
+    border-radius: 4px;
+    box-shadow: 2px 4px 10px 0 rgba(16, 25, 27, 0.25);
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.ton-tower-treasure .content_box10:hover {
+    background-color: rgb(29, 47, 52);
+}
+
+.ton-tower-treasure .flex_row2 {
+    display: flex;
+    align-items: end;
+    gap: 0 22px;
+    height: 43px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ton-tower-treasure .floorImage {
+    width: 45px;
+    min-width: 0;
+    margin-left: -7px;
+}
+.ton-tower-treasure .flex_col3 {
+    display: flex;
+    flex-direction: column;
+    gap: 6px 0;
+    width: 26px;
+    min-width: 0;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+.ton-tower-treasure .floorNumber {
+    font: 600 12px / 0.71 Montserrat, Helvetica, Arial, serif;
+    color: #f9fcff;
+}
+.ton-tower-treasure .floorLabel {
+    font: 300 10px / 0.7 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .content_box11 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    background-color: #2a4349;
+    border-radius: 4px;
+    box-shadow: 2px 4px 10px 0 rgba(16, 25, 27, 0.25);
+    transition: background-color 0.3s ease;
+}
+
+.ton-tower-treasure .content_box11:hover {
+    background-color: rgb(29, 47, 52);
+}
+
+.ton-tower-treasure .flex_row3 {
+    display: flex;
+    align-items: center;
+    gap: 0 15px;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ton-tower-treasure .ratingImage {
+    width: 43px;
+    min-width: 0;
+    height: 50px;
+    margin-left: -7px;
+    margin-bottom: -7px;
+}
+
+.ton-tower-treasure .flex_col4 {
+    display: flex;
+    flex-direction: column;
+    gap: 6px 0;
+    width: 43px;
+    min-width: 0;
+    align-items: center;
+}
+
+.ton-tower-treasure .ratingNumber {
+    font: 600 12px / 0.71 Montserrat, Helvetica, Arial, serif;
+    color: #f9fcff;
+}
+.ton-tower-treasure .ratingLabel {
+    font: 300 10px / 0.7 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
+
+.ton-tower-treasure .content_box12 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    background-color: #2a4349;
+    border-radius: 4px;
+    box-shadow: 2px 4px 10px 0 rgba(16, 25, 27, 0.25);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.ton-tower-treasure .content_box12:hover {
+    background-color: rgb(29, 47, 52);
+}
+
+.ton-tower-treasure .flex_row4 {
+    display: flex;
+    align-items: center;
+    gap: 0 3px;
+    overflow: hidden;
+}
+
+.ton-tower-treasure .balanceImage {
+    width: 51px;
+    min-width: 0;
+    height: 46px;
+    margin-left: -19px;
+    margin-bottom: -3px;
+}
+
+.ton-tower-treasure .flex_col5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px 0;
+    width: 64px;
+    min-width: 0;
+}
+
+.ton-tower-treasure .balanceNumber {
+    font: 600 12px / 0.71 Montserrat, Helvetica, Arial, serif;
+    color: #f9fcff;
+}
+.ton-tower-treasure .balanceLabel {
+    font: 300 10px / 0.7 Montserrat, Helvetica, Arial, serif;
+    color: #87a3ab;
+}
